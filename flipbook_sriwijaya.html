@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Katalog E-Book dan Flipbook Pustaka Wbiznet Publisher - Sejarah Maritim Sriwijaya">
+    <meta name="keywords" content="Ebook Sriwijaya, Flipbook Sejarah, Pustaka Wbiznet, Lynk.id wbiznet">
+    <meta name="author" content="Kresnawan Sasmita Putra">
+    <title>Katalog E-Book & Flipbook | Pustaka Wbiznet Publisher</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="img/favicon.png">
+
+    <style>
+      /* --- DESAIN MODERN HEADER & NAVBAR --- */
+      header {
+        background: linear-gradient(135deg, #1e2b37 0%, #2c3e50 100%);
+        color: #ffffff;
+        padding: 15px 0;
+        border-bottom: 3px solid #e8491d;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      #branding h3 {
+        margin: 0;
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+      }
+
+      #branding .highlight {
+        color: #e8491d;
+        font-style: normal;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+      }
+
+      nav li a {
+        color: #ecf0f1;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      nav li a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+
+      nav li.current a {
+        background: #e8491d;
+        color: #ffffff;
+        box-shadow: 0 2px 8px rgba(232, 73, 29, 0.4);
+      }
+
+      /* Responsif Tampilan HP */
+      @media (max-width: 768px) {
+        header .container {
+          flex-direction: column;
+          gap: 12px;
+          text-align: center;
+        }
+        nav ul {
+          justify-content: center;
+        }
+      }
+
+      /* --- STYLE PENDUKUNG HALAMAN --- */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 10px 0;
+      }
+
+      footer {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        text-align: center;
+        margin-top: 30px;
+      }
+      footer p {
+        margin: 0;
+      }
+
+      .btn-buy {
+        display: inline-block;
+        background: #e8491d;
+        color: #ffffff;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-right: 5px;
+      }
+
+      .btn-karyakarsa {
+        display: inline-block;
+        background: #8e44ad;
+        color: #ffffff;
+        padding: 8px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .flipbook-container {
+        margin-top: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      #newsletter {
+        background: #e8491d;
+        color: #fff;
+        padding: 15px 0;
+        text-align: center;
+      }
+
+      #newsletter h5 {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+      }
+
+      #newsletter form {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      #newsletter input[type="email"] {
+        padding: 8px;
+        width: 250px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .button_1 {
+        background: #2c3e50;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      #main {
+        padding: 20px 0;
+      }
+
+      #main .container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      #main-col {
+        flex: 2;
+        min-width: 300px;
+      }
+
+      #sidebar {
+        flex: 1;
+        min-width: 280px;
+      }
+
+      .dark {
+        background: #35424a;
+        color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      .dark h3 {
+        color: #fff;
+        margin-top: 0;
+        border-bottom: 2px solid #e8491d;
+        padding-bottom: 5px;
+      }
+
+      .quote input, .quote textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      #services {
+        list-style: none;
+        padding: 0;
+      }
+
+      #services li {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Modern -->
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h3>Pustaka <span class="highlight">Wbiznet</span> Publisher</h3>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li class="current"><a href="services.html">Buku Ebook</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Newsletter -->
+    <section id="newsletter">
+      <div class="container">
+        <h5>Langganan Newsletter Katalog Buku Terbaru</h5>
+        <form>
+          <input type="email" placeholder="Masukkan Email Anda..." required>
+          <button type="submit" class="button_1">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Content Utama & Flipbook -->
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">Katalog & Flipbook Digital</h1>
+          <ul id="services">
+            
+            <!-- BUKU 1: SRIWIJAYA POROS MARITIM DUNIA -->
+            <li>
+              <h3>E-Book: SRIWIJAYA POROS MARITIM DUNIA</h3>
+              <p><em>Dekonstruksi Ilmiah Pusat Komando Sriwijaya dari Muara Takus ke Pulau Posek.</em></p>
+              <p>Membahas bukti astronomis presisi gnomon I-Tsing, teknologi kapal raksasa Jong nir-paku, hingga rekonstruksi kedaulatan maritim Daun Cogan Riau-Lingga.</p>
+            
+              <!-- Petunjuk Baca HP -->
+              <p style="text-align: center; font-size: 13px; color: #e8491d; font-weight: bold; margin-top: 15px;">
+                📖 Sentuh Layar Buku Untuk Membaca
+              </p>
+
+              <!-- Kotak Flipbook Interaktif (PUBHTML5) -->
+              <div class="flipbook-container" style="width: 100%; overflow: hidden; position: relative; -webkit-overflow-scrolling: touch;">
+                <iframe 
+                  style="width: 100%; height: 420px; border: none; pointer-events: auto;" 
+                  src="https://online.pubhtml5.com/fontf/bcqh/" 
+                  seamless="seamless" 
+                  scrolling="no" 
+                  frameborder="0" 
+                  allowtransparency="true" 
+                  allowfullscreen="true"
+                  allow="autoplay; fullscreen">
+                </iframe>
+              </div>
+
+              <!-- Jarak Pijakan Jari & Petunjuk Scroll HP -->
+              <div style="height: 35px; text-align: center; margin-top: 5px;">
+                <small style="color: #777;">↑ Usap bagian kosong ini untuk geser halaman web ↓</small>
+              </div>
+
+              <!-- Tombol Pembelian / Download -->
+              <div>
+                <a href="https://lynk.id/wbiznet" target="_blank" class="btn-buy">🛒 Beli E-Book di Lynk.id</a>
+                <a href="https://karyakarsa.com" target="_blank" class="btn-karyakarsa">💜 Baca di KaryaKarsa</a>
+              </div>
+            </li>
+
+            <!-- BUKU 2 -->
+            <li>
+              <h3>Koleksi Seri Sejarah & Pustaka Favorit</h3>
+              <p>Kumpulan riset dokumen, petualangan epigrafi, dan jurnal pendukung rekonstruksi sejarah Nusantara.</p>
+              <p>Format: Digital Flipbook & PDF Download.</p>
+              <div>
+                <a href="https://lynk.id/wbiznet" target="_blank" class="btn-buy">📚 Lihat Katalog Lengkap di Lynk.id</a>
+              </div>
+            </li>
+
+          </ul>
+        </article>
+
+        <!-- Sidebar Kontak / Pemesanan -->
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Pemesanan & Diskusi Riset</h3>
+            <form class="quote">
+              <div>
+                <label>Nama Lengkap</label><br>
+                <input type="text" placeholder="Nama Anda">
+              </div>
+              <div>
+                <label>Email / WhatsApp</label><br>
+                <input type="email" placeholder="Email atau Kontak WA">
+              </div>
+              <div>
+                <label>Pesan / Pertanyaan Buku</label><br>
+                <textarea placeholder="Tuliskan pertanyaan atau pemesanan buku cetak..."></textarea>
+              </div>
+              <button class="button_1" type="submit">Kirim Pesan</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Pustaka Wbiznet Publisher, Copyright &copy; Kresnawan Sasmita Putra—2026</p>
+    </footer>
+  </body>
+</html>
