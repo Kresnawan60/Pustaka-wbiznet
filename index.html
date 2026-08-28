@@ -1,4 +1,4 @@
-8
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,41 +7,105 @@
   <title>Pustaka Wbiznet Publisher</title>
   <link rel="icon" href="img/favicon.png">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-    header { background-color: #1e293b; color: white; padding: 1rem 0; }
-    header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    header h3 { margin: 0; }
-    header h3 span { color: #38bdf8; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 15px; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    .main-container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
-    .hero { text-align: center; margin-bottom: 30px; }
-    .hero h1 { color: #0f172a; margin-bottom: 10px; }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
     
-    /* Garis Lurus Pembatas Modern */
+    /* Header & Navigasi Mobile-Friendly */
+    header { background-color: #1e293b; color: white; padding: 0.8rem 0; sticky: top; }
+    header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+    header h3 { margin: 0; font-size: 1.1rem; }
+    header h3 span { color: #38bdf8; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 35px 15px;
+      text-align: center;
+      border-bottom: 4px solid #38bdf8;
+    }
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .hero-badge {
+      background-color: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .hero-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 12px 0; line-height: 1.3; }
+    .hero-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      border-left: 3px solid #38bdf8;
+      margin: 15px auto;
+      padding: 10px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .hero-description { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+    .btn-hero-primary {
+      background-color: #0284c7;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+
+    /* Grid Buku & Kartu */
+    .main-container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
     .section-divider {
       border: 0;
       height: 2px;
       background: linear-gradient(to right, #cbd5e1, #0284c7, #cbd5e1);
-      margin: 35px 0 25px 0;
+      margin: 25px 0 20px 0;
     }
+    .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .book-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    /* Image Link Effect */
+    .book-card-link { text-decoration: none; color: inherit; display: block; }
+    .book-card img { width: 100%; height: auto; border-radius: 6px; margin-bottom: 12px; transition: transform 0.2s; }
+    .book-card-link:hover img { transform: scale(1.02); }
+    .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.1rem; line-height: 1.3; }
+    .book-card p { font-size: 0.9rem; color: #64748b; flex-grow: 1; line-height: 1.5; }
+    .badge { background-color: #0284c7; color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
+    
+    /* Tombol Aksi HP-Friendly */
+    .btn-action-area { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+    .btn-row { display: flex; gap: 8px; }
+    .btn { display: block; width: 100%; padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; }
+    
+    .btn-ringkasan { background-color: #0284c7; color: white; font-size: 0.9rem; padding: 11px; }
+    .btn-detail { background-color: #475569; color: white; }
+    .btn-beli { background-color: #10b981; color: white; }
+    .btn-flipbook { background-color: #d97706; color: white; }
+    
+    footer { text-align: center; padding: 20px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
 
-    .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-    .book-card { background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
-    .book-card img { max-width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px; }
-    .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.15rem; }
-    .book-card p { font-size: 0.95rem; color: #64748b; flex-grow: 1; }
-    .badge { background-color: #0284c7; color: white; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
-    .btn-group { display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
-    .btn { display: inline-block; padding: 8px 14px; border-radius: 5px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; flex: 1; }
-    .btn-primary { background-color: #0284c7; color: white; }
-    .btn-secondary { background-color: #10b981; color: white; }
-    .btn-flipbook { background-color: #d97706; color: white; width: 100%; margin-top: 8px; }
-    footer { text-align: center; padding: 20px; background-color: #1e293b; color: white; margin-top: 50px; }
+    /* Penyesuaian Layar Komputer */
+    @media (min-width: 600px) {
+      .hero-title { font-size: 2rem; }
+      .hero-quote { font-size: 1.1rem; }
+      .hero-section { padding: 50px 20px; }
+      header h3 { font-size: 1.3rem; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="container">
       <h3><span>Pustaka Wbiznet</span> Publisher</h3>
@@ -54,33 +118,54 @@
     </div>
   </header>
 
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="hero-badge">Selamat Datang di Portal Publikasi</span>
+      <h1 class="hero-title">Menulis Rekam Jejak, Merawat Karya & Pemikiran</h1>
+      
+      <blockquote class="hero-quote">
+        "Pensiun bukanlah titik akhir dari sebuah pengabdian, melainkan pintu gerbang menuju babak baru untuk terus berbagi makna dan karya."
+      </blockquote>
+
+      <p class="hero-description">
+        Temukan kumpulan gagasan, catatan sejarah, panduan praktis, hingga esai reflektif karya <strong>Kresnawan Sasmita Putra</strong>. Nikmati cuplikan sinopsis dan intip lembar bukunya di sini.
+      </p>
+
+      <div>
+        <a href="#katalog" class="btn-hero-primary">📚 Jelajahi Koleksi Buku</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTAINER -->
   <div class="main-container">
-    <section class="hero">
-      <h1>Katalog Pustaka Wbiznet Publisher</h1>
-      <p>Portal Resmi Publikasi Karya Kresnawan Sasmita Putra (7 Koleksi Buku Utama)</p>
-    </section>
 
-    <!-- GARIS LURUS PEMBATAS -->
     <hr class="section-divider">
-
-    <h2 id="katalog">📚 Koleksi Buku Publikasi</h2>
+    <h2 id="katalog" style="font-size: 1.3rem;">📚 Koleksi Buku Publikasi</h2>
 
     <div class="book-grid">
 
-      <!-- BUKU 1 -->
+      <!-- BUKU 1 (KLIK KE RINGKASAN) -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #1</span>
-          <h3>Pensiun Bukan Akhir Perjalanan</h3>
-           src="cover_pensiun.png" alt="cover_pensiun Bukan Akhir Perjalanan">
+          <!-- Gambar & Judul bisa diklik langsung ke ringkasan -->
+          <a href="ringkasan-pensiun.html" class="book-card-link">
+            <h3>Pensiun Bukan Akhir Perjalanan</h3>
+            <img src="img/cover_pensiun.png" alt="Cover Pensiun Bukan Akhir Perjalanan">
+          </a>
           <p>Panduan inspiratif merancang fase purnabakti yang produktif, bermakna, serta penuh karya baru di masa tua tanpa kehilangan semangat berkontribusi.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/mnwdg71lmk7k" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        
+        <div class="btn-action-area">
+          <!-- Tombol Utama: Ringkasan -->
+          <a href="ringkasan-pensiun.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/mnwdg71lmk7k" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
@@ -89,15 +174,15 @@
         <div>
           <span class="badge">BUKU #2</span>
           <h3>Retirement is Not the End of the Journey</h3>
- <img          src="cover_retirement.png" alt="Cover retirement is Not the End of the Journey">
+          <img src="img/cover_retirement.png" alt="Cover Retirement is Not the End of the Journey">
           <p>English edition offering a strategic mindset and inspiring perspectives on reinventing purpose, productivity, and passion during post-career years.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        <div class="btn-action-area">
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
@@ -106,15 +191,15 @@
         <div>
           <span class="badge">BUKU #3</span>
           <h3>90 Hari Melejitkan Penjualan Produk Digital</h3>
-      <img    src="cover_90hari.png" alt="Cover 90 Hari Melejitkan Penjualan Produk Digital">
+          <img src="img/cover_90hari.png" alt="Cover 90 Hari Melejitkan Penjualan Produk Digital">
           <p>Panduan praktis dan terstruktur mengenai pemasaran digital, strategi konversi, serta penataan corong penjualan (funneling) untuk akselerasi produk digital.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/yvym79gp0k2d" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        <div class="btn-action-area">
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/yvym79gp0k2d" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
@@ -123,15 +208,15 @@
         <div>
           <span class="badge">BUKU #4</span>
           <h3>It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)</h3>
-        <img  src="cover-1776.png" alt="Cover It's 1776 in Indonesia">
+          <img src="img/cover-1776.png" alt="Cover It's 1776 in Indonesia">
           <p>Tinjauan analitis dan historiografi diplomasi kritis seputar babak krusial perjuangan pertahanan kemerdekaan Indonesia pasca-Agresi Militer Belanda.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/zlpzdx6lzw39" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        <div class="btn-action-area">
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/zlpzdx6lzw39" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
@@ -140,15 +225,15 @@
         <div>
           <span class="badge">BUKU #5</span>
           <h3>Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian</h3>
-           <img src="cover-abraham.jpg" alt="Cover Abraham Lincoln">
+          <img src="img/cover-abraham.jpg" alt="Cover Abraham Lincoln">
           <p>Studi biografi mendalam melacak akar kepemimpinan, integritas, dan filosofi kebebasan Abraham Lincoln dari masa kecil hingga mengubah sejarah dunia.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        <div class="btn-action-area">
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
@@ -157,15 +242,15 @@
         <div>
           <span class="badge">BUKU #6</span>
           <h3>Seni Menata Waktu di Gerbang Rehat</h3>
-       <img    src="cover-seniwaktu.jpg" alt="Cover Seni Menata Waktu">
+          <img src="img/cover-seniwaktu.jpg" alt="Cover Seni Menata Waktu">
           <p>Seni mengelola ritme hidup, kualitas istirahat, dan pemulihan energi agar tetap fokus, kreatif, serta seimbang di tengah dinamika aktivitas harian.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        <div class="btn-action-area">
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
@@ -174,21 +259,22 @@
         <div>
           <span class="badge">BUKU #7 (TERBARU)</span>
           <h3>Sriwijaya Poros Maritim Dunia</h3>
-          < src="cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
+          <img src="img/cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
           <p>Dekonstruksi Ilmiah Pusat Komando Sriwijaya dari Muara Takus ke Pulau Posek. Menggugat lokasi pusat operasional melalui presisi Gnomon I-Tsing dan astronomi.</p>
         </div>
-        <div>
-          <div class="btn-group">
-            <a href="http://lynk.id/wbiznet/qw98lrlery27" target="_blank" class="btn btn-primary">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-secondary">Beli Sekarang</a>
+        <div class="btn-action-area">
+          <div class="btn-row">
+            <a href="http://lynk.id/wbiznet/qw98lrlery27" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="http://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">📖 Baca Flipbook</a>
+          <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
     </div>
   </div>
 
+  <!-- FOOTER -->
   <footer>
     <p>Pustaka Wbiznet Publisher,<br> Copyright © Kresnawan Sasmita Putra—2026</p>
   </footer>
