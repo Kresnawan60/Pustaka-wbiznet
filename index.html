@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,8 +9,8 @@
     * { box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
     
-    /* Header & Navigasi Mobile-Friendly */
-    header { background-color: #1e293b; color: white; padding: 0.8rem 0; sticky: top; }
+    /* Header & Navigasi */
+    header { background-color: #1e293b; color: white; padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; }
     header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
     header h3 { margin: 0; font-size: 1.1rem; }
     header h3 span { color: #38bdf8; }
@@ -27,6 +26,14 @@
       border-bottom: 4px solid #38bdf8;
     }
     .hero-content { max-width: 850px; margin: 0 auto; }
+    
+    .hero-content img {
+      max-width: 150px;
+      height: auto;
+      margin: 0 auto 15px auto;
+      display: block;
+    }
+
     .hero-badge {
       background-color: rgba(56, 189, 248, 0.15);
       color: #38bdf8;
@@ -74,15 +81,22 @@
     .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .book-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
     
-    /* Image Link Effect */
     .book-card-link { text-decoration: none; color: inherit; display: block; }
-    .book-card img { width: 100%; height: auto; border-radius: 6px; margin-bottom: 12px; transition: transform 0.2s; }
+    .book-card img { 
+      max-width: 180px; 
+      width: 100%; 
+      height: auto; 
+      display: block;
+      margin: 0 auto 12px auto; 
+      border-radius: 6px; 
+      transition: transform 0.2s; 
+    }
     .book-card-link:hover img { transform: scale(1.02); }
     .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.1rem; line-height: 1.3; }
     .book-card p { font-size: 0.9rem; color: #64748b; flex-grow: 1; line-height: 1.5; }
     .badge { background-color: #0284c7; color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
     
-    /* Tombol Aksi HP-Friendly */
+    /* Tombol Aksi */
     .btn-action-area { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
     .btn-row { display: flex; gap: 8px; }
     .btn { display: block; width: 100%; padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; }
@@ -92,9 +106,10 @@
     .btn-beli { background-color: #10b981; color: white; }
     .btn-flipbook { background-color: #d97706; color: white; }
     
-    footer { text-align: center; padding: 20px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
+    /* Footer */
+    footer { text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
+    footer img { max-width: 80px; height: auto; margin-bottom: 10px; }
 
-    /* Penyesuaian Layar Komputer */
     @media (min-width: 600px) {
       .hero-title { font-size: 2rem; }
       .hero-quote { font-size: 1.1rem; }
@@ -105,22 +120,21 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <div class="container">
       <h3><span>Pustaka Wbiznet</span> Publisher</h3>
       <nav>
         <ul>
-          <li><a href="/">Portal Utama</a></li>
+          <li><a href="index.html">Portal Utama</a></li>
           <li><a href="#katalog">Katalog Buku</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero-section">
     <div class="hero-content">
+      <img src="img/logo_pustaka_wbiznet.png" alt="logo">
       <span class="hero-badge">Selamat Datang di Portal Publikasi</span>
       <h1 class="hero-title">Menulis Rekam Jejak, Merawat Karya & Pemikiran</h1>
       
@@ -138,7 +152,6 @@
     </div>
   </section>
 
-  <!-- MAIN CONTAINER -->
   <div class="main-container">
 
     <hr class="section-divider">
@@ -146,126 +159,135 @@
 
     <div class="book-grid">
 
-      <!-- BUKU 1 (KLIK KE RINGKASAN) -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #1</span>
-          <!-- Gambar & Judul bisa diklik langsung ke ringkasan -->
-          <a href="ringkasan-pensiun.html" class="book-card-link">
+          <a href="ringkasan_pensiun.html" class="book-card-link">
             <h3>Pensiun Bukan Akhir Perjalanan</h3>
-            <img src="cover_pensiun.png" alt="Cover Pensiun Bukan Akhir Perjalanan">
+            <img src="img/cover_pensiun.png" alt="Cover Pensiun Bukan Akhir Perjalanan">
           </a>
           <p>Panduan inspiratif merancang fase purnabakti yang produktif, bermakna, serta penuh karya baru di masa tua tanpa kehilangan semangat berkontribusi.</p>
         </div>
         
         <div class="btn-action-area">
-          <!-- Tombol Utama: Ringkasan -->
           <a href="ringkasan_pensiun.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/mnwdg71lmk7k" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
-      <!-- BUKU 2 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #2</span>
-          <h3>Retirement is Not the End of the Journey</h3>
-          <img src="cover_retirement.png" alt="Cover Retirement is Not the End of the Journey">
+          <a href="ringkasan_retirement.html" class="book-card-link">
+            <h3>Retirement is Not the End of the Journey</h3>
+            <img src="img/cover_retirement.png" alt="Cover Retirement is Not the End of the Journey">
+          </a>
           <p>English edition offering a strategic mindset and inspiring perspectives on reinventing purpose, productivity, and passion during post-career years.</p>
         </div>
         <div class="btn-action-area">
+          <a href="ringkasan_retirement.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
-      <!-- BUKU 3 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #3</span>
-          <h3>90 Hari Melejitkan Penjualan Produk Digital</h3>
-          <img src="cover_90hari.png" alt="Cover 90 Hari Melejitkan Penjualan Produk Digital">
+          <a href="ringkasan_90hari.html" class="book-card-link">
+            <h3>90 Hari Melejitkan Penjualan Produk Digital</h3>
+            <img src="img/cover_90hari.png" alt="Cover 90 Hari Melejitkan Penjualan Produk Digital">
+          </a>
           <p>Panduan praktis dan terstruktur mengenai pemasaran digital, strategi konversi, serta penataan corong penjualan (funneling) untuk akselerasi produk digital.</p>
         </div>
         <div class="btn-action-area">
+          <a href="ringkasan_90hari.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/yvym79gp0k2d" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/yvym79gp0k2d" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
-      <!-- BUKU 4 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #4</span>
-          <h3>It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)</h3>
-          <img src="cover-1776.png" alt="Cover It's 1776 in Indonesia">
+          <a href="ringkasan_1776.html" class="book-card-link">
+            <h3>It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)</h3>
+            <img src="img/cover-1776.png" alt="Cover It's 1776 in Indonesia">
+          </a>
           <p>Tinjauan analitis dan historiografi diplomasi kritis seputar babak krusial perjuangan pertahanan kemerdekaan Indonesia pasca-Agresi Militer Belanda.</p>
         </div>
         <div class="btn-action-area">
+          <a href="ringkasan_1776.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/zlpzdx6lzw39" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
-      <!-- BUKU 5 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #5</span>
-          <h3>Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian</h3>
-          <img src="cover-abraham.jpg" alt="Cover Abraham Lincoln">
+          <a href="ringkasan_abraham.html" class="book-card-link">
+            <h3>Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian</h3>
+            <img src="img/cover-abraham.jpg" alt="Cover Abraham Lincoln">
+          </a>
           <p>Studi biografi mendalam melacak akar kepemimpinan, integritas, dan filosofi kebebasan Abraham Lincoln dari masa kecil hingga mengubah sejarah dunia.</p>
         </div>
         <div class="btn-action-area">
+          <a href="ringkasan_abraham.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
-      <!-- BUKU 6 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #6</span>
-          <h3>Seni Menata Waktu di Gerbang Rehat</h3>
-          <img src="cover-seniwaktu.jpg" alt="Cover Seni Menata Waktu">
+          <a href="ringkasan_seni_menata_waktu.html" class="book-card-link">
+            <h3>Seni Menata Waktu di Gerbang Rehat</h3>
+            <img src="img/cover_seni_menata_waktu.png" alt="Cover Seni Menata Waktu">
+          </a>
           <p>Seni mengelola ritme hidup, kualitas istirahat, dan pemulihan energi agar tetap fokus, kreatif, serta seimbang di tengah dinamika aktivitas harian.</p>
         </div>
         <div class="btn-action-area">
+          <a href="ringkasan_seni_menata_waktu.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
       </div>
 
-      <!-- BUKU 7 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #7 (TERBARU)</span>
-          <h3>Sriwijaya Poros Maritim Dunia</h3>
-          <img src="cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
+          <a href="ringkasan_sriwijaya.html" class="book-card-link">
+            <h3>Sriwijaya Poros Maritim Dunia</h3>
+            <img src="img/cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
+          </a>
           <p>Dekonstruksi Ilmiah Pusat Komando Sriwijaya dari Muara Takus ke Pulau Posek. Menggugat lokasi pusat operasional melalui presisi Gnomon I-Tsing dan astronomi.</p>
         </div>
         <div class="btn-action-area">
+          <a href="ringkasan_sriwijaya.html" class="btn btn-ringkasan">📝 Baca Ringkasan Buku</a>
           <div class="btn-row">
-            <a href="http://lynk.id/wbiznet/qw98lrlery27" target="_blank" class="btn btn-detail">Lihat Detail</a>
-            <a href="http://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/qw98lrlery27" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">📖 Intip Flipbook</a>
         </div>
@@ -274,9 +296,9 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    <p>Pustaka Wbiznet Publisher,<br> Copyright © Kresnawan Sasmita Putra—2026</p>
+    <img src="icon_logo.png" alt="icon logo">
+    <p>Copyright © Kresnawan Sasmita Putra—2026</p>
   </footer>
 
 </body>
