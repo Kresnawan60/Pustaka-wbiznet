@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ringkasan Buku #1 - Pensiun Bukan Akhir Perjalanan | Pustaka Wbiznet</title>
     <style>
-        /* CSS Dasar & Tema Warna Utama (Seragam dengan Pustaka Wbiznet) */
+        /* CSS Dasar & Tema Warna Utama */
         :root {
             --bg-color: #f4f6f8;
             --card-bg: #ffffff;
@@ -26,24 +26,35 @@
             padding: 20px;
         }
 
-        /* Container Pembungkus Utama */
         .container {
             max-width: 850px;
             margin: 0 auto;
         }
 
-        
-    <!-- Navigasi / Header Atas dengan Logo -->
-    <div class="nav-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-        <!-- PILIHAN 1: Jika Logo berupa Gambar (Ganti 'logo-wbiznet.png' dengan nama file gambar Anda) -->
-        <a href="index.html">
-            <img src="logo-wbiznet.png" alt="Logo Pustaka Wbiznet" style="height: 55px; width: auto; display: block;">
-        </a>
+        /* Navigasi / Header Atas */
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .btn-back:hover {
+            background-color: var(--accent-color);
+        }
 
-        <a href="index.html" class="btn-back">← Kembali ke Utama (Homepage)</a>
-    </div>
-
-        /* Kartu Utama (Card Wrapper) */
+        /* Kartu Utama */
         .card-wrapper {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -53,7 +64,6 @@
             margin-bottom: 25px;
         }
 
-        /* Header Judul Buku */
         .book-badge {
             display: inline-block;
             background-color: #e3f2fd;
@@ -79,7 +89,6 @@
             padding-bottom: 15px;
         }
 
-        /* Blok Tagline Puitis */
         .tagline-box {
             background-color: var(--quote-bg);
             border-left: 4px solid var(--primary-color);
@@ -91,7 +100,23 @@
             border-radius: 0 8px 8px 0;
         }
 
-        /* Bagian Seksi Ringkasan */
+        /* PEMBUNGKUS FLIPBOOK RESPONSIVE */
+        .flipbook-container {
+            position: relative;
+            width: 100%;
+            margin: 25px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background-color: #000;
+        }
+        .flipbook-container iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            display: block;
+        }
+
         .section-title {
             color: var(--primary-color);
             font-size: 1.2em;
@@ -100,7 +125,6 @@
             margin-top: 25px;
         }
 
-        /* List Poin Utama (Sub-Pola Seragam) */
         .feature-list {
             list-style: none;
             padding-left: 0;
@@ -119,7 +143,6 @@
             font-size: 1.1em;
         }
 
-        /* Catatan Pinggir Penulis */
         .side-note {
             background: #fff8e1;
             border: 1px solid #ffe082;
@@ -134,7 +157,6 @@
             margin-bottom: 5px;
         }
 
-        /* Metadata & Verifikasi Digital */
         .meta-footer {
             margin-top: 25px;
             padding-top: 15px;
@@ -143,24 +165,27 @@
             color: var(--text-muted);
         }
 
-        /* Responsive Mobile Layout (HP Samsung A30s Friendly) */
         @media (max-width: 600px) {
             body { padding: 10px; }
             .card-wrapper { padding: 18px; }
             .book-title { font-size: 1.4em; }
+            .flipbook-container iframe { height: 380px; } /* Penyesuaian tinggi layar HP */
         }
     </style>
 </head>
-<body>
+<body id="top">
 
 <div class="container">
 
-    <!-- Tombol Kembali ke Homepage -->
+    <!-- Navigasi / Header Atas dengan Logo -->
     <div class="nav-header">
+        <a href="index.html">
+            <img src="logo-wbiznet.png" alt="Logo Pustaka Wbiznet" style="height: 55px; width: auto; display: block;">
+        </a>
         <a href="index.html" class="btn-back">← Kembali ke Utama (Homepage)</a>
     </div>
 
-    <!-- BUNGKUSAN KARTU UTAMA (SERAGAM DENGAN RINGKASAN SUB-PAGE LAIN) -->
+    <!-- BUNGKUSAN KARTU UTAMA -->
     <div class="card-wrapper">
         
         <span class="book-badge">KARYA BUKU #1</span>
@@ -171,6 +196,15 @@
         <div class="tagline-box">
             "Purnabakti memberikan waktu. Menulis memberikan ruang. Berkarya memberikan arti."
         </div>
+
+        <!-- ======================================================= -->
+        <!-- POSISI FLIPBOOK ELEKTRONIK (PUBHTML5) TERLETAK DI SINI -->
+        <!-- ======================================================= -->
+        <h2 class="section-title">📖 Pratinjau Flipbook Interactive</h2>
+        <div class="flipbook-container">
+            <iframe src="https://online.pubhtml5.com/fontf/mfok/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+        </div>
+        <!-- ======================================================= -->
 
         <!-- Gambaran Umum -->
         <h2 class="section-title">📌 Ringkasan Naskah</h2>
@@ -203,11 +237,10 @@
 
 </div>
 
-<!-- Footer Sub-Halaman Ringkasan (Icon 50px + Navigasi Lengkap) -->
+<!-- Footer Sub-Halaman Ringkasan -->
 <footer style="background-color: #1a1e24; border-top: 3px solid #0056b3; padding: 18px 20px; text-align: center !important; margin-top: 40px; width: 100%; box-sizing: border-box;">
   <div style="max-width: 800px; margin: 0 auto; text-align: center !important;">
     
-    <!-- Icon Logo 50px -->
     <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 70px; margin: 0 auto 8px auto; display: block;">
 
     <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0; text-align: center !important;">
@@ -218,7 +251,6 @@
       Copyright © Kresnawan Sasmita Putra — 2026
     </p>
 
-    <!-- Dua Tombol Navigasi: Ke Beranda & Ke Atas -->
     <div style="text-align: center !important;">
       <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
         ← Kembali ke Beranda
