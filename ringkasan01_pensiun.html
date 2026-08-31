@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Buku #1 - Pensiun Bukan Akhir Perjalanan | Pustaka Wbiznet</title>
+    <style>
+        /* Navigasi / Header Atas (Dibuat Memanjang ke Bawah / Stacked) */
+        .nav-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 10px 0;
+        }
+
+        /* Ukuran Logo Atas (Besar & Rata Tengah) */
+        .header-logo {
+            height: 75px; /* Bisa disesuaikan: 70px - 90px */
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Tombol Kembali ke Beranda (Tampilan Desktop) */
+        .btn-back {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+        .btn-back:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive Khusus Layar HP (Samsung A30s Friendly) */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .card-wrapper { padding: 18px; }
+            .book-title { font-size: 1.4em; }
+            .flipbook-container iframe { height: 380px; }
+
+            /* Penyesuaian Header Atas di HP */
+            .nav-header {
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+            .header-logo {
+                height: 65px; /* Tetap tampak besar namun pas di HP */
+            }
+            .btn-back {
+                font-size: 0.75em; /* Font lebih kecil agar tidak tampak dominan */
+                padding: 5px 10px;  /* Ukuran tombol lebih ringkas */
+                border-radius: 4px;
+            }
+        }
+
+        /* CSS Dasar & Tema Warna Utama */
+        :root {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --primary-color: #1b3b6f;
+            --accent-color: #2196f3;
+            --text-dark: #2c3e50;
+            --text-muted: #596575;
+            --border-color: #e2e8f0;
+            --quote-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        
+    <!-- Navigasi / Header Atas (Logo Tengah Besar & Tombol Ringkas) -->
+    <div class="nav-header">
+        <!-- Logo di Tengah -->
+        <a href="index.html">
+            <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" class="header-logo">
+        </a>
+        
+        <!-- Tombol Ringkas di Bawah Logo -->
+        <div>
+            <a href="index.html" class="btn-back">← Kembali ke Utama</a>
+        </div>
+    </div>
+
+
+/* Navigasi / Header Atas */
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        .btn-back:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Kartu Utama */
+        .card-wrapper {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .book-badge {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .book-title {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin: 5px 0 10px 0;
+            line-height: 1.3;
+        }
+        .book-subtitle {
+            font-size: 1em;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #f0f4f8;
+            padding-bottom: 15px;
+        }
+
+        .tagline-box {
+            background-color: var(--quote-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 1.05em;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* PEMBUNGKUS FLIPBOOK RESPONSIVE */
+        .flipbook-container {
+            position: relative;
+            width: 100%;
+            margin: 25px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background-color: #000;
+        }
+        .flipbook-container iframe {
+            width: 100%;
+            height: 480px;
+            border: none;
+            display: block;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.2em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+            margin-top: 25px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .side-note {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-top: 25px;
+            font-size: 0.95em;
+        }
+        .side-note-title {
+            font-weight: bold;
+            color: #b78103;
+            margin-bottom: 5px;
+        }
+
+        .meta-footer {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 0.88em;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .card-wrapper { padding: 18px; }
+            .book-title { font-size: 1.4em; }
+            .flipbook-container iframe { height: 380px; } /* Penyesuaian tinggi layar HP */
+        }
+    </style>
+</head>
+<body id="top">
+
+<div class="container">
+
+    <!-- Navigasi / Header Atas dengan Logo -->
+    <div class="nav-header">
+        <a href="index.html">
+            <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="height: 55px; width: auto; display: block;">
+        </a>
+        <a href="index.html" class="btn-back">← Kembali ke Utama (Homepage)</a>
+    </div>
+
+    <!-- BUNGKUSAN KARTU UTAMA -->
+    <div class="card-wrapper">
+        
+        <span class="book-badge">KARYA BUKU #1</span>
+        <h1 class="book-title">PENSIUN BUKAN AKHIR PERJALANAN</h1>
+        <div class="book-subtitle">Catatan, Refleksi, dan Inspirasi Menjemput Rezeki, Menjaga Iman, serta Terus Belajar di Era Digital</div>
+
+        <!-- Tagline Filosofis -->
+        <div class="tagline-box">
+            "Purnabakti memberikan waktu. Menulis memberikan ruang. Berkarya memberikan arti."
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- POSISI FLIPBOOK ELEKTRONIK (PUBHTML5) TERLETAK DI SINI -->
+        <!-- ======================================================= -->
+        <h2 class="section-title">📖 Pratinjau Flipbook Interactive</h2>
+        <div class="flipbook-container">
+            <iframe src="https://online.pubhtml5.com/fontf/mfok/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+        </div>
+        <!-- ======================================================= -->
+
+        <!-- Gambaran Umum -->
+        <h2 class="section-title">📌 Ringkasan Naskah</h2>
+        <p>Buku ini merupakan rekam jejak perjuangan, refleksi hidup, dan proses adaptasi seorang purnabakti yang menolak pasrah pada usia senja. Berawal dari pensiun pada tahun 2015 dari perusahaan perkebunan kelapa sawit, penulis memilih untuk tetap mandiri dan berkarya dekat dengan keluarga.</p>
+        <p>Melalui berbagai dinamika usaha—mulai dari toko sparepart, menjadi pengemudi Grab Mobil, ikhtiar di tambak udang, warung kopi teras rumah, hingga bisnis perantara <i>pre-owned luxury watch</i>—penulis menemukan satu hakikat bahwa pensiun bukanlah garis akhir (<i>finish</i>), melainkan awal dari petualangan baru (<i>start</i>).</p>
+
+        <!-- Empat Pilar Hikmah Utama -->
+        <h2 class="section-title">💡 Pilar Utama Pembahasan</h2>
+        <ul class="feature-list">
+            <li><b>Pensiun Adalah Start, Bukan Finish:</b> Mengubah pola pikir dari berhenti bekerja menjadi titik awal berkarya dan mengeksplorasi potensi diri.</li>
+            <li><b>Kemandirian & Izzah:</b> Semangat memegang teguh prinsip <i>tangan di atas</i> untuk menjemput rezeki halal di masa tua tanpa membebani anak dan cucu.</li>
+            <li><b>Literasi & Kolaborasi AI:</b> Keberanian menundukkan ego untuk belajar teknologi digital, mengolah arsip blog sejak tahun 2009 menjadi karya e-book fisik dan digital.</li>
+            <li><b>Pondasi Spiritual & Silaturahmi:</b> Menjaga jangkar ibadah, merawat persahabatan sejati, dan pasrah (ridho) atas ketetapan takdir dalam Lauh Mahfuz.</li>
+        </ul>
+
+        <!-- Catatan Pinggir Penulis -->
+        <div class="side-note">
+            <div class="side-note-title">📝 Catatan Pinggir Penulis:</div>
+            <i>"Di era digital yang serba instan ini, uban bukan halangan untuk belajar. Selama akal masih bekerja, ibadah tetap terjaga, dan jemari masih mau mengetik, tidak pernah ada kata terlambat untuk memulai babak baru."</i>
+        </div>
+
+        <!-- Verifikasi Digital & Metadata -->
+        <div class="meta-footer">
+            <div><b>Penulis:</b> Wawansasmita (Kresnawan Sasmita Putra)</div>
+            <div><b>Verifikasi Digital:</b> <a href="https://pustakawawan.wordpress.com" target="_blank" style="color:var(--accent-color);">Blog Kutipan Pustaka (ID: 48188324)</a></div>
+            <div><b>Status Terbit:</b> Terdaftar Hak Cipta & Tersedia di Google Play Books</div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer Sub-Halaman Ringkasan -->
+<footer style="background-color: #1a1e24; border-top: 3px solid #0056b3; padding: 18px 20px; text-align: center !important; margin-top: 40px; width: 100%; box-sizing: border-box;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center !important;">
+    
+    <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 70px; margin: 0 auto 8px auto; display: block;">
+
+    <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0; text-align: center !important;">
+      Membaca → Menulis → Berkarya
+    </p>
+
+    <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 10px 0; text-align: center !important;">
+      Copyright © Kresnawan Sasmita Putra — 2026
+    </p>
+
+    <div style="text-align: center !important;">
+      <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
+        ← Kembali ke Beranda
+      </a>
+      <span style="color: #4a5568;">|</span>
+      <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
+        ↑ Ke Atas
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
