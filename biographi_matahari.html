@@ -1,299 +1,275 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografi Mata Hari - Pustaka WBizNet</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #f7f5f0;
-            --card-bg: #ffffff;
-            --primary: #8c2d19;
-            --primary-hover: #6e2212;
-            --text-main: #2b2b2b;
-            --text-muted: #5a5a5a;
-            --border-color: #e2ded8;
-            --accent-bg: #f3efe6;
-            --font-heading: 'Merriweather', Georgia, serif;
-            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biografi MATA HARI — Pustaka Wbiznet</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+  * { 
+    box-sizing: border-box; 
+  }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            line-height: 1.7;
-            padding: 20px 15px;
-        }
+  body {
+    margin: 0;
+    background: #f5f5f5;
+    color: #222;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.75;
+  }
 
-        /* Navigation */
-        .navbar {
-            max-width: 850px;
-            margin: 0 auto 20px auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-        }
+  .book {
+    max-width: 850px;
+    margin: 24px auto;
+    background: #fff;
+    padding: 28px 34px 45px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
 
-        .navbar a.brand {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
+  .publisher {
+    text-align: center;
+    margin-bottom: 24px;
+  }
 
-        .navbar a.nav-link {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            text-decoration: none;
-        }
+  .publisher img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-        .navbar a.nav-link:hover {
-            color: var(--primary);
-        }
+  .title {
+    text-align: center;
+    margin: 20px 0 6px;
+    font-size: clamp(24px, 5vw, 36px);
+    line-height: 1.25;
+    color: #111;
+  }
 
-        /* Container Document */
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        }
+  .author {
+    text-align: center;
+    margin: 0 0 24px;
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+  }
 
-        /* Header Article */
-        .article-header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 25px;
-            margin-bottom: 30px;
-        }
+  /* Container TikTok Embed (Orientasi Portret 9:16) */
+  .tiktok-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    min-height: 580px;
+  }
 
-        .article-header h1 {
-            font-family: var(--font-heading);
-            font-size: 2.2rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
+  .tiktok-embed {
+    max-width: 325px !important;
+    min-width: 325px !important;
+    margin: 0 auto !important;
+  }
 
-        .article-header .subtitle {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            font-style: italic;
-        }
+  h1, h2, h3 {
+    line-height: 1.3;
+    color: #111;
+  }
 
-        /* Meta Box Info */
-        .meta-card {
-            background-color: var(--accent-bg);
-            border-left: 4px solid var(--primary);
-            padding: 16px 20px;
-            border-radius: 0 6px 6px 0;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
-        }
+  h2 {
+    margin-top: 36px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    font-size: 22px;
+  }
 
-        .meta-card p {
-            margin-bottom: 6px;
-        }
+  p {
+    margin: 0 0 16px;
+    text-align: justify;
+  }
 
-        .meta-card p:last-child {
-            margin-bottom: 0;
-        }
+  .quote {
+    margin: 24px 0;
+    padding: 14px 20px;
+    border-left: 4px solid #4a5568;
+    background: #f7fafc;
+    font-style: italic;
+  }
 
-        /* Banner Link TikTok */
-        .video-reference-box {
-            background-color: #2b2b2b;
-            color: #ffffff;
-            padding: 16px 20px;
-            border-radius: 6px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+  .source-box {
+    background: #f0f4f8;
+    border: 1px solid #d9e2ec;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 25px 0;
+    font-size: 15px;
+  }
 
-        .video-btn {
-            background-color: var(--primary);
-            color: #ffffff;
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
+  .source-box p {
+    margin: 0;
+    text-align: left;
+  }
 
-        .video-btn:hover {
-            background-color: var(--primary-hover);
-        }
+  ol, ul {
+    padding-left: 28px;
+    margin-bottom: 20px;
+  }
 
-        /* Typography */
-        h2 {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            color: #1a1a1a;
-            margin-top: 32px;
-            margin-bottom: 14px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid var(--border-color);
-        }
+  li {
+    margin-bottom: 8px;
+  }
 
-        p {
-            font-size: 1rem;
-            margin-bottom: 16px;
-            text-align: justify;
-        }
+  /* STILISASI BANNER FOOTER WBIZNET (SERAGAM) */
+  .wbiznet-footer-banner {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 24px 20px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
 
-        ul, ol {
-            margin: 0 0 20px 24px;
-        }
+  .wbiznet-footer-banner h3 {
+    color: #f8fafc;
+    margin: 0 0 8px 0;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+  }
 
-        li {
-            margin-bottom: 10px;
-            font-size: 0.98rem;
-        }
+  .wbiznet-footer-banner p {
+    color: #cbd5e1;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
 
-        .highlight-quote {
-            background: #fff8f6;
-            border: 1px solid #ebd4cd;
-            padding: 20px;
-            border-radius: 6px;
-            margin: 25px 0;
-        }
+  .wbiznet-footer-banner .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 
-        /* Referensi */
-        .references {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
+  .wbiznet-footer-banner a.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #3b82f6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+  }
 
-        .references h3 {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            color: var(--text-main);
-            margin-bottom: 10px;
-        }
+  .wbiznet-footer-banner a.btn:hover {
+    background: #2563eb;
+  }
 
-        .references a {
-            color: var(--primary);
-            text-decoration: none;
-        }
+  .wbiznet-footer-banner a.btn-secondary {
+    background: #475569;
+  }
 
-        .references a:hover {
-            text-decoration: underline;
-        }
+  .wbiznet-footer-banner a.btn-secondary:hover {
+    background: #334155;
+  }
 
-        .footer {
-            text-align: center;
-            margin-top: 35px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+  footer {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font: 13px/1.5 Arial, sans-serif;
+    color: #777;
+  }
 
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            .article-header h1 { font-size: 1.7rem; }
-        }
-    </style>
+  @media (max-width: 600px) {
+    .book {
+      margin: 0;
+      padding: 20px 16px 35px;
+      box-shadow: none;
+    }
+
+    p {
+      text-align: left;
+    }
+
+    .tiktok-container {
+      min-height: 500px;
+    }
+  }
+</style>
 </head>
+
 <body>
 
-    <!-- Navigasi Atas -->
-    <nav class="navbar">
-        <a href="https://pustaka-wbiznet.vercel.app/" class="brand">Pustaka WBizNet</a>
-        <a href="https://pustaka-wbiznet.vercel.app/" class="nav-link">&larr; Beranda</a>
-    </nav>
+<main class="book">
 
-    <!-- Konten Utama Dokumen -->
-    <main class="container">
-        <header class="article-header">
-            <h1>Mata Hari (1876–1917)</h1>
-            <p class="subtitle">Rekam Jejak Sejarah: Dari Malang Jawa Timur, Panggung Seni Eropa, hingga Kontroversi Spionase Perang Dunia I</p>
-        </header>
+  <header class="publisher">
+    <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
+  </header>
 
-        <!-- Ringkasan Profil -->
-        <div class="meta-card">
-            <p><strong>Nama Lengkap:</strong> Margaretha Geertruida Zelle</p>
-            <p><strong>Kelahiran:</strong> 7 Agustus 1876, Leeuwarden, Belanda</p>
-            <p><strong>Wafat:</strong> 15 Oktober 1917 (Usia 41 tahun), Vincennes, Prancis</p>
-            <p><strong>Fokus Narasi:</strong> Pelengkap pembahasan video ulasan sejarah @wbiznetchannel</p>
-        </div>
+  <h1 class="title">Biografi Margaretha Geertruida Zelle <br> KISAH SPIONASE MATAHARI</h1>
+  <div class="author">Karya &amp; Narasi AI oleh: Wawansasmita | Pustaka Wbiznet</div>
 
-        <!-- Tautan Integrasi Video TikTok -->
-        <div class="video-reference-box">
-            <span>📹 Narasi tertulis ini melengkapi ulasan video TikTok @wbiznetchannel:</span>
-            <a href="https://www.tiktok.com/@wbiznetchannel/video/7550276880247655686" target="_blank" rel="noopener" class="video-btn">Lihat Video TikTok &rarr;</a>
-        </div>
+  <section class="tiktok-container">
+    <blockquote class="tiktok-embed" 
+                cite="https://www.tiktok.com/@wbiznetchannel/video/7550276880247655686" 
+                data-video-id="7550276880247655686">
+      <section>
+        <a target="_blank" title="@wbiznetchannel" href="https://www.tiktok.com/@wbiznetchannel">@wbiznetchannel</a>
+      </section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+  </section>
 
-        <!-- Bagian 1 -->
-        <h2>1. Pengantar Singkat Akademis</h2>
-        <p>
-            Margaretha Geertruida Zelle, yang populer di panggung seni dunia dengan nama <strong>Mata Hari</strong>, merupakan salah satu figur sejarah paling terkenal dari era Perang Dunia I. Sosoknya dipenuhi persimpangan antara seni tari eksotis, dinamika elit Eropa, hingga dugaan keterlibatannya dalam dunia intelijen internasional yang berujung pada eksekusi mati oleh regu tembak Prancis pada 15 Oktober 1917.
-        </p>
+  <div class="source-box">
+    <p><strong>Sumber Pustaka &amp; Rujukan:</strong> Riset disarikan dari arsip Fries Museum Belanda, Encyclopaedia Britannica, serta catatan sejarah publik. Narasi disampaikan melalui audio AI dan diulas secara tertulis di bawah ini.</p>
+  </div>
 
-        <!-- Bagian 2 -->
-        <h2>2. Latar Belakang & Jejak di Hindia Belanda (Jawa)</h2>
-        <ul>
-            <li><strong>Pernikahan Awal (1895):</strong> Margaretha menikah dengan seorang perwira militer Belanda (KNIL) bernama Rudolf MacLeod.</li>
-            <li><strong>Kehidupan di Malang:</strong> Pasangan ini menetap di Jawa Timur, khususnya di Malang. Selama tinggal di Hindia Belanda, Margaretha tertarik serta mempelajari secara mendalam kebudayaan, busana, dan tarian tradisional Melayu-Jawa.</li>
-            <li><strong>Inspirasi Nama Panggung:</strong> Pengalaman budaya Nusantara menjadi titik balik identitas seni pertunjukannya. Nama panggung <em>Mata Hari</em> diambil langsung dari istilah bahasa Melayu yang berarti "mata dari hari" atau sang surya.</li>
-        </ul>
+  <article>
+    <h2>Ringkasan Narasi Video</h2>
+    <p>
+      Margaretha Geertruida Zelle, yang dikenal luas dengan nama panggung <strong>Mata Hari</strong>, lahir pada 7 Agustus 1876 di Leeuwarden, Belanda. Sosoknya dikenal sebagai penari pentas terkemuka di Eropa yang perjalanannya berakhir tragis setelah dieksekusi oleh regu tembak Prancis pada 15 Oktober 1917 atas tuduhan menjadi agen rahasia Jerman selama Perang Dunia I.
+    </p>
 
-        <!-- Bagian 3 -->
-        <h2>3. Karier di Eropa & Pusaran Perang Dunia I</h2>
-        <ul>
-            <li><strong>Sensasi Seni di Paris:</strong> Setelah berpisah dari suaminya pada 1904, ia menetap di Paris dan menjadi penari terkemuka yang memikat perhatian kaum elit aristokrat serta pejabat militer Eropa.</li>
-            <li><strong>Hak Akses Lintas Perbatasan:</strong> Berstatus sebagai warga negara Belanda (yang bersikap netral dalam Perang Dunia I), ia memiliki mobilitas tinggi untuk melintasi batas-batas negara Eropa yang berkonflik.</li>
-            <li><strong>Tuduhan Intelijen (Agen Sandi H21):</strong> Akses komunikasi dan hubungan dekatnya dengan para diplomat serta perwira membuat badan intelijen Prancis mencegat pesan telegram rahasia Jerman yang merujuk pada kode agen <strong>H21</strong>. Pesan ini dijadikan dasar penangkapan dan tuduhan spionase.</li>
-        </ul>
+    <blockquote class="quote">
+      "Saya adalah seorang penari, bukan agen rahasia. Posisi netral dan pergaulan saya adalah bagian dari jalan hidup saya di Eropa."
+    </blockquote>
 
-        <!-- Bagian 4 -->
-        <h2>4. Perspektif Sejarah & Perdebatan Modern</h2>
-        <div class="highlight-quote">
-            <p><strong>Analisis Sejarawan:</strong> Sebagian besar peneliti sejarah modern meyakini bahwa peran Mata Hari dalam jaringan spionase sangat dibesar-besarkan. Pengadilan militer Prancis pada 1917 dinilai berada di bawah tekanan politik untuk menemukan sosok <em>kambing hitam (scapegoat)</em> guna menutupi penurunan moral dan kekalahan pasukan militer Prancis di garis depan.</p>
-            <p style="margin-top: 10px;"><strong>Penyangkalan Konsisten:</strong> Hingga menjelang eksekusinya, Margaretha secara konsisten menegaskan bahwa dirinya bukanlah mata-mata yang merugikan kepentingan Prancis maupun pihak Sekutu.</p>
-        </div>
+    <h2>Ulasan Lengkap &amp; Rekam Jejak Sejarah</h2>
+    <p>
+      Kisah hidup Mata Hari memiliki keterikatan historis dengan Indonesia. Pada tahun 1895, Margaretha menikah dengan Rudolf MacLeod, seorang perwira militer KNIL (Tentara Kerajaan Hindia Belanda). Pasangan ini pernah menetap di Malang, Jawa Timur. Selama bermukim di Jawa, Margaretha mempelajari tarian tradisional Melayu-Jawa serta adopsi nama panggung "Mata Hari" (yang berasal dari istilah bahasa Melayu untuk matahari).
+    </p>
+    <p>
+      Sekembalinya ke Eropa dan berpisah dari suaminya pada 1904, ia meraih popularitas tinggi di Paris. Sebagai warga negara Belanda yang berstatus netral saat Perang Dunia I berkecamuk, ia memiliki kebebasan melintasi perbatasan negara-negara yang berkonflik. Fleksibilitas ini memicu kecurigaan otoritas militer Prancis, yang kemudian mencegat rahasia enkripsi Jerman dengan kode agen <strong>H21</strong> dan mengaitkannya dengan Mata Hari.
+    </p>
 
-        <!-- Referensi Sumber Data -->
-        <section class="references">
-            <h3>Sumber Data & Referensi Sejarah:</h3>
-            <ol>
-                <li><a href="https://www.friesmuseum.nl/en/collection/icons/mata-hari" target="_blank" rel="noopener">Fries Museum Archives</a> – <i>Mata Hari Official Collection & History</i></li>
-                <li><a href="https://id.wikipedia.org/wiki/Mata_Hari" target="_blank" rel="noopener">Wikipedia Indonesia</a> – <i>Entry Sejarah Mata Hari</i></li>
-                <li><a href="https://www.britannica.com/biography/Mata-Hari" target="_blank" rel="noopener">Encyclopaedia Britannica</a> – <i>Mata Hari: Biography, Facts & Execution</i></li>
-            </ol>
-        </section>
+    <h2>Pelajaran Penting &amp; Warisan (Legacy)</h2>
+    <ul>
+      <li><strong>Identitas Budaya:</strong> Keterikatannya dengan Nusantara memberikan inspirasi seni yang melahirkan nama panggung ikonik "Mata Hari".</li>
+      <li><strong>Analisis Sejarah Modern:</strong> Sebagian sejarawan menilai bahwa pengadilan militer Prancis tahun 1917 menjadikannya sebagai alat pengalihan isu (kambing hitam) atas kekalahan perang dan penurunan moral pasukan Prancis.</li>
+      <li><strong>Konsistensi Hingga Akhir Hayat:</strong> Margaretha secara konsisten membantah melakukan tindakan perkhianatan atau spionase yang merugikan pihak Sekutu hingga eksekusi dilaksanakan di Vincennes, Prancis.</li>
+    </ul>
+  </article>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 Pustaka WBizNet — Dikelola oleh Kresnawan Sasmita Putra (Wawansasmita)</p>
-        </footer>
-    </main>
+  <section class="wbiznet-footer-banner">
+    <h3>PUSTAKA WBIZNET PORTFOLIO</h3>
+    <p>Kumpulan Artikel Pustaka, Biografi Tokoh, &amp; Konten Visual Narasi AI <br>karya Kresnawan Sasmita Putra <br>(Wawansasmita)</p>
+    <div class="btn-group">
+      <a href="index.html" class="btn">📚 Lihat Semua Koleksi</a>
+      <a href="https://www.tiktok.com/@wbiznetchannel" target="_blank" class="btn btn-secondary">🎵 TikTok Wbiznetchannel</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra
+  </footer>
+
+</main>
 
 </body>
 </html>
