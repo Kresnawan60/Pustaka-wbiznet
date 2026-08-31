@@ -5,6 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ringkasan Buku #1 - Pensiun Bukan Akhir Perjalanan | Pustaka Wbiznet</title>
     <style>
+        /* Navigasi / Header Atas (Dibuat Memanjang ke Bawah / Stacked) */
+        .nav-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 10px 0;
+        }
+
+        /* Ukuran Logo Atas (Besar & Rata Tengah) */
+        .header-logo {
+            height: 75px; /* Bisa disesuaikan: 70px - 90px */
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Tombol Kembali ke Beranda (Tampilan Desktop) */
+        .btn-back {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+        .btn-back:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive Khusus Layar HP (Samsung A30s Friendly) */
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .card-wrapper { padding: 18px; }
+            .book-title { font-size: 1.4em; }
+            .flipbook-container iframe { height: 380px; }
+
+            /* Penyesuaian Header Atas di HP */
+            .nav-header {
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+            .header-logo {
+                height: 65px; /* Tetap tampak besar namun pas di HP */
+            }
+            .btn-back {
+                font-size: 0.75em; /* Font lebih kecil agar tidak tampak dominan */
+                padding: 5px 10px;  /* Ukuran tombol lebih ringkas */
+                border-radius: 4px;
+            }
+        }
+
         /* CSS Dasar & Tema Warna Utama */
         :root {
             --bg-color: #f4f6f8;
@@ -31,7 +88,22 @@
             margin: 0 auto;
         }
 
-        /* Navigasi / Header Atas */
+        
+    <!-- Navigasi / Header Atas (Logo Tengah Besar & Tombol Ringkas) -->
+    <div class="nav-header">
+        <!-- Logo di Tengah -->
+        <a href="index.html">
+            <img src="logo-wbiznet.png" alt="Logo Pustaka Wbiznet" class="header-logo">
+        </a>
+        
+        <!-- Tombol Ringkas di Bawah Logo -->
+        <div>
+            <a href="index.html" class="btn-back">← Kembali ke Utama</a>
+        </div>
+    </div>
+
+
+/* Navigasi / Header Atas */
         .nav-header {
             display: flex;
             justify-content: space-between;
