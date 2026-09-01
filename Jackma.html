@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biografi Ringkas Jack Ma - Pustaka Wbiznet</title>
+    <style>
+        /* CSS Utama / Reset Style ala Pustaka Wbiznet */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        /* Container Buku (.book) */
+        .book {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Logo */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            margin-bottom: 25px;
+        }
+
+        header a img {
+            max-width: 220px;
+            height: auto;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #1a202c;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #718096;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        /* Video Container TikTok Embed */
+        .tiktok-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 580px;
+            margin: 25px 0;
+            width: 100%;
+        }
+
+        .tiktok-embed {
+            max-width: 325px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Element Quote */
+        .quote {
+            background-color: #f7fafc;
+            border-left: 4px solid #4a5568;
+            padding: 15px 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #2d3748;
+            font-size: 1.05rem;
+        }
+
+        /* Ringkasan Biografi Content */
+        .summary-content {
+            margin: 25px 0;
+        }
+
+        .summary-content h3 {
+            font-size: 1.3rem;
+            color: #1a202c;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 5px;
+        }
+
+        .summary-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .summary-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .summary-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Drop Cap untuk Paragraf Pertama */
+        .drop-cap::first-letter {
+            font-size: 3.2rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 8px;
+            color: #2b6cb0;
+            font-weight: bold;
+        }
+
+        /* Box Rujukan / Sumber */
+        .source-box {
+            background-color: #f0f4f8;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 25px 0;
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        .source-box h4 {
+            margin-bottom: 8px;
+            color: #2b6cb0;
+        }
+
+        /* Footer Banner */
+        .wbiznet-footer-banner {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        .wbiznet-footer-banner p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #3182ce;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #2b6cb0;
+        }
+
+        .btn-tiktok {
+            background-color: #fe2c55;
+            color: #ffffff;
+        }
+
+        .btn-tiktok:hover {
+            background-color: #e0264a;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 15px;
+            border-top: 1px solid #334155;
+            padding-top: 15px;
+        }
+
+        /* Responsive UI */
+        @media (max-width: 600px) {
+            .book {
+                padding: 18px;
+            }
+            .title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book">
+        <!-- Header & Logo Pustaka Wbiznet -->
+        <header>
+            <a href="index.html">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
+            </a>
+            <h1 class="title">Jack Ma (Ma Yun)</h1>
+            <p class="subtitle">Pendiri Alibaba Group & Pelopor E-Commerce Tiongkok</p>
+        </header>
+
+        <!-- Media Pendukung (TikTok Embed) -->
+        <div class="tiktok-container">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wbiznetchannel/video/7551397406567451915" data-video-id="7551397406567451915">
+                <section>
+                    <a target="_blank" title="@wbiznetchannel" href="https://www.tiktok.com/@wbiznetchannel?refer=embed">@wbiznetchannel</a>
+                </section>
+            </blockquote>
+        </div>
+
+        <!-- Kutipan / Quote -->
+        <div class="quote">
+            "Hari ini berat, besok akan lebih berat lagi, tetapi lusa akan indah. Kebanyakan orang menyerah di esok malam." 
+            <br><strong>— Jack Ma</strong>
+        </div>
+
+        <!-- Teks Biografi Ringkas -->
+        <div class="summary-content">
+            <h3>Masa Muda dan Perjuangan Awal</h3>
+            <p class="drop-cap">
+                Jack Ma, lahir dengan nama <strong>Ma Yun</strong> pada 10 September 1964 di Hangzhou, Zhejiang, Tiongkok, tumbuh dalam keluarga sederhana. Sejak kecil, ia menunjukkan ketangguhan luar biasa dengan belajar bahasa Inggris secara mandiri. Selama sembilan tahun, ia mengayuh sepeda sejauh puluhan kilometer setiap hari ke Hangzhou International Hotel demi menjadi pemandu wisata gratis bagi para turis asing untuk melatih kemampuan bahasanya.
+            </p>
+            <p>
+                Perjalanan akademis dan kariernya dipenuhi penolakan. Ia beberapa kali gagal dalam ujian masuk perguruan tinggi sebelum akhirnya diterima di Hangzhou Teachers College. Setelah lulus, ia melamar pekerjaan di puluhan tempat—termasuk di gerai KFC pertama di kotanya—dan selalu ditolak. Tak patah semangat, ia mengawali kariernya sebagai pengajar bahasa Inggris dengan gaji rendah.
+            </p>
+
+            <h3>Penemuan Internet dan Lahirnya Alibaba</h3>
+            <p>
+                Pada tahun 1995, saat berkunjung ke Amerika Serikat, Jack Ma pertama kali mengenal teknologi internet. Ketika mencoba mencari kata kunci "bir", ia tidak menemukan satupun informasi tentang produk asal Tiongkok di dunia maya. Pengalaman ini menyadarkan visinya akan potensi besar internet dalam menghubungkan bisnis Tiongkok ke pasar global.
+            </p>
+            <p>
+                Pada tahun 1999, bersama 17 temannya di apartemen sederhananya di Hangzhou, Jack Ma mendirikan <strong>Alibaba Group</strong>. Meskipun awal perjalanannya menghadapi tantangan finansial dan keterbatasan infrastruktur teknologi, kepemimpinannya yang visioner membawa Alibaba bertumbuh pesat menjadi raksasa <em>e-commerce</em> global melalui platform seperti Taobao, Tmall, dan Alipay.
+            </p>
+
+            <h3>Pensiun dan Kegiatan Filantropi</h3>
+            <p>
+                Pada September 2019, Jack Ma secara resmi mengundurkan diri dari jabatannya sebagai Chairman Eksekutif Alibaba Group. Ia memilih untuk memfokuskan sisa usianya pada kegiatan filantropi, peningkatan kualitas pendidikan di daerah terpencil, serta pengembangan kewirausahaan generasi muda melalui Jack Ma Foundation.
+            </p>
+        </div>
+
+        <!-- Box Sumber / Rujukan Tambahan -->
+        <div class="source-box">
+            <h4>Catatan & Sumber Rujukan:</h4>
+            <p>• <strong>Media Pendukung:</strong> Video Biografi TikTok @wbiznetchannel (ID: 7551397406567451915)</p>
+            <p>• <strong>Referensi Utama:</strong> Dokumen Ensklopedia Wikipedia (Bahasa Indonesia) & Arsip Biografi Online Tokoh Dunia</p>
+            <p>• <strong>Penerbit Digital:</strong> Pustaka Wbiznet Library Service</p>
+        </div>
+
+        <!-- Footer Banner Wbiznet -->
+        <footer class="wbiznet-footer-banner">
+            <div class="btn-group">
+                <a href="index.html" class="btn btn-primary">Kembali ke Koleksi</a>
+                <a href="https://www.tiktok.com/@wbiznetchannel/video/7551397406567451915" target="_blank" rel="noopener noreferrer" class="btn btn-tiktok">Tonton di TikTok</a>
+            </div>
+            <p>Jelajahi berbagai koleksi ringkasan biografi, buku digital, dan materi edukasi interaktif lainnya di Pustaka Wbiznet.</p>
+            <div class="copyright">
+                © 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra (Wawansasmita)
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script Async TikTok Embed -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+</body>
+</html>
