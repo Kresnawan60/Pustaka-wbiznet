@@ -2,19 +2,23 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pustaka-wbiznet.vercel.app/">
-    <meta property="og:title" content="Pustaka Wbiznet — Membaca → Menulis → Berkarya">
-    <meta property="og:description" content="Koleksi ringkasan buku, karya tulis, dan inspirasi purnabakti digital oleh Kresnawan Sasmita Putra.">
-    <meta property="og:image" content="https://pustaka-wbiznet.vercel.app/logo_pustaka_wbiznet.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pustaka Wbiznet — Membaca, Menulis, Berkarya</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pustaka-wbiznet.vercel.app/">
+  <meta property="og:title" content="Pustaka Wbiznet — Membaca → Menulis → Berkarya">
+  <meta property="og:description" content="Koleksi ringkasan buku, karya tulis, dan inspirasi purnabakti digital oleh Kresnawan Sasmita Putra.">
+  <meta property="og:image" content="https://pustaka-wbiznet.vercel.app/logo_pustaka_wbiznet.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- PWA & Favicon -->
   <link rel="icon" href="img/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e293b">
+
   <style>
     * { box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
@@ -36,14 +40,7 @@
       border-bottom: 4px solid #38bdf8;
     }
     .hero-content { max-width: 850px; margin: 0 auto; }
-    
-    .hero-content img {
-      max-width: 150px;
-      height: auto;
-      margin: 0 auto 15px auto;
-      display: block;
-    }
-
+    .hero-content img { max-width: 150px; height: auto; margin: 0 auto 15px auto; display: block; }
     .hero-badge {
       background-color: rgba(56, 189, 248, 0.15);
       color: #38bdf8;
@@ -90,32 +87,62 @@
     }
     .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
     .book-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
-    
     .book-card-link { text-decoration: none; color: inherit; display: block; }
-    .book-card img { 
-      max-width: 180px; 
-      width: 100%; 
-      height: auto; 
-      display: block;
-      margin: 0 auto 12px auto; 
-      border-radius: 6px; 
-      transition: transform 0.2s; 
-    }
+    .book-card img { max-width: 180px; width: 100%; height: auto; display: block; margin: 0 auto 12px auto; border-radius: 6px; transition: transform 0.2s; }
     .book-card-link:hover img { transform: scale(1.02); }
     .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.1rem; line-height: 1.3; }
     .book-card p { font-size: 0.9rem; color: #64748b; flex-grow: 1; line-height: 1.5; }
     .badge { background-color: #0284c7; color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
     
-    /* Tombol Aksi */
+    /* Tombol Aksi Buku */
     .btn-action-area { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
     .btn-row { display: flex; gap: 8px; }
     .btn { display: block; width: 100%; padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; }
-    
     .btn-ringkasan { background-color: #0284c7; color: white; font-size: 0.9rem; padding: 11px; }
     .btn-detail { background-color: #475569; color: white; }
     .btn-beli { background-color: #10b981; color: white; }
     .btn-flipbook { background-color: #d97706; color: white; }
     
+    /* Area Download APK & PWA */
+    .app-download-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px;
+      margin-top: 35px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .btn-install {
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      padding: 14px 24px;
+      background-color: #28a745;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(40,167,69,0.2);
+      transition: background-color 0.2s;
+    }
+    .btn-install:hover { background-color: #218838; }
+    .ios-box {
+      margin-top: 15px;
+      background: #f0f4f8;
+      border: 1px solid #d0d7de;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #333;
+      text-align: left;
+      line-height: 1.4;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     /* Footer */
     footer { text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
     footer img { max-width: 80px; height: auto; margin-bottom: 10px; }
@@ -137,6 +164,7 @@
         <ul>
           <li><a href="index.html">Beranda</a></li>
           <li><a href="#katalog">Koleksi</a></li>
+          <li><a href="#biografi">Biografi</a></li>
         </ul>
       </nav>
     </div>
@@ -145,12 +173,9 @@
   <section class="hero-section">
     <div class="hero-content">
       <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
-
-      <span class="hero-badge">Mwmbaca → Menulis → Berkarya</span><br>
-Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
-      <h1 class="hero-title">
-        Pensiun Bukan Akhir Perjalanan
-      </h1>
+      <span class="hero-badge">Membaca → Menulis → Berkarya</span><br>
+      Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra.
+      <h1 class="hero-title">Pensiun Bukan Akhir Perjalanan</h1>
       
       <blockquote class="hero-quote">
         "Ketika pekerjaan berakhir, bukan berarti perjalanan berhenti. 
@@ -178,10 +203,10 @@ Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
     </h2>
 
     <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 25px;">
-      Purnabakti memberikan waktu. Menulis memberikan ruang. 
-      Berkarya memberikan arti.
+      Purnabakti memberikan waktu. Menulis memberikan ruang. Berkarya memberikan arti.
     </p>
 
+    <!-- KATALOG BUKU -->
     <div class="book-grid">
 
       <!-- BUKU 1 -->
@@ -198,25 +223,15 @@ Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
             bekerja dengan cara berbeda, menulis, dan tetap memberikan manfaat.
           </p>
         </div>
-        
         <div class="btn-action-area">
-          <a href="ringkasan01_pensiun.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan01_pensiun.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
-
 
       <!-- BUKU 2 -->
       <div class="book-card">
@@ -229,29 +244,18 @@ Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
           <p>
             Edisi bahasa Inggris yang membawa gagasan yang sama: 
             masa setelah karier bukan akhir dari perjalanan, 
-            melainkan kesempatan untuk menemukan kembali tujuan, 
-            semangat belajar, dan produktivitas.
+            melainkan kesempatan untuk menemukan kembali tujuan.
           </p>
         </div>
-
         <div class="btn-action-area">
-          <a href="ringkasan02_retirement.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan02_retirement.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
-
 
       <!-- BUKU 3 -->
       <div class="book-card">
@@ -263,101 +267,63 @@ Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
           </a>
           <p>
             Catatan praktis tentang perjalanan mempelajari dunia penjualan 
-            digital, mulai dari pemasaran, membangun penawaran, 
-            hingga menemukan cara menjual produk melalui internet.
+            digital, mulai dari pemasaran hingga menemukan cara menjual produk.
           </p>
         </div>
-
         <div class="btn-action-area">
-          <a href="ringkasan_90hari.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan_90hari.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/yvym79gp0k2d" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/yvym79gp0k2d" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
-
 
       <!-- BUKU 4 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #4</span>
           <a href="ringkasan04_1776_jan1949.html" class="book-card-link">
-            <h3>
-              It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)
-            </h3>
+            <h3>It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)</h3>
             <img src="cover-1776.png" alt="Cover It's 1776 in Indonesia">
           </a>
           <p>
             Catatan penelusuran sejarah yang lahir dari ketertarikan 
-            untuk membaca kembali perjuangan Indonesia dan berbagai 
-            peristiwa penting di sekitar masa mempertahankan kemerdekaan.
+            untuk membaca kembali perjuangan Indonesia mempertahankan kemerdekaan.
           </p>
         </div>
-
         <div class="btn-action-area">
-          <a href="ringkasan04_1776_jan1949.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan04_1776_jan1949.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
-
 
       <!-- BUKU 5 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #5</span>
           <a href="ringkasan05_abraham.html" class="book-card-link">
-            <h3>
-              Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian
-            </h3>
+            <h3>Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian</h3>
             <img src="cover-abraham.jpg" alt="Cover Abraham Lincoln">
           </a>
           <p>
-            Ketertarikan terhadap perjalanan hidup Abraham Lincoln 
-            membawa catatan ini pada kisah tentang kepemimpinan, 
-            integritas, kebebasan, kegagalan, dan tanggung jawab.
+            Kisah perjalanan hidup Abraham Lincoln mengenai kepemimpinan, integritas, kebebasan, dan tanggung jawab.
           </p>
         </div>
-
         <div class="btn-action-area">
-          <a href="ringkasan05_abraham.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan05_abraham.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
-
 
       <!-- BUKU 6 -->
       <div class="book-card">
@@ -368,30 +334,18 @@ Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
             <img src="cover_seni_menata_waktu.png" alt="Cover Seni Menata Waktu">
           </a>
           <p>
-            Catatan tentang waktu, istirahat, ritme hidup, 
-            dan bagaimana menata kembali kehidupan ketika 
-            seseorang mulai memasuki fase yang lebih tenang.
+            Catatan tentang waktu, istirahat, ritme hidup, dan bagaimana menata kembali kehidupan saat memasuki fase tenang.
           </p>
         </div>
-
         <div class="btn-action-area">
-          <a href="ringkasan06_seni_menata_waktu.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan06_seni_menata_waktu.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
-
 
       <!-- BUKU 7 -->
       <div class="book-card">
@@ -402,176 +356,104 @@ Ruang berbagi dan catatan karya purnabakti Kresnawan Sasmita Putra."
             <img src="cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
           </a>
           <p>
-            Sebuah penelusuran sejarah mengenai Sriwijaya, 
-            ruang maritim Nusantara, dan usaha memahami kembali 
-            pusat kekuasaan serta jaringan dunia maritim masa lalu.
+            Penelusuran sejarah mengenai Sriwijaya, ruang maritim Nusantara, dan jaringan dunia maritim masa lalu.
           </p>
         </div>
-
         <div class="btn-action-area">
-          <a href="ringkasan07_sriwijaya_poros_maritim_dunia.html" class="btn btn-ringkasan">
-            Baca Ringkasan
-          </a>
+          <a href="ringkasan07_sriwijaya_poros_maritim_dunia.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
-            <a href="https://lynk.id/wbiznet/qw98lrlery27" target="_blank" class="btn btn-detail">
-              Lihat Detail
-            </a>
-            <a href="https://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">
-              Beli
-            </a>
+            <a href="https://lynk.id/wbiznet/qw98lrlery27" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">
-            Intip Flipbook
-          </a>
+          <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
         </div>
       </div>
 
     </div>
-  </div>
-<!-- Bagian Katalog Koleksi Biografi & Video di index.html -->
-<div id="biografi" style="margin-top: 25px; padding: 0 10px;">
-  <h2 style="color: #2b6cb0; font-size: 18px; border-bottom: 2px solid #3182ce; padding-bottom: 6px; margin-bottom: 15px;">
-    📚 Koleksi Biografi &amp; Video Narasi
-  </h2>
-  
-  <div style="display: flex; flex-direction: column; gap: 12px;">
-    <!-- Item 1: Jacqueline Kennedy Onassis -->
-    <a href="Jacqueline_Kennedy_Onassis.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">
-        🎬 Jacqueline Kennedy Onassis
-      </h3>
-      <p style="margin: 0; font-size: 10px; color: #4a5568; line-height: 1.4;">
-        Ibu Negara AS (1961–1963) &amp; Ikon Budaya Dunia. Dilengkapi artikel biografi dan video narasi.
-      </p>
+
+    <!-- KATALOG BIOGRAFI & VIDEO -->
+    <div id="biografi" style="margin-top: 40px;">
+      <h2 style="color: #1e293b; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+        📚 Koleksi Biografi &amp; Video Narasi
+      </h2>
       
-    </a>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <!-- Item 1: Jacqueline Kennedy Onassis -->
+        <a href="Jacqueline_Kennedy_Onassis.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Jacqueline Kennedy Onassis</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Ibu Negara AS (1961–1963) &amp; Ikon Budaya Dunia. Dilengkapi artikel biografi dan video narasi.</p>
+        </a>
 
-    <!-- Item 2: Mata Hari -->
-    <a href="biographi_matahari.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e53e3e; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">
-        💃 Biografi Mata Hari
-      </h3>
-      <p style="margin: 0; font-size: 10px; color: #4a5568; line-height: 1.4;">
-        Kisah Penari Eksotis &amp; Agen Rahasia Legendaris Perang Dunia I.
+        <!-- Item 2: Mata Hari -->
+        <a href="biographi_matahari.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e11d48; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">💃 Biografi Mata Hari</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah Penari Eksotis &amp; Agen Rahasia Legendaris Perang Dunia I.</p>
+        </a>
+
+        <!-- Item 3: Margaret Thatcher -->
+        <a href="bio_MargaretThatcher.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Margaret Thatcher</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah PM Inggris yang dijuluki "The Iron Lady".</p>
+        </a>
+
+        <!-- Item 4: Al Capone -->
+        <a href="alcapone.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e11d48; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Al Capone</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah mafia dan tokoh kontroversial Amerika Serikat.</p>
+        </a>
+
+        <!-- Item 5: Vladimir Putin -->
+        <a href="VladimirPutin.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Vladimir Putin</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Perjalanan hidup dari dinas intelijen KGB hingga menjadi tokoh kunci politik Rusia.</p>
+        </a>
+
+        <!-- Item 6: Jack Ma -->
+        <a href="Jackma.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Jack Ma (Pendiri Alibaba)</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">"Hari ini berat, besok akan lebih berat lagi, tetapi lusa akan indah." — Jack Ma</p>
+        </a>
+
+        <!-- Item 7: Fidel Castro -->
+        <a href="FidelCastro.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Fidel Castro</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">"Satu-satunya keinginan saya adalah bertarung sebagai seorang prajurit ide." — Fidel Castro</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- AREA UNDUH APLIKASI -->
+    <div class="app-download-card">
+      <h2 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 8px;">Aplikasi Mobile Pustaka Wbiznet</h2>
+      <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+        Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
       </p>
-    </a>
-      <!-- Item 3: Margaret Thatcher -->
-    <a href="bio_MargaretThatcher.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e53e3e; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">
-        🎬 Biografi Margaret Thatcher
-      </h3>
-      <p style="margin: 0; font-size: 10px; color: #4a5568; line-height: 1.4;">
-        Kisah PM.Inggris &amp; Yang Di juluki Lady Iron .
-      </p>
-    </a>
 
-<!-- Item 4: Alcapone -->
-    <a href="alcapone.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e53e3e; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">
-         🎬 Biografi Al Capone
-      </h3>
-      <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">
-        Kisah mafia dan Pengusaha Amerika
-      </p>
-    </a>
-    
+      <!-- Shortlink APK -->
+      <a href="https://go.shr.lc/4gPkS9J" class="btn-install">
+        Download &amp; Install APK
+      </a>
 
-<!-- Kartu Item 5: Vladimir Putin-->
-    <a href="VladimirPutin.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">
-        🎬 Biografi Vladimir Putin
-      </h3>
-      <p style="margin: 0; font-size: 10px; color: #4a5568; line-height: 1.4;">
-        Video ini mengulas perjalanan hidup Vladimir Putin dari masa mudanya di Leningrad, pengabdiannya di dinas intelijen KGB, hingga transformasinya menjadi tokoh kunci politik Rusia dan dunia modern
-      </p>
-    </a>
+      <!-- Petunjuk iPhone -->
+      <div class="ios-box">
+        <strong>📱 Pengguna iPhone (iOS):</strong><br>
+        Buka web ini di browser <strong>Safari</strong> &rarr; Tekan ikon <strong>Share</strong> (kotak dengan panah ke atas) &rarr; Pilih <strong>"Tambahkan ke Layar Utama"</strong>.
+      </div>
+    </div>
 
- <!-- Kartu Item 6: Jack Ma -->
-    <a href="Jackma.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">
-        🎬 Biografi Jack Ma 
-Pendiri Alibaba 
-      </h3>
-      <p style="margin: 0; font-size: 10px; color: #4a5568; line-height: 1.4;">
-       "Hari ini berat, besok akan lebih berat lagi, tetapi lusa akan indah. Kebanyakan orang menyerah di esok malam."
-— Jack Ma 
-
-      </p>
-    </a>
-
- <!-- Kartu Item 8. Fidel Castro -->
-    <a href="FidelCastro.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-      <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">
-        🎬 Biografi Fidel Castro
-      </h3>
-      <p style="margin: 0; font-size: 10px; color: #4a5568; line-height: 1.4;">
-       "Saya tidak mengucapkan selamat tinggal kepada Anda. Satu-satunya keinginan saya adalah bertarung sebagai seorang prajurit ide."
-— Fidel Castro
-
-
-      </p>
-    </a>
-
-
-    <!-- Tempat Tambah Kartu Item Selanjutnya (Tinggal Copy-Paste Blok Kartu Di Atas) -->
-
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unduh Aplikasi Pustaka Wbiznet</title>
-    <style>
-        .btn-install {
-            display: inline-block;
-            padding: 14px 28px;
-            background-color: #28a745; /* Warna hijau */
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .btn-install:hover {
-            background-color: #218838;
-        }
-    </style>
-</head>
-<body>
-
-    <h2>Aplikasi Pustaka Wbiznet</h2>
-    <p>Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi di ponsel Android Anda:</p>
-
-    <!-- Menggunakan link pendek Anda -->
-    <a href="https://go.shr.lc/4gPkS9J" class="btn-install">
-        Download & Install APK
-    </a>
-
-</body>
-</html>
-
-<!-- Petunjuk Pengguna iPhone -->
-<div style="margin-top: 15px; background: #f0f4f8; padding: 12px; border-radius: 8px; font-size: 13px;">
-    <strong>Pengguna iPhone (iOS):</strong><br>
-    Buka web ini di browser <strong>Safari</strong> &rarr; Tekan tombol <strong>Share</strong> (ikon kotak panah atas) &rarr; Pilih <strong>"Tambahkan ke Layar Utama"</strong>.
-</div>
-
-
+  </div>
 
   <footer>
     <img src="icon_logo.png" alt="Icon Pustaka Wbiznet">
-
-    <p>
-      Membaca → Menulis → Berkarya
-    </p>
-
-    <p>
-      Copyright © Kresnawan Sasmita Putra — 2026
-    </p>
-
+    <p>Membaca → Menulis → Berkarya</p>
+    <p>Copyright © Kresnawan Sasmita Putra — 2026</p>
   </footer>
 
+  <!-- Script Service Worker (PWA) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>
