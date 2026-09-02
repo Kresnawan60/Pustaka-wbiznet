@@ -41,21 +41,26 @@
             border: 1px solid var(--border);
         }
 
+        /* LOGO DI ATAS LATAR PUTIH */
+        .logo-header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+        }
+
+        /* HEADER JUDUL WARNA HIJAU */
         header {
             background-color: var(--primary);
             color: white;
             padding: 30px 40px;
             text-align: center;
             border-bottom: 4px solid var(--accent);
-        }
-
-        .logo-container {
-            margin-bottom: 15px;
-        }
-
-        .logo-container img {
-            max-width: 180px;
-            height: auto;
         }
 
         header h1 {
@@ -89,15 +94,24 @@
             padding: 40px;
         }
 
+        /* PEMUTAR VIDEO LAYAR PENUH (FULL WIDTH) */
         .video-embed-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            width: 100%;
             height: 0;
+            padding-bottom: 177.78%; 
+            max-height: 85vh;
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 12px;
             background-color: #000;
             margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        @media (min-width: 768px) {
+            .video-embed-container {
+                padding-bottom: 100%; 
+            }
         }
 
         .video-embed-container iframe {
@@ -242,10 +256,15 @@
 <body>
 
 <div class="container">
-    <header>
+    <!-- Bagian Logo Latar Belakang Putih -->
+    <div class="logo-header">
         <div class="logo-container">
             <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
         </div>
+    </div>
+
+    <!-- Header Judul Fidel Castro -->
+    <header>
         <h1>Fidel Castro</h1>
         <div class="subtitle">Simbol Revolusi Komunis & Pemimpin Legendaris Kuba</div>
     </header>
@@ -259,6 +278,7 @@
     </div>
 
     <div class="content">
+        <!-- Pemutar Video Layar Penuh (Full Width) -->
         <div class="video-embed-container">
             <iframe src="https://www.tiktok.com/embed/v2/7549410220527586616?autoplay=1&loop=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
@@ -331,22 +351,24 @@
         </ul>
     </div>
 
-    <div class="footer">
-        <div class="footer-portfolio">
-            <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
-            <h4>Portofolio Pustaka Wbiznet</h4>
-            <p>Kumpulan Artikel Pustaka, Biografi Tokoh, & Konten Visual Narasi AI<br>
-            karya <strong>Kresnawan Sasmita Putra (Wawansasmita)</strong></p>
-            <div class="footer-links">
-                <a href="https://pustaka-wbiznet.vercel.app" target="_blank">📚 Lihat Semua Koleksi</a>
-                <a href="https://www.tiktok.com/@wbiznetchannel" target="_blank">🎵 TikTok Wbiznetchannel</a>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra
-        </div>
+   
+   
+   <!-- Footer Portofolio Pustaka Wbiznet (Ringkas & Compact) -->
+  <div style="background-color: #2d3748; color: #ffffff; padding: 12px 15px; border-radius: 6px; text-align: center; margin-top: 25px;">
+    <h3 style="color: #ebf8ff; margin: 0 0 4px 0; font-size: 15px;">Portofolio Pustaka Wbiznet</h3>
+    <p style="margin: 0 0 10px 0; font-size: 12px; color: #cbd5e0; line-height: 1.3;">
+      Kumpulan Artikel, Biografi Tokoh, &amp; Narasi AI <br>karya <strong>Kresnawan Sasmita Putra </strong>
+    </p>
+    <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
+      <a href="index.html" target="_blank" style="background-color: #3182ce; color: #ffffff; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 11px;">📚 Lihat Semua Koleksi</a>
+      <a href="https://www.tiktok.com/@wbiznetchannel" target="_blank" style="background-color: #e53e3e; color: #ffffff; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 11px;">🎵 TikTok Wbiznetchannel</a>
     </div>
-</div>
+    <div style="font-size: 10px; color: #a0aec0; border-top: 1px solid #4a5568; padding-top: 6px;">
+      © 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra
+    </div>
+  </div>
+
+  
 
 </body>
 </html>
