@@ -9,7 +9,7 @@
     <img src=="logo^pustaka_wbiznet".png" alt="Logo Pustaka Wbiznet">
   </header>  
     
-    <title>Biografi Salahuddin Ayyubi: Teladan Ksatria dan Pembebas Baitul Maqdis</title>
+    <title>Biografi Salahuddin Ayyubi <br><h2>Teladan Ksatria dan Pembebas Baitul Maqdis</h2></title>
     <style>
         body { font-family: 'Georgia', serif; line-height: 1.8; color: #2c3e50; max-width: 850px; margin: 0 auto; padding: 25px; background-color: #fdfbf7; }
         h1 { color: #8b4513; border-bottom: 2px solid #d4af37; padding-bottom: 12px; font-size: 2.2em; text-align: center; }
