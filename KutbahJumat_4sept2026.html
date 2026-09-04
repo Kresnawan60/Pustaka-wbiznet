@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghidupkan Hati yang Lalai: Naskah Khutbah Jumat - Pustaka Wbiznet</title>
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --accent-color: #d4a373;
+            --bg-color: #fcfbf9;
+            --text-color: #2b2b2b;
+            --card-bg: #ffffff;
+            --border-color: #e9ecef;
+            --dark-grey: #212529;
+            --nav-bg: #343a40;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        /* Top Navigation Bar (Abu Gelap) */
+        .top-navbar {
+            background-color: var(--nav-bg);
+            color: #ffffff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .top-navbar .brand {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .top-navbar nav a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: sans-serif;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        .top-navbar nav a:hover {
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            border-top: 6px solid var(--primary-color);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 25px;
+            margin-bottom: 35px;
+        }
+        .site-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-family: sans-serif;
+        }
+        h1 {
+            font-size: 28px;
+            color: #111;
+            margin: 15px 0 10px 0;
+        }
+        .meta {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            font-family: sans-serif;
+        }
+        .arabic {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 22px;
+            direction: rtl;
+            text-align: right;
+            background: #f8f9fa;
+            padding: 18px 20px;
+            border-right: 4px solid var(--primary-color);
+            margin: 25px 0;
+            line-height: 2.2;
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 35px;
+        }
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        .highlight-box {
+            background: #fefae0;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .btn-action-container {
+            text-align: center;
+            margin-top: 35px;
+        }
+        .btn-action {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .btn-action:hover {
+            background: #143224;
+        }
+
+        /* Dark Footer (Abu Gelap di Bawah) */
+        footer {
+            background-color: var(--dark-grey);
+            color: #ced4da;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-family: sans-serif;
+        }
+        footer .portfolio-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        footer .portfolio-desc {
+            font-size: 13px;
+            color: #adb5bd;
+            margin-bottom: 15px;
+        }
+        footer .author-info {
+            font-size: 14px;
+            color: #e9ecef;
+            margin-bottom: 20px;
+        }
+        footer .links-row {
+            margin-bottom: 25px;
+        }
+        footer .links-row a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        footer .links-row a:hover {
+            text-decoration: underline;
+            color: var(--accent-color);
+        }
+        footer .copyright {
+            font-size: 12px;
+            color: #6c757d;
+            border-top: 1px solid #495057;
+            padding-top: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media print {
+            .top-navbar, .btn-action-container, footer { display: none; }
+            body { background: white; }
+            .container { box-shadow: none; border: none; padding: 0; margin: 0; max-width: 100%; }
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; margin: 10px; }
+            .top-navbar { padding: 12px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar (Abu Gelap) -->
+    <header class="top-navbar">
+        <a href="#" class="brand">Pustaka Wbiznet</a>
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Koleksi</a>
+            <a href="#">TikTok</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <header style="border-bottom: 2px solid var(--border-color); padding-bottom: 25px; margin-bottom: 35px; text-align: center;">
+            <div class="site-title">Kutipan Pustaka &amp; Artikel Islami</div>
+            <h1>Menghidupkan Hati yang Lalai: Refleksi Nasihat Imam Hasan Al-Basri</h1>
+            <div class="meta">Oleh: Wawansasmita | Dipublikasikan 04-09-2026 di Pustaka Wbiznet</div>
+        </header>
+
+        <article>
+            <p>Berikut adalah khutbah Jumat di Mesjid Nurul Qalam Jl. Abadi. Tanjung Rejo Medan Sunggal tanggal 4 sept 2026, yang mengupas tuntas tentang sebab-sebab hati menjadi mati, mengapa doa-doa tertahan di langit, serta pentingnya persiapan menyambut kematian berdasarkan kisah masyhur Al-Imam Hasan Al-Basri kepada para pemuda di Kota Basrah.</p>
+
+            <h2>Khutbah Pertama</h2>
+            
+            <div class="arabic">
+                أَلْحَمْدُ لِلَّهِ الَّذِي هَدَانَا لِهَذَا وَمَا كُنَّا لِنَهْتَدِيَ لَوْلَا أَنْ هَدَانَا اللَّهُ. أَشْهدُ أَنْ لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيْكَ لَهُ، وَأَشْهدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ...
+            </div>
+
+            <p><strong>Ma'asyaral muslimin, jamaah shalat Jumat Masjid Nurul Qalam yang dirahmati Allah subhanahu wa taala,</strong></p>
+            
+            <p>Mengawali khutbah yang singkat ini, marilah kita perbanyak rasa syukur kita kepada Allah subhanahu wa taala. Syukur atas nikmat kesehatan, syukur atas nikmat iman dan Islam, serta syukur atas segala pemberian Allah subhanahu wa taala. Terkhusus pada bulan Rabiul Awal—bulan kelahiran baginda Rasulullah shallallahu alaihi wasallam—yang mana kelahiran baginda Rasulullah Muhammad ke bumi ini merupakan nikmat terbesar bagi umat Islam dan alam semesta.</p>
+            
+            <p>Shalawat dan salam mari kita curahkan kepada junjungan kita Nabi Muhammad shallallahu alaihi wasallam, keluarga, para sahabat, serta umatnya hingga akhir zaman. Mudah-mudahan kita semua mendapatkan syafaat beliau di yaumul akhir kelak. Amin ya rabbal alamin.</p>
+
+            <p><strong>Hadirin jamaah shalat Jumat yang dimuliakan Allah,</strong></p>
+            <p>Suatu hari, Al-Imam Hasan Al-Basri—seorang ulama kharismatik asal Basrah—berjalan-jalan di pusat kota. Di tengah perjalanan, beliau dicegat oleh tiga orang pemuda yang bertanya dengan penuh kegundahan: <em>"Wahai Aba Ishaq, kami telah mendengar firman Allah: Ud’uni astajib lakum (Berdoalah kepada-Ku, niscaya akan Kuperkenankan bagimu). Namun wahai Imam, sudah lama kami berdoa—pagi, siang, malam—tapi mengapa sampai detik ini doa-doa kami belum diijabah oleh Allah?"</em></p>
+
+            <p>Sambil tersenyum, Imam Hasan Al-Basri menjawab bahwa penyebab utama doa-doa tertahan dan tidak dikabulkan adalah karena <strong>hati yang telah mati</strong>. Hati yang mati tidak lagi mampu mengguncangkan Arasy-nya Allah.</p>
+
+            <p>Beliau kemudian merincikan empat sebab utama mengapa hati manusia menjadi mati:</p>
+
+            <ul>
+                <li><strong>1. Mengenal Allah, namun Mengabaikan Hak-Hak-Nya:</strong> Kita tahu dan mudah menjawab bahwa Allah adalah Pencipta alam semesta, langit, dan bumi. Namun, sudahkah hak-hak Allah untuk disembah dan ditaati—seperti shalat lima waktu dan kewajiban lainnya—kita tunaikan secara maksimal? Ataukah kita mengerjakannya hanya sekadar "menunggu tua" atau "tergantung kebutuhan"?</li>
+                <li><strong>2. Membaca Al-Qur'an, namun Mengabaikan Isinya:</strong> Kita mungkin sudah bolak-balik khatam Al-Qur'an, bahkan anak cucu kita hafal 30 juz. Namun, sudahkah pesan dan kandungan Al-Qur'an kita amalkan dalam keseharian? Ataukah lisannya membaca ayat-ayat cinta dari Allah, tetapi perilakunya masih berbohong, curang, angkuh, dan jauh dari nilai-nilai Al-Qur'an?</li>
+                <li><strong>3. Menikmati Limpahan Rezeki Allah, namun Sedikit Bersyukur:</strong> Tiap hari kita makan nikmat dari Allah—bahkan untuk menciptakan sebutir beras atau nasi yang kita konsumsi, tidak ada teknologi manusia yang mampu membuatnya. Namun, berapa sering lisan kita lupa mengucapkan <em>alhamdulillah</em>, dan berapa sering nikmat itu justru digunakan untuk maksiat kepada-Nya?</li>
+                <li><strong>4. Mengetahui Pasti tentang Kematian, namun Lalai Mempersiapkannya:</strong> Kematian adalah hal yang pasti bagi setiap yang bernyawa—tua atau muda, kaya atau miskin. Kematian hakikatnya bukanlah akhir, melainkan perpindahan alam: dari rahim ibu, ke dunia, menuju alam barzah, yaumul ba'ats, padang mahsyar, hingga akhirnya tiba di dua terminal akhir: surga atau neraka. Namun, mengapa kita begitu sedikit meluangkan waktu untuk mempersiapkan bekal terbaik menuju kematian? Allah berfirman: <em>Watazawwadu fainna khairazzadit taqwa</em> (Berbekallah, dan sesungguhnya sebaik-baik bekal adalah takwa).</li>
+            </ul>
+
+            <div class="highlight-box">
+                "Di dalam tubuh manusia ada segumpal daging. Jika ia baik, baiklah seluruh jasad. Jika ia rusak, rusaklah seluruh jasad. Ketahuilah ia adalah hati (al-qalb)." &mdash; HR. Bukhari & Muslim
+            </div>
+
+            <p>Mari kita hidupkan hati kita untuk terus mengingat-Nya. Hidupkan hati kita untuk terus beriman kepada-Nya, melaksanakan segala perintah-Nya, mengamalkan ajaran-Nya, dan mempersiapkan bekal terbaik menuju kematian.</p>
+
+            <h2>Khutbah Kedua</h2>
+            <p><strong>Ma'asyaral muslimin, jamaah shalat Jumat rahimakumullah,</strong></p>
+            <p>Mari di penghujung khutbah ini kita tundukkan hati, memohon kepada Allah subhanahu wa taala agar senantiasa membimbing langkah kita, mengampuni dosa-dosa kedua orang tua, keluarga, serta kaum muslimin sekalian.</p>
+            <p>Ya Allah, hidupkanlah hati kami dengan cahaya iman-Mu, jauhkan kami dari sifat lalai, dan bimbinglah kami agar senantiasa taat beribadah, mencintai Al-Qur'an, pandai bersyukur atas nikmat-Mu, serta senantiasa siap siaga membawa bekal amal saleh menghadap-Mu. <em>Rabbana atina fid-dunya hasanah, wa fil-akhirati hasanah, wa qina 'adzaban-nar.</em></p>
+
+            <div class="btn-action-container">
+                <button class="btn-action" onclick="window.print()">Cetak / Simpan Artikel (PDF)</button>
+            </div>
+        </article>
+    </div>
+
+    <!-- Dark Footer (Footer bawah warna abu gelap) -->
+    <footer>
+        <div class="portfolio-title">PUSTAKA WBIZNET PORTFOLIO</div>
+        <div class="portfolio-desc">Kumpulan Artikel Pustaka, Biografi Tokoh, &amp; Konten Visual Narasi AI</div>
+        <div class="author-info">
+            karya Kresnawan Sasmita Putra<br>
+            <em>(Wawansasmita)</em>
+        </div>
+        <div class="links-row">
+            <a href="#">📚 Lihat Semua Koleksi</a>
+            <a href="#">🎵 TikTok Wbiznetchannel</a>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra
+        </div>
+    </footer>
+
+</body>
+</html>
