@@ -16,25 +16,26 @@
             background-color: #f4f6f9;
             color: #333;
             line-height: 1.6;
+            padding: 20px 0;
         }
 
         /* Konten Utama */
         .main-container {
             max-width: 850px;
-            margin: 30px auto;
+            margin: 0 auto;
             padding: 30px;
             background: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         
-        /* Styling untuk Logo Penerbit di dalam Konten */
+        /* Styling untuk Logo di Atas */
         .publisher {
             text-align: center;
             margin-bottom: 15px;
         }
         .publisher img {
-            width: 80px; /* Ukuran logo diperkecil agar pas */
+            width: 80px; /* Ukuran logo diatur di sini */
             height: auto;
             display: inline-block;
         }
@@ -80,12 +81,14 @@
 
         /* Banner Bawah / Footer */
         footer {
+            max-width: 850px;
+            margin: 30px auto 0 auto;
             background-color: #1a1a1a;
             color: #ffffff;
             text-align: center;
             padding: 15px 20px;
             font-size: 0.85rem;
-            margin-top: 50px;
+            border-radius: 8px;
         }
         footer p {
             text-align: center;
@@ -95,15 +98,8 @@
 
         /* Responsif untuk HP / Tablet */
         @media(max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                gap: 15px;
-            }
             .main-container {
-                margin: 15px;
+                margin: 10px;
                 padding: 15px;
             }
         }
@@ -111,34 +107,18 @@
 </head>
 <body>
 
-    <!-- Header / Banner Atas Navigasi -->
-    <header style="background-color: #22252a; width: 100%; border-bottom: 1px solid #3a3f47; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <div class="nav-container" style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
-            
-            <a href="index.html" class="nav-logo" style="display: flex; align-items: center; text-decoration: none;">
-                <img src="icon_logo.png" width="38" style="display: block; object-fit: contain;" alt="Logo Pustaka Wbiznet">
-            </a>
-            
-            <ul class="nav-links" style="list-style: none; display: flex; align-items: center; gap: 25px; margin: 0; padding: 0;">
-                <li><a href="index.html#artikel" style="text-decoration: none; color: #d1d5db; font-weight: 500; font-size: 0.95rem;">Artikel</a></li>
-                <li><a href="index.html#katalog" style="text-decoration: none; color: #d1d5db; font-weight: 500; font-size: 0.95rem;">Koleksi</a></li>
-                <li><a href="index.html#biografi" style="text-decoration: none; color: #d1d5db; font-weight: 500; font-size: 0.95rem;">Biografi</a></li>
-            </ul>
-
-        </div>
-    </header>
-
-    <!-- Konten Utama (Logo dan Judul Disatukan di Sini) -->
+    <!-- Konten Utama (Tanpa Banner Navigasi Atas) -->
     <div class="main-container">
         
-        <!-- Logo Kecil di Atas Judul -->
+        <!-- Logo Pustaka di Atas Judul -->
         <div class="publisher">
             <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
         </div>
 
-        <!-- Judul Berada Tepat di Bawah Logo -->
+        <!-- Judul Artikel / Biografi -->
         <h1>Biografi Cleopatra VII: Ratu Terakhir Mesir Kuno</h1>
 
+        <!-- Video TikTok (VT) -->
         <div class="tiktok-container">
             <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wbiznetchannel/video/7550359047283789112" data-video-id="7550359047283789112" style="max-width: 605px; min-width: 325px;" > <section> </section> </blockquote> 
             <script async src="https://www.tiktok.com/embed.js"></script>
