@@ -27,9 +27,21 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
+        
+        /* Styling untuk Logo Penerbit di dalam Konten */
+        .publisher {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .publisher img {
+            width: 80px; /* Ukuran logo diperkecil agar pas */
+            height: auto;
+            display: inline-block;
+        }
+
         h1 {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             color: #1a1a1a;
             text-align: center;
         }
@@ -99,20 +111,32 @@
 </head>
 <body>
 
-    
-<body>
+    <!-- Header / Banner Atas Navigasi -->
+    <header style="background-color: #22252a; width: 100%; border-bottom: 1px solid #3a3f47; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <div class="nav-container" style="max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 12px 20px;">
+            
+            <a href="index.html" class="nav-logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="icon_logo.png" width="38" style="display: block; object-fit: contain;" alt="Logo Pustaka Wbiznet">
+            </a>
+            
+            <ul class="nav-links" style="list-style: none; display: flex; align-items: center; gap: 25px; margin: 0; padding: 0;">
+                <li><a href="index.html#artikel" style="text-decoration: none; color: #d1d5db; font-weight: 500; font-size: 0.95rem;">Artikel</a></li>
+                <li><a href="index.html#katalog" style="text-decoration: none; color: #d1d5db; font-weight: 500; font-size: 0.95rem;">Koleksi</a></li>
+                <li><a href="index.html#biografi" style="text-decoration: none; color: #d1d5db; font-weight: 500; font-size: 0.95rem;">Biografi</a></li>
+            </ul>
 
-<main class="book">
-  <header class="publisher">
-    <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" width="200">
-  </header>
-</main>
+        </div>
+    </header>
 
-
-
-  
-
+    <!-- Konten Utama (Logo dan Judul Disatukan di Sini) -->
     <div class="main-container">
+        
+        <!-- Logo Kecil di Atas Judul -->
+        <div class="publisher">
+            <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
+        </div>
+
+        <!-- Judul Berada Tepat di Bawah Logo -->
         <h1>Biografi Cleopatra VII: Ratu Terakhir Mesir Kuno</h1>
 
         <div class="tiktok-container">
