@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jejak Sang Pionir: Evolusi dan Warisan Homo erectus di Nusantara - Pustaka Wbiznet</title>
+    <style>
+        :root {
+            --primary-color: #3182ce;
+            --text-color: #2d3748;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-container {
+            max-width: 850px;
+            margin: 30px auto;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Header & Navigasi */
+        .publisher {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .publisher img {
+            max-height: 45px;
+            width: auto;
+            display: block;
+        }
+
+        .quick-nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .quick-nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .quick-nav a:hover {
+            color: #2b6cb0;
+            text-decoration: underline;
+        }
+
+        /* Konten Artikel */
+        h1 {
+            font-size: 28px;
+            color: #1a202c;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #2b6cb0;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: #4a5568;
+            text-align: justify;
+        }
+
+        ul {
+            margin-bottom: 16px;
+            padding-left: 20px;
+            color: #4a5568;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        /* Tabel Perbandingan */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+            background-color: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        /* Video Embed Responsive */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Rasio 16:9 */
+            height: 0;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Kotak Referensi & Daftar Pustaka */
+        .references-box {
+            margin: 35px 0 25px 0;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-left: 4px solid #3182ce;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #4a5568;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .references-box strong {
+            color: #2d3748;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .references-box ul {
+            margin: 0;
+            padding-left: 18px;
+            line-height: 1.6;
+        }
+
+        .references-box li {
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+
+        /* Footer Portofolio */
+        .footer-portofolio {
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .footer-portofolio h3 {
+            color: #ebf8ff;
+            margin: 0 0 4px 0;
+            font-size: 15px;
+        }
+
+        .footer-portofolio p {
+            margin: 0 0 10px 0;
+            font-size: 12px;
+            color: #cbd5e0;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .footer-btn {
+            background-color: #3182ce;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 11px;
+            transition: opacity 0.2s;
+        }
+
+        .footer-btn.tiktok {
+            background-color: #e53e3e;
+        }
+
+        .footer-btn:hover {
+            opacity: 0.9;
+        }
+
+        .footer-copyright {
+            font-size: 10px;
+            color: #a0aec0;
+            border-top: 1px solid #4a5568;
+            padding-top: 6px;
+        }
+
+        @media (max-width: 600px) {
+            .main-container {
+                margin: 10px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <!-- Logo Pustaka Wbiznet (Jika diklik kembali ke index.html) -->
+        <div class="publisher">
+            <a href="index.html">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
+            </a>
+            
+            <!-- Menu Navigasi Internal Sesuai Permintaan -->
+            <div class="quick-nav">
+                <a href="index.html#biografi">Biografi</a>
+                <a href="index.html#artikel">Artikel</a>
+                <a href="index.html#katalog">Koleksi</a>
+            </div>
+        </div>
+
+        <!-- Judul Artikel -->
+        <h1>Jejak Sang Pionir: Evolusi dan Warisan Homo erectus di Nusantara</h1>
+
+        <!-- Embed Video YouTube dibawah judul -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/IRKrA5-DVWY" title="Jejak Sang Pionir: Evolusi dan Warisan Homo erectus di Nusantara" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- ISI ARTIKEL LENGKAP -->
+        
+        <h2>1. Pembukaan: Mengapa Indonesia Adalah Kunci Evolusi Manusia?</h2>
+        <p>Pernahkah Anda membayangkan bahwa jutaan tahun lalu, kepulauan Nusantara merupakan panggung utama bagi drama terbesar dalam sejarah umat manusia? Indonesia bukan sekadar destinasi wisata, melainkan sebuah "laboratorium" alam yang menyimpan rahasia bagaimana leluhur kita belajar beradaptasi dan bertahan hidup. Aktor utamanya adalah <em>Homo erectus</em>. Mereka merupakan spesies manusia purba pertama yang memiliki keberanian luar biasa untuk berkelana jauh meninggalkan tanah kelahiran mereka di Afrika dalam sebuah gelombang evolusi dan migrasi besar. Mengapa mereka bisa sampai ke Jawa? Rahasianya terletak pada Paparan Sunda (Sunda Shelf). Pada masa itu, permukaan air laut menurun drastis, menyatukan daratan Asia Tenggara menjadi satu benua luas. Jalur darat inilah yang memungkinkan para pionir ini berjalan kaki melintasi ribuan kilometer hingga menapakkan kaki di tanah Jawa. Mari kita duduk sejenak dan berbincang santai mengenai sejarah nenek moyang kita ini—para penjelajah tangguh yang jejaknya terkubur di bawah tanah yang kita pijak sekarang.</p>
+
+        <h2>2. Penemuan 'Manusia Jawa': Ambisi Eugene Dubois di Trinil</h2>
+        <p>Pada akhir abad ke-19, dunia ilmu pengetahuan sedang dilanda demam teori evolusi. Namun, ada satu potongan teka-teki yang dianggap hilang: bukti fisik transisi dari kera ke manusia atau yang populer disebut sebagai <em>missing link</em>. Pertanyaan ini memicu obsesi seorang dokter tentara Belanda bernama Eugene Dubois. Ia yakin bahwa bukti tersebut berada di wilayah tropis Asia yang hangat. Pencariannya membuahkan hasil fenomenal di tepian sungai Bengawan Solo, tepatnya di Trinil, Jawa Timur, antara tahun 1891 - 1892. Di sana, ia menemukan sebuah atap tengkorak yang sangat primitif namun memiliki volume otak yang besar, serta sebuah tulang paha yang menunjukkan bahwa makhluk ini sudah berjalan tegak sepenuhnya. Temuan ini ia beri nama <em>Pithecanthropus erectus</em> (Manusia Kera yang Berdiri Tegak).</p>
+        <p>Namun, penemuan ini sempat mengguncang dan memicu kontroversi hebat di dunia sains karena beberapa alasan:</p>
+        <ul>
+            <li><strong>Perdebatan Anatomi:</strong> Dubois menemukan tulang paha tersebut sekitar 15 meter jauhnya dari atap tengkorak. Banyak kolega sezamannya meragukan apakah kedua fosil itu berasal dari individu yang sama atau bahkan spesies yang sama.</li>
+            <li><strong>Bukti Evolusi Nyata:</strong> Menjadi bukti fisik pertama di dunia yang secara langsung mendukung teori Darwin tentang asal-usul manusia melalui temuan fosil nyata.</li>
+            <li><strong>Pergeseran Fokus Geografis:</strong> Temuan ini memaksa para ahli untuk mengalihkan pandangan mereka dari Eropa ke Asia dalam mencari akar sejarah manusia.</li>
+        </ul>
+
+        <h2>3. Sangiran: Perpustakaan Purba yang Diakui Dunia</h2>
+        <p>Bergeser ke Jawa Tengah, kita menemukan Situs Sangiran. Situs ini bukan sekadar lokasi penggalian biasa, melainkan sebuah warisan dunia UNESCO yang sangat istimewa. Secara geologis, Sangiran adalah sebuah Kubah Sangiran (<em>Geological Dome</em>) yang terangkat oleh kekuatan tektonik. Akibat proses erosi selama jutaan tahun, puncak kubah ini "terkelupas", menyingkapkan lapisan-lapisan tanah purba yang menyimpan fosil manusia, binatang, dan alat batu.</p>
+        <p>Ratusan ribu tahun yang lalu, Sangiran adalah lingkungan yang sangat dinamis—berubah dari lautan dangkal menjadi daratan subur berkat aktivitas vulkanik. Kondisi geologis unik inilah yang mengawetkan tulang-belulang para penghuninya dalam lapisan sedimen yang sempurna.</p>
+        <p><strong>Deskripsi Visual Lapisan Tanah Sangiran:</strong> Bayangkan sebuah tebing raksasa yang teriris secara alami, memperlihatkan gradasi warna yang bercerita tentang waktu. Di bagian dasar, Anda akan melihat Formasi Pucangan berwarna abu-abu gelap kehitaman, sisa-sisa dari lingkungan rawa purba yang kaya akan material organik. Di atasnya, bertumpuk Formasi Kabuh yang berwarna kuning kecokelatan, terdiri dari material pasir sungai dan abu vulkanik yang keras. Lapisan-lapisan ini berfungsi seperti halaman buku raksasa; semakin dalam kita menggali, semakin jauh kita melompat ke masa lalu, menemukan fosil yang terkunci dalam kepadatan waktu.</p>
+
+        <h2>4. Ngandong dan Babak Terakhir Sang Pionir</h2>
+        <p>Jika Sangiran mewakili fase Arkaik dan Tipikal, maka situs Ngandong di Blora adalah tempat di mana <em>Homo erectus</em> menunjukkan profil morfologi tertingginya. Fosil-fosil yang ditemukan di teras sungai Bengawan Solo ini menunjukkan karakteristik yang jauh lebih maju.</p>
+        <p>Dalam kacamata paleoantropologi, individu dari Ngandong ini disebut sebagai <em>Homo erectus Progresif</em>. Mereka memiliki <em>Supraorbital Torus</em> (tonjolan kening) yang masih sangat nyata, namun bagian belakang mata mereka tidak lagi mengalami <em>Post-orbital constriction</em> (penyempitan) sehebat pendahulu mereka di Sangiran. Ini menandakan perkembangan lobus frontal otak yang lebih besar.</p>
+        <p>Berdasarkan penanggalan (<em>dating</em>) terbaru, populasi di Ngandong diperkirakan hidup sekitar 117.000 hingga 108.000 tahun yang lalu. Ini menjadikan mereka sebagai populasi <em>Homo erectus</em> terakhir yang bertahan di bumi sebelum akhirnya punah.</p>
+        
+        <!-- Tabel Perbandingan -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Karakteristik</th>
+                    <th>Homo erectus Sangiran (Tipikal)</th>
+                    <th>Homo erectus Ngandong (Progresif)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Masa Hidup</strong></td>
+                    <td>Sekitar 1,5 juta - 700.000 tahun lalu</td>
+                    <td>Sekitar 117.000 - 108.000 tahun lalu</td>
+                </tr>
+                <tr>
+                    <td><strong>Kapasitas Otak</strong></td>
+                    <td>Sekitar 800 - 1.000 cc</td>
+                    <td>Sekitar 1.100 - 1.200 cc</td>
+                </tr>
+                <tr>
+                    <td><strong>Morfologi Tengkorak</strong></td>
+                    <td>Atap tengkorak rendah, tulang sangat tebal</td>
+                    <td>Lebih bulat, volume lebih besar, dinding lebih tipis</td>
+                </tr>
+                <tr>
+                    <td><strong>Alat Batu</strong></td>
+                    <td>Alat serpih (<em>flakes</em>) sederhana</td>
+                    <td>Alat batu lebih halus dan alat tulang (kapak perimbas)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. Warisan Ilmu Pengetahuan: Apa Maknanya Bagi Kita?</h2>
+        <p>Kehadiran <em>Homo erectus</em> di Nusantara memberikan kontribusi yang tak ternilai bagi sains global. Temuan di Indonesia mematahkan teori lama dan membangun pemahaman baru tentang migrasi manusia purba. Kita belajar bahwa manusia memiliki kemampuan adaptasi yang luar biasa terhadap lingkungan tropis yang fluktuatif.</p>
+        <p>Keberadaan mereka di atas Paparan Sunda membuktikan bahwa Indonesia sejak masa Pleistosen merupakan wilayah strategis dalam sejarah persebaran manusia. Mempelajari mereka membantu kita memahami bagaimana nenek moyang manusia mengembangkan teknologi dan bagaimana mereka bertahan menghadapi perubahan iklim ekstrem yang mengubah padang rumput menjadi hutan hujan yang rapat.</p>
+
+        <!-- Kotak Referensi / Daftar Pustaka untuk Keamanan & Kredibilitas Perpustakaan Pribadi -->
+        <div class="references-box">
+            <strong>📚 Sumber Referensi &amp; Literatur Terkait:</strong>
+            <ul>
+                <li><strong>Encyclopædia Britannica:</strong> Entri komprehensif mengenai sejarah penemuan <em>Java Man</em>, <em>Homo erectus</em>, dan situs purbakala Sangiran.</li>
+                <li><strong>Dubois, Eugène. (1894):</strong> Monograf ilmiah awal <em>Pithecanthropus erectus: Eine menschenähnliche Übergangsform aus Java</em> (Batavia).</li>
+                <li><strong>Rizal, Y., et al. (2020):</strong> Riset penanggalan modern <em>Last appearance of Homo erectus at Ngandong, Java, Indonesia</em> (Jurnal *Nature*, Vol. 577).</li>
+            </ul>
+        </div>
+
+        <!-- Footer Portofolio Pustaka Wbiznet -->
+        <div class="footer-portofolio">
+            <h3>Portofolio Pustaka Wbiznet</h3>
+            <p>
+                Kumpulan Artikel, Biografi Tokoh, &amp; Narasi AI karya <strong>Kresnawan Sasmita Putra (Wawansasmita)</strong>
+            </p>
+            <div class="footer-links">
+                <a href="index.html" class="footer-btn" target="_blank">📚 Lihat Semua Koleksi</a>
+                <a href="https://www.tiktok.com/@wbiznetchannel" class="footer-btn tiktok" target="_blank">🎵 TikTok Wbiznetchannel</a>
+            </div>
+            <div class="footer-copyright">
+                © 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
