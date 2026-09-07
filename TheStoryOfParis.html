@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+/* Pengaturan khusus agar nyaman dibaca di HP */
+@media (max-width: 768px) {
+    /* 1. Ubah paragraf jadi rata kiri agar tidak renggang-renggang */
+    p {
+        text-align: left !important;
+        font-size: 1rem; /* Ukuran font ideal untuk HP */
+        line-height: 1.6;
+    }
+
+    /* 2. Hilangkan efek bingkai bertumpuk dengan mengecilkan padding card di HP */
+    .card {
+        padding: 1.25rem !important; /* Membuat card lebih lega di layar kecil */
+        margin-bottom: 1.5rem;
+    }
+
+    /* 3. Pastikan container tidak memakan terlalu banyak ruang samping */
+    .container {
+        padding: 0 1rem !important;
+    }
+}
+
+
+
+
+
+
+
+
     <title>Ringkasan Buku: Paris - Biografi Sang Raksasa Muda | Pustaka Wbiznet</title>
     <meta name="description" content="Ringkasan eksekutif dan landing page buku saku Paris: Biografi Sang Raksasa Muda, adaptasi karya klasik Thomas Okey (1906) oleh Kresnawan Sasmita Putra.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
