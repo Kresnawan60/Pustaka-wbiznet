@@ -211,19 +211,22 @@
             .chapter-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        /* === PENGATURAN KHUSUS NYAMAN DIBACA DI HP (DI DALAM STYLE) === */
+        /* === PERBAIKAN UTAMA AGAR DI HP TIDAK SEMPIT / TIDAK BERTUMPUK === */
         @media (max-width: 768px) {
-            p {
-                text-align: left !important;
-                font-size: 1rem;
-                line-height: 1.6;
+            .container {
+                padding: 0 0.5rem !important; /* Memperlebar batas pinggir layar HP */
             }
             .card {
-                padding: 1.25rem !important;
+                padding: 1rem !important; /* Kotak luar lebih pas di HP */
                 margin-bottom: 1.5rem;
             }
-            .container {
-                padding: 0 1rem !important;
+            .chapter-card {
+                padding: 1rem !important; /* Kotak bab dalam tidak terlalu tebal paddingnya */
+            }
+            p {
+                text-align: left !important; /* Rata kiri agar tulisan tidak renggang-renggang */
+                font-size: 1rem;
+                line-height: 1.6;
             }
         }
     </style>
