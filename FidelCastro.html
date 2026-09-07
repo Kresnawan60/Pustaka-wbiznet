@@ -1,374 +1,296 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografi Fidel Castro - Pustaka Wbiznet</title>
-    <link rel="icon" href="icon_logo" type="image/x-icon">
-    <style>
-        :root {
-            --primary: #1b382b;
-            --accent: #c0392b;
-            --secondary: #2c3e50;
-            --bg: #f4f6f7;
-            --card-bg: #ffffff;
-            --text: #2c3e50;
-            --text-muted: #7f8c8d;
-            --border: #e2e8f0;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biografi Fidel Castro</title>
+  <meta name="description" content="Biografi Fidel Castro, pemimpin revolusi Kuba dan tokoh politik global. Pustaka Wbiznet.">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            padding: 20px;
-        }
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #2d3748;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 20px 15px;
+      background-color: #ffffff;
+    }
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            overflow: hidden;
-            border: 1px solid var(--border);
-        }
+    h2 {
+      color: #2d3748;
+      font-size: 21px;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      border-left: 4px solid #3182ce;
+      padding-left: 10px;
+    }
 
-        /* LOGO DI ATAS LATAR PUTIH */
-        .logo-header {
-            background-color: #ffffff;
-            padding: 20px 40px;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
+    h3 {
+      color: #2d3748;
+    }
 
-        .logo-container img {
-            max-width: 180px;
-            height: auto;
-        }
+    p {
+      font-size: 0.975rem; /* Standar ukuran seragam Pustaka Wbiznet (~15.6px) */
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
 
-        /* HEADER JUDUL WARNA HIJAU */
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 30px 40px;
-            text-align: center;
-            border-bottom: 4px solid var(--accent);
-        }
+    ul {
+      padding-left: 22px;
+    }
 
-        header h1 {
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
+    li {
+      margin-bottom: 8px;
+    }
 
-        header .subtitle {
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            font-style: italic;
-        }
+    .meta {
+      text-align: center;
+      color: #718096;
+      font-size: 13px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+    }
 
-        .credits {
-            background-color: #0f2319;
-            color: #d1d5db;
-            padding: 12px 20px;
-            font-size: 0.88rem;
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-        }
+    .video-container {
+      text-align: center;
+      margin: 20px 0 30px 0;
+      padding: 10px;
+      background-color: #f7fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      overflow: hidden;
+    }
 
-        .credits a {
-            color: #6ee7b7;
-            text-decoration: none;
-        }
+    .document-box {
+      background-color: #f7fafc;
+      border: 1px solid #cbd5e0;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
 
-        .content {
-            padding: 40px;
-        }
+    .document-box h3 {
+      margin-top: 0;
+      font-size: 17px;
+    }
 
-        /* PEMUTAR VIDEO LAYAR PENUH (FULL WIDTH) */
-        .video-embed-container {
-            position: relative;
-            width: 100%;
-            height: 0;
-            padding-bottom: 177.78%; 
-            max-height: 85vh;
-            overflow: hidden;
-            border-radius: 12px;
-            background-color: #000;
-            margin-bottom: 30px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-        }
+    .document-box a {
+      color: #3182ce;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-        @media (min-width: 768px) {
-            .video-embed-container {
-                padding-bottom: 100%; 
-            }
-        }
+    .document-box a:hover {
+      text-decoration: underline;
+    }
 
-        .video-embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+    /* Footer Portofolio Pustaka Wbiznet */
+    .wbiznet-footer {
+      background-color: #2d3748;
+      color: #ffffff;
+      padding: 12px 15px;
+      border-radius: 6px;
+      text-align: center;
+      margin-top: 25px;
+    }
 
-        .section-title {
-            font-size: 1.4rem;
-            color: var(--primary);
-            border-left: 5px solid var(--accent);
-            padding-left: 12px;
-            margin: 35px 0 20px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .wbiznet-footer h3 {
+      color: #ebf8ff;
+      margin: 0 0 4px 0;
+      font-size: 15px;
+    }
 
-        .quote-box {
-            background-color: #fdf2e9;
-            border-left: 4px solid #e67e22;
-            padding: 20px 25px;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-        }
+    .wbiznet-footer p {
+      margin: 0 0 10px 0;
+      font-size: 12px;
+      color: #cbd5e0;
+      line-height: 1.3;
+    }
 
-        .quote-box .quote-text {
-            font-size: 1.1rem;
-            color: #d35400;
-            margin-bottom: 8px;
-        }
+    .wbiznet-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
 
-        .quote-box .quote-author {
-            font-weight: bold;
-            font-style: normal;
-            text-align: right;
-            color: #e67e22;
-            font-size: 0.95rem;
-        }
+    .wbiznet-buttons a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 11px;
+    }
 
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
+    .btn-koleksi {
+      background-color: #3182ce;
+    }
 
-        .info-table th, .info-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
+    .btn-tiktok {
+      background-color: #e53e3e;
+    }
 
-        .info-table th {
-            background-color: #f8fafc;
-            color: var(--primary);
-            width: 30%;
-            font-weight: 600;
-        }
+    .copyright {
+      font-size: 10px;
+      color: #a0aec0;
+      border-top: 1px solid #4a5568;
+      padding-top: 6px;
+    }
 
-        .info-table td {
-            color: #334155;
-        }
+    @media (max-width: 600px) {
+      body {
+        padding: 15px 12px;
+      }
 
-        ul, ol {
-            padding-left: 25px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        p {
-            margin-bottom: 18px;
-            text-align: justify;
-        }
-
-        .footer {
-            background-color: #1e293b;
-            color: white;
-            padding: 35px 40px;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .footer-portfolio {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #334155;
-        }
-
-        .footer-portfolio img {
-            max-width: 140px;
-            margin-bottom: 12px;
-        }
-
-        .footer-portfolio h4 {
-            font-size: 1.1rem;
-            margin-bottom: 6px;
-            color: #f8fafc;
-        }
-
-        .footer-portfolio p {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
-
-        .footer-links {
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .footer-links a {
-            display: inline-block;
-            color: white;
-            background-color: #334155;
-            padding: 8px 16px;
-            border-radius: 20px;
-            text-decoration: none;
-            margin: 0 5px;
-            font-size: 0.85rem;
-            transition: background-color 0.3s;
-        }
-
-        .footer-links a:hover {
-            background-color: var(--accent);
-        }
-
-        .copyright {
-            color: #64748b;
-            font-size: 0.8rem;
-            margin-top: 15px;
-        }
-    </style>
+      h2 {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
-<body>
 
-<div class="container">
-    <!-- Bagian Logo Latar Belakang Putih -->
-    <div class="logo-header">
-        <div class="logo-container">
-            <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
-        </div>
-    </div>
+<body id="top">
 
-    <!-- Header Judul Fidel Castro -->
-    <header>
-        <h1>Fidel Castro</h1>
-        <div class="subtitle">Simbol Revolusi Komunis & Pemimpin Legendaris Kuba</div>
-    </header>
-
-    <div class="credits">
-        Karya & Narasi AI oleh: <strong>Wawansasmita | Pustaka Wbiznet</strong><br>
-        Sumber Pustaka & Rujukan: 
-        <a href="https://biographyonline.net" target="_blank">biographyonline.net</a> | 
-        <a href="https://www.britannica.com/biography/Fidel-Castro" target="_blank">Britannica - Fidel Castro</a> | 
-        <a href="https://id.wikipedia.org/wiki/Fidel_Castro" target="_blank">Wikipedia - Fidel Castro</a>
-    </div>
-
-    <div class="content">
-        <!-- Pemutar Video Layar Penuh (Full Width) -->
-        <div class="video-embed-container">
-            <iframe src="https://www.tiktok.com/embed/v2/7549410220527586616?autoplay=1&loop=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <!-- Navigasi & Logo Atas -->
+    <div class="top-nav" style="text-align: center; margin-bottom: 25px; border-bottom: 2px solid #3182ce; padding-bottom: 15px;">
+        <div class="container">
+            <a href="index.html">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto;">
+            </a>
+            <div>
+                <a href="index.html#biografi" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Biografi</a>
+                <a href="index.html#artikel" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Artikel</a>
+                <a href="index.html#katalog" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Koleksi</a>
+            </div>
         </div>
 
-        <h2 class="section-title">Ringkasan Narasi Video</h2>
-        <p>Video edukasi ini mengulas perjalanan hidup Fidel Castro, sosok kontroversial sekaligus bersejarah yang mengubah Kuba menjadi negara komunis pertama di Belahan Barat. Mengisahkan dari masa mudanya sebagai mahasiswa hukum dan atlet berprestasi, aksi pendaratan kapal Granma dan perang gerilya di Sierra Maestra, hingga keberhasilannya menggulingkan kediktatoran Fulgencio Batista pada tahun 1959. Narasi juga menyoroti bagaimana Castro bertahan dari ribuan tekanan luar negeri, Krisis Rudal Kuba 1962, serta legacy reformasi pendidikan dan kesehatannya di Kuba.</p>
+        <h1 style="color: #1a202c; margin: 15px 0 5px 0; font-size: 26px;">
+          Biografi Fidel Castro
+        </h1>
 
-        <div class="quote-box">
-            <div class="quote-text">"Saya tidak mengucapkan selamat tinggal kepada Anda. Satu-satunya keinginan saya adalah bertarung sebagai seorang prajurit ide."</div>
-            <div class="quote-author">— Fidel Castro</div>
-        </div>
-
-        <h2 class="section-title">Ulasan Lengkap & Rekam Jejak Sejarah</h2>
-
-        <h3 style="margin-bottom: 12px; color: var(--secondary);">Informasi Pribadi</h3>
-        <table class="info-table">
-            <tr>
-                <th>Nama Lengkap</th>
-                <td>Fidel Alejandro Castro Ruz</td>
-            </tr>
-            <tr>
-                <th>Lahir</th>
-                <td>13 Agustus 1926 (Birán, Kuba)</td>
-            </tr>
-            <tr>
-                <th>Wafat</th>
-                <td>25 November 2016 (Havana, Kuba — usia 90 tahun)</td>
-            </tr>
-            <tr>
-                <th>Partai Politik</th>
-                <td>Partai Komunis Kuba (PCC) / Gerakan 26 Juli</td>
-            </tr>
-            <tr>
-                <th>Julukan</th>
-                <td>El Comandante (Sang Komandan) / El Caballo</td>
-            </tr>
-        </table>
-
-        <h3 style="margin-bottom: 12px; color: var(--secondary);">Masa Muda dan Pendidikan</h3>
-        <p><strong>Latar Belakang Keluarga:</strong> Fidel lahir di wilayah Kuba tenggara. Ayahnya, Ángel Castro y Argiz, merupakan imigran Spanyol yang sukses menjadi petani tebu makmur. Ibunya adalah Lina Ruz González. Fidel tumbuh bersama saudara-saudaranya, termasuk Raúl Castro yang kelak menjadi rekan perjuangan terdekatnya.</p>
-        <p><strong>Pendidikan Tinggi:</strong> Menempuh pendidikan di sekolah Katolik Belén di Havana dan menonjol sebagai atlet berprestasi di bidang atletik, bisbol, dan basket. Pada tahun 1945, ia masuk Sekolah Hukum Universitas Havana dan aktif dalam gerakan politik mahasiswa.</p>
-        <p><strong>Karier Awal:</strong> Setelah lulus pada tahun 1950, Castro berpraktik sebagai pengacara dan bergabung dengan Partai Rakyat Kuba (Ortodoksos) untuk memperjuangkan keadilan sosial serta menolak korupsi pemerintah.</p>
-
-        <h3 style="margin-bottom: 12px; color: var(--secondary);">Karier Politik & Perjuangan Revolusi</h3>
-        <p><strong>Masuk Parlemen & Aksi Revolusi:</strong> Pada tahun 1952, Castro mencalonkan diri sebagai anggota Dewan Perwakilan Rakyat. Namun, kudeta militer yang dipimpin Jenderal Fulgencio Batista membatalkan pemilu. Kegagalan jalur hukum mendorong Castro memimpin serangan ke Barak Moncada pada 26 Juli 1953. Walau gagal dan dipenjara, dibebaskannya Castro pada 1955 memicu pembentukan <em>Gerakan 26 Juli</em> di Meksiko.</p>
-        <p><strong>Perang Gerilya & Penggulingan Batista:</strong> Menggunakan kapal pesiar Granma pada akhir 1956, Castro bersama Che Guevara dan Raúl Castro mendarat di Kuba dan mengobarkan perang gerilya di Sierra Maestra. Pada 1 Januari 1959, pasukan gerilya berhasil menggulingkan kediktatoran Batista.</p>
-        <p><strong>Perdana Menteri & Presiden:</strong> Castro resmi menjadi Perdana Menteri Kuba pada Februari 1959. Ia memegang kendali pemerintahan hingga tahun 1976 ketika ia menjabat sebagai Presiden Dewan Negara dan Dewan Menteri Kuba hingga pengunduran dirinya.</p>
-
-        <h2 class="section-title">Kebijakan Utama & Peristiwa Terkenal</h2>
-        <ul>
-            <li><strong>Nasionalisasi Aset & Reformasi Agraria:</strong> Mengambil alih perkebunan dan bisnis Amerika Serikat di Kuba serta membagikan tanah kepada petani.</li>
-            <li><strong>Insiden Teluk Babi (1961):</strong> Keberhasilan pasukan Kuba dalam menggagalkan invasi milisi bentukan AS yang ingin menggulingkan Castro.</li>
-            <li><strong>Krisis Rudal Kuba (1962):</strong> Konfrontasi Perang Dingin terpanas antara AS dan Uni Soviet terkait penempatan rudal nuklir di Kuba, membawa dunia ke ambang perang nuklir.</li>
-            <li><strong>Layanan Sosial Gratis:</strong> Menyediakan sistem pendidikan dan perawatan kesehatan gratis yang komprehensif untuk seluruh rakyat Kuba serta memberantas buta huruf.</li>
-            <li><strong>Pengiriman Pasukan Internasional:</strong> Mendukung gerakan anti-kolonialisme dan sosialis di Afrika, khususnya dalam Perang Saudara Angola dan Perang Ogaden di Ethiopia.</li>
-        </ul>
-
-        <h2 class="section-title">Asal-Usul Julukan "El Comandante"</h2>
-        <p>Berbeda dengan Margaret Thatcher dari Inggris yang dijuluki <em>"Wanita Besi" (Iron Lady)</em>, Fidel Castro dikenal secara global dengan julukan <strong>"El Comandante" (Sang Komandan)</strong>. Julukan ini lahir dari kepemimpinan militernya saat memimpin pasukan gerilya di Pegunungan Sierra Maestra hingga kemenangan Revolusi Kuba 1959, serta perannya sebagai Komandan Tertinggi Angkatan Bersenjata Kuba selama bertahun-tahun.</p>
-
-        <h2 class="section-title">Akhir Kekuasaan dan Wafat</h2>
-        <p><strong>Pengunduran Diri:</strong> Akibat masalah kesehatan usus yang serius, Castro menyerahkan kekuasaan sementara kepada saudaranya, Raúl Castro, pada Juli 2006. Secara resmi ia mengundurkan diri dari jabatan Presiden pada Februari 2008 dan melepas jabatan Sekretaris Jenderal Partai Komunis Kuba pada 2011.</p>
-        <p><strong>Wafat:</strong> Fidel Castro meninggal dunia pada tanggal 25 November 2016 di Havana, Kuba, pada usia 90 tahun. Pemerintah Kuba menetapkan sembilan hari berkabung nasional untuk mengenang jasanya.</p>
-
-        <h2 class="section-title">Pelajaran Penting & Warisan (Legacy)</h2>
-        <ul>
-            <li><strong>Ketegasan Prinsip & Ketahanan Nasional:</strong> Menunjukkan ketangguhan kepemimpinan yang konsisten dalam mempertahankan kedaulatan ideologi Kuba di bawah ketegangan embargo AS selama lebih dari 5 dekade.</li>
-            <li><strong>Pionir Kebijakan Kesehatan & Pendidikan:</strong> Berhasil membangun salah satu sistem kesehatan publik dan tingkat melek huruf terbaik dan gratis di kawasan Latin Amerika.</li>
-            <li><strong>Simbol Anti-Imperialisme Global:</strong> Menjadi ikon perlawanan terhadap dominasi hegemonik barat dan pemberdayaan negara-negara berkembang (Gerakan Non-Blok).</li>
-        </ul>
+        <p style="color: #4a5568; margin: 0; font-size: 1rem;">
+          Pemimpin Revolusi Kuba dan Tokoh Politik Global
+        </p>
     </div>
 
-   
-   
-   <!-- Footer Portofolio Pustaka Wbiznet (Ringkas & Compact) -->
-  <div style="background-color: #2d3748; color: #ffffff; padding: 12px 15px; border-radius: 6px; text-align: center; margin-top: 25px;">
-    <h3 style="color: #ebf8ff; margin: 0 0 4px 0; font-size: 15px;">Portofolio Pustaka Wbiznet</h3>
-    <p style="margin: 0 0 10px 0; font-size: 12px; color: #cbd5e0; line-height: 1.3;">
-      Kumpulan Artikel, Biografi Tokoh, &amp; Narasi AI <br>karya <strong>Kresnawan Sasmita Putra </strong>
+  <!-- Informasi -->
+  <div class="meta">
+    Kategori: Tokoh &amp; Sejarah Dunia | Pustaka Arsip Digital
+  </div>
+
+  <!-- PENDAHULUAN -->
+  <section>
+    <h2>1. Pendahuluan</h2>
+
+    <p>
+      Fidel Alejandro Castro Ruz adalah seorang tokoh revolusioner dan politikus asal Kuba yang memimpin negaranya selama hampir lima dekade. Perjalanan hidupnya mengubah arah politik Kuba serta memberikan dampak besar pada konstelasi politik internasional, khususnya selama era Perang Dingin.
     </p>
-    <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px;">
-      <a href="index.html" target="_blank" style="background-color: #3182ce; color: #ffffff; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 11px;">📚 Lihat Semua Koleksi</a>
-      <a href="https://www.tiktok.com/@wbiznetchannel" target="_blank" style="background-color: #e53e3e; color: #ffffff; text-decoration: none; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 11px;">🎵 TikTok Wbiznetchannel</a>
+
+    <p>
+      Dikenal karena keteguhan ideologinya serta kemampuannya dalam berpidato di hadapan publik, Castro menjadi salah satu figur paling berpengaruh sekaligus kontroversial di panggung politik abad ke-20.
+    </p>
+  </section>
+
+  <!-- VIDEO -->
+  <section>
+    <h2>2. Video Profil &amp; Kajian Tokoh</h2>
+
+    <p>
+      Video berikut merupakan konten pendukung untuk mengenal rekam jejak perjuangan dan kepemimpinan Fidel Castro.
+    </p>
+
+    <div class="video-container">
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@wbiznetchannel/video/7549410220527586616"
+        data-video-id="7549410220527586616"
+        style="max-width: 605px; min-width: 325px; margin: 0 auto;"
+      >
+        <section>
+          <a
+            target="_blank"
+            href="https://www.tiktok.com/@wbiznetchannel/video/7549410220527586616"
+          >
+            @wbiznetchannel
+          </a>
+        </section>
+      </blockquote>
     </div>
-    <div style="font-size: 10px; color: #a0aec0; border-top: 1px solid #4a5568; padding-top: 6px;">
+
+    <script async src="https://www.tiktok.com/embed.js"></script>
+  </section>
+
+  <!-- REVOLUSI -->
+  <section>
+    <h2>3. Gerakan 26 Juli dan Revolusi Kuba</h2>
+
+    <p>
+      Perjuangan politik Castro bermula dari perlawanan terhadap rezim pemerintahan Fulgencio Batista yang didukung oleh Amerika Serikat. Bersama kelompok gerilyawannya dalam Gerakan 26 Juli, Castro melancarkan perlawanan dari Pegunungan Sierra Maestra.
+    </p>
+
+    <p>
+      Puncak dari perlawanan tersebut terjadi pada awal tahun 1959, ketika pasukan revolusioner berhasil menggulingkan pemerintahan Batista dan mengambil alih kendali atas Republik Kuba.
+    </p>
+  </section>
+
+  <!-- PERANG DINGIN -->
+  <section>
+    <h2>4. Era Perang Dingin dan Krisis Rudal Kuba</h2>
+
+    <p>
+      Di bawah kepemimpinan Fidel Castro, Kuba mendekatkan diri secara politik dan ekonomi kepada Uni Soviet. Kebijakan ini memicu ketegangan geopolitik yang mendalam dengan Amerika Serikat.
+    </p>
+
+    <p>
+      Salah satu puncak ketegangan global tersebut adalah Krisis Rudal Kuba pada tahun 1962, di mana dunia hampir berada di ambang perang nuklir sebelum akhirnya dicapai penyelesaian diplomatik antara Amerika Serikat dan Uni Soviet.
+    </p>
+  </section>
+
+  <!-- REFERENSI -->
+  <section>
+    <h2>5. Referensi &amp; Sumber Eksternal</h2>
+
+    <div class="document-box">
+      <h3>Sumber Rujukan &amp; Bacaan Lanjutan</h3>
+      <p>
+        Informasi dan rekam jejak sejarah mengenai Fidel Castro dihimpun dari berbagai sumber ensiklopedia dan arsip publik terpercaya:
+      </p>
+      <p>
+        <a
+          href="https://id.wikipedia.org/wiki/Fidel_Castro"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🌐 Baca Selengkapnya di Wikipedia (Fidel Castro)
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer Portofolio Pustaka Wbiznet -->
+  <div class="wbiznet-footer">
+    <h3>Portofolio Pustaka Wbiznet</h3>
+    <p>
+      Kumpulan Artikel, Biografi Tokoh, &amp; Narasi AI <br>
+      karya <strong>Kresnawan Sasmita Putra</strong>
+    </p>
+
+    <div class="wbiznet-buttons">
+      <a href="index.html" target="_blank" class="btn-koleksi">
+        📚 Lihat Semua Koleksi
+      </a>
+      <a href="https://www.tiktok.com/@wbiznetchannel" target="_blank" class="btn-tiktok">
+        🎵 TikTok Wbiznetchannel
+      </a>
+    </div>
+
+    <div class="copyright">
       © 2026 Pustaka Wbiznet — Dikembangkan oleh Kresnawan Sasmita Putra
     </div>
   </div>
-
-  
 
 </body>
 </html>
