@@ -44,7 +44,7 @@
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 1.25rem; /* Jarak aman kiri & kanan di HP */
         }
 
         .badge {
@@ -93,15 +93,16 @@
         }
 
         main {
-            padding: 3rem 0;
+            padding: 2.5rem 0;
         }
 
+        /* HANYA 1 BINGKAI LUAR UTAMA */
         .card {
             background: var(--card-bg);
             border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            margin-bottom: 2.5rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
             border: 1px solid var(--border-color);
         }
 
@@ -137,25 +138,22 @@
             color: #78350f;
         }
 
+        /* DAFTAR BAB TANPA BINGKAI DALAM (BERSIH & RAPI) */
         .chapter-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 2rem;
             margin-top: 2rem;
         }
 
-        .chapter-card {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: transform 0.2s, box-shadow 0.2s;
+        .chapter-item {
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--border-color);
         }
 
-        .chapter-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            border-color: var(--accent);
+        .chapter-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
         .chapter-num {
@@ -169,17 +167,17 @@
 
         .chapter-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--primary);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .landmark {
             background: #f1f5f9;
-            padding: 0.75rem 1rem;
+            padding: 0.6rem 0.9rem;
             border-radius: 6px;
             font-size: 0.9rem;
-            margin-top: 1rem;
+            margin-top: 0.75rem;
             color: #475569;
             border-left: 3px solid #64748b;
         }
@@ -208,20 +206,18 @@
 
         @media (min-width: 768px) {
             h1 { font-size: 3rem; }
-            .chapter-grid { grid-template-columns: repeat(2, 1fr); }
+            .chapter-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+            .chapter-item { border-bottom: none; padding-bottom: 0; background: #fafaf9; padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color); }
         }
 
-        /* === PERBAIKAN UTAMA AGAR DI HP TIDAK SEMPIT / TIDAK BERTUMPUK === */
+        /* PENGATURAN KHUSUS LAYAR HP (TIDAK TERLALU KE PINGGIR & TIDAK SEMPIT) */
         @media (max-width: 768px) {
             .container {
-                padding: 0 0.5rem !important; /* Memperlebar batas pinggir layar HP */
+                padding: 0 0.85rem !important; /* Ada jarak aman kiri-kanan, tidak menempel di tepi layar HP */
             }
             .card {
-                padding: 1rem !important; /* Kotak luar lebih pas di HP */
+                padding: 1.25rem !important; /* Bingkai luar pas, tidak terlalu besar paddingnya */
                 margin-bottom: 1.5rem;
-            }
-            .chapter-card {
-                padding: 1rem !important; /* Kotak bab dalam tidak terlalu tebal paddingnya */
             }
             p {
                 text-align: left !important; /* Rata kiri agar tulisan tidak renggang-renggang */
@@ -234,11 +230,11 @@
 <body id="top">
 
     <!-- Navigasi & Logo Atas -->
-    <div class="container" style="text-align: center; padding: 20px 0; background: #ffffff; border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="text-align: center; padding: 20px 0; background: #ffffff; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; border-radius: 12px;">
 
         <div class="publisher" style="text-align: center; margin-bottom: 15px; padding: 0 15px;">
             <a href="index.html">
-                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 400px; height: auto; display: block; margin: 0 auto;">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 350px; height: auto; display: block; margin: 0 auto;">
             </a>
         </div>
 
@@ -287,84 +283,84 @@
             
             <div class="chapter-grid">
                 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab I</div>
                     <div class="chapter-title">Lutetia dan Fondasi Ketangguhan Paris</div>
                     <p>Menelusuri awal mula Paris dari pulau kecil Île de la Cité hingga menjadi kota Romawi Lutetia yang makmur berkat guild pelaut (Nautae Parisiaci).</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Amfiteater Arènes de Lutèce & Thermae di Musée de Cluny.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab II</div>
                     <div class="chapter-title">Di Tengah Badai Barbarisme & Spiritual</div>
                     <p>Transisi pasca-Romawi, kepemimpinan heroik St. Genevieve menghadapi ancaman suku Hun, serta transformasi bangsa Viking (Rollo) menjadi pembangun peradaban.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Makam St. Genevieve di St. Étienne du Mont & Tour Clovis.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab III</div>
                     <div class="chapter-title">Lentera Intelektual & Mahakarya Gotik</div>
                     <p>Era keemasan Philip Augustus dan St. Louis (Louis IX), pembangunan Katedral Notre Dame, Sainte Chapelle, dan lahirnya Universitas Paris (Sorbonne).</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Katedral Notre Dame, Sainte-Chapelle, & Latin Quarter.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab IV</div>
                     <div class="chapter-title">Cengkeraman Badai: Invasi & Jeanne d'Arc</div>
                     <p>Perang Seratus Tahun, pergerakan sipil Étienne Marcel, Perang Saudara Armagnac vs Burgundian, hingga kepahlawanan Jeanne d'Arc membebaskan kota.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Hôtel de Ville (Balai Kota) & Patung Jeanne d'Arc di Rue de Rivoli.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab V</div>
                     <div class="chapter-title">Fajar Renaissance: Seni, Ambisi & Pembaruan</div>
                     <p>Pemerintahan Francis I, perpaduan arsitektur Gotik-Renaissance, transformasi Istana Louvre oleh Pierre Lescot, dan berdirinya Collège de France.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Sayap Lescot Louvre, Salle des Caryatides, & Fontaine des Innocents.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab VI</div>
                     <div class="chapter-title">Paris dalam Bara Fanatisme: Tragedi St. Bartholomew</div>
                     <p>Konflik agama berdarah, pernikahan politik Marguerite de Valois, hingga malam pembantaian massal kaum Huguenot pada Agustus 1572.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Gereja St. Germain l'Auxerrois dengan lonceng sejarahnya.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab VII</div>
                     <div class="chapter-title">Fajar Rekonsiliasi: Kejayaan Henry IV</div>
                     <p>Kepemimpinan pragmatis Henry IV ("Paris vaut bien une messe"), penetapan Edict of Nantes, menteri keuangan Sully, serta pembangunan Pont Neuf & Place des Vosges.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Pont Neuf, Place des Vosges, & Patung Berkuda Henry IV.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab VIII</div>
                     <div class="chapter-title">Hegemoni Richelieu & Lahirnya Absolutisme</div>
                     <p>Ketegasan Kardinal Richelieu menegakkan disiplin hukum di atas privilese bangsawan, pembangunan Palais Luxembourg, Palais Royal, dan Académie Française.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Istana Luxembourg (Senat Prancis) & Palais Royal.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab IX</div>
                     <div class="chapter-title">Kemegahan Versailles & Gelembung Spekulasi</div>
                     <p>Megalomania Louis XIV di Versailles, pencabutan Edict of Nantes, skema keuangan spekulatif John Law (Mississippi Bubble), dan dekadensi era Louis XV.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Lokasi Rue Quincampoix & Restorasi Notre Dame.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab X</div>
                     <div class="chapter-title">Runtuhnya Takhta Absolut: Tragedi Louis XVI</div>
                     <p>Krisis finansial, penyerbuan penjara Bastille (14 Juli 1789), pelarian ke Varennes, persidangan di Salle du Manége, hingga eksekusi guillotine Louis XVI.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Place de la Bastille & Pont de la Concorde.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab XI</div>
                     <div class="chapter-title">Di Bawah Panji Kekaisaran: Napoleon</div>
                     <p>Kebangkitan Napoleon Bonaparte, penobatan di Notre Dame, penjarahan seni Italia, serta proyek megah Kolom Vendôme dan Arc de Triomphe.</p>
                     <div class="landmark"><strong>Jejak Hari Ini:</strong> Arc de Triomphe, Kolom Vendôme, & Rue de Rivoli.</div>
                 </div>
 
-                <div class="chapter-card">
+                <div class="chapter-item">
                     <div class="chapter-num">Bab XII</div>
                     <div class="chapter-title">Paris Modern: Haussmannisasi & Republik Ketiga</div>
                     <p>Pembedahan tata kota brutal oleh Baron Haussmann, tragedi Komune Paris 1871, restorasi oleh Viollet-le-Duc, hingga berdirinya Opéra Garnier dan Sacré-Cœur.</p>
