@@ -189,55 +189,32 @@
             color: var(--primary);
         }
 
-        .cta-section {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            margin-top: 3rem;
-        }
-
-        .cta-section h2 {
-            color: #ffffff;
-            border-bottom: none;
-            margin-bottom: 1rem;
-        }
-
         .btn {
             display: inline-block;
-            background: #ffffff;
-            color: #92400e;
+            background: var(--accent);
+            color: #ffffff;
             padding: 0.85rem 2rem;
             border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             transition: background 0.2s, transform 0.2s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .btn:hover {
-            background: #fef3c7;
+            background: #b45309;
             transform: translateY(-2px);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 1.5rem;
+            padding: 2rem 1.5rem;
             color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
-            background: #ffffff;
-        }
-
-        footer a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            background: #1a1e24;
+            color: #ffffff;
         }
 
         @media (min-width: 768px) {
@@ -246,41 +223,23 @@
         }
     </style>
 </head>
-<body>
-    <div class="main-container">
+<body id="top">
 
-        <!-- Logo Pustaka Wbiznet (Jika diklik kembali ke index.html) -->
-        
-            </a>
-
-            <!-- Menu Navigasi Internal Sesuai Permintaan -->
-
-      </style>
-</head>
-<body>
-    <div class="main-container">
-
-        <div class="publisher" style="text-align: center; margin-bottom: 20px;">
+    <!-- Navigasi & Logo Atas -->
+    <div class="container" style="text-align: center; padding: 20px 0; background: #ffffff; border-bottom: 1px solid var(--border-color);">
+        <div class="publisher" style="margin-bottom: 15px;">
             <a href="index.html">
                 <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" width="130">
             </a>
         </div>
-
-        <div class="quick-nav" style="text-align: center;">
-            <p style="text-align: center; color: blue;"></p>
-            
-            <a href="index.html#biografi" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Biografi</a>
-            
-            <a href="index.html#artikel" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">Artikel</a>
-            
-            <a href="index.html#katalog" style="display: inline-block; padding: 10px 20px; margin: 5px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 5px;">Koleksi</a>
+        <div class="quick-nav">
+            <a href="index.html#biografi" style="display: inline-block; padding: 8px 16px; margin: 4px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Biografi</a>
+            <a href="index.html#artikel" style="display: inline-block; padding: 8px 16px; margin: 4px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Artikel</a>
+            <a href="index.html#katalog" style="display: inline-block; padding: 8px 16px; margin: 4px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Koleksi</a>
         </div>
-
     </div>
-</body>
 
-
-        </div>
+    <!-- Header Utama -->
     <header>
         <div class="container">
             <span class="badge">Pustaka Wbiznet • Ringkasan Eksekutif</span>
@@ -296,6 +255,7 @@
         </div>
     </header>
 
+    <!-- Konten Utama -->
     <main class="container">
         
         <!-- Sinopsis Eksekutif -->
@@ -311,7 +271,7 @@
         </section>
 
         <!-- Ringkasan 12 Bab -->
-        <section>
+        <section class="card">
             <h2>Daftar Bab & Jejak Sejarah</h2>
             <p>Berikut adalah ringkasan dari 12 bagian penting dalam buku saku ini beserta panduan jejak sejarahnya di masa kini:</p>
             
@@ -403,67 +363,46 @@
 
             </div>
         </section>
-<!-- FLIPBOOK -->
-<section class="flipbook">
-  <h2>Baca Buku</h2>
 
+        <!-- Flipbook Section -->
+        <section class="card">
+            <h2>Baca Buku</h2>
+            <iframe style="width:100%;height:420px" src="https://online.pubhtml5.com/fontf/lkpt/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+        </section>
 
-<iframe style='width:100%;height:420px' src='https://online.pubhtml5.com/fontf/lkpt/'  seamless='seamless' scrolling='no' frameborder='0' allowtransparency='true' allowfullscreen='true' ></iframe>
+        <!-- Ebook Lengkap Section -->
+        <section class="card" style="text-align: center;">
+            <p style="text-align: center; font-size: 1.1rem;">
+                <strong>Ingin membaca ebook lengkap?</strong>
+            </p>
+            <a href="http://lynk.id/wbiznet" target="_blank" rel="noopener" class="btn">
+                Download Ebook Lengkap
+            </a>
+        </section>
 
+    </main>
 
-
-  
-
-<!-- EBOOK LENGKAP -->
-<section class="buy">
-  <p>
-    <strong>Ingin membaca ebook lengkap?</strong>
-  </p>
-
-  <a href="http://lynk.id/wbiznet"
-     target="_blank"
-     rel="noopener">
-    Download Ebook Lengkap
-  </a>
-</section>
-
-
-
-
-<!-- Footer Tema Gelap - Terjamin 100% Di Tengah untuk Mobile & Desktop -->
-
-<!-- Footer Sub-Halaman Ringkasan (Icon 50px + Navigasi Lengkap) -->
-
-<footer style="background-color: #1a1e24; border-top: 3px solid #0056b3; padding: 18px 20px; text-align: center !important; margin-top: 40px; width: 100%; box-sizing: border-box;">
-  <div style="max-width: 800px; margin: 0 auto; text-align: center !important;">
-
-    <!-- Icon Logo 50px -->
-    <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 50px; margin: 0 auto 8px auto; display: block;">
-
-    <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0; text-align: center !important;">
-      Membaca → Menulis → Berkarya
-    </p>
-
-    <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 10px 0; text-align: center !important;">
-      Copyright © Kresnawan Sasmita Putra — 2026
-    </p>
-
-    <!-- Dua Tombol Navigasi: Ke Beranda & Ke Atas -->
-    <div style="text-align: center !important;">
-      <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
-        ← Kembali ke Beranda
-      </a>
-      <span style="color: #4a5568;">|</span>
-      <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
-        ↑ Ke Atas
-      </a>
-    </div>
-
-  </div>
-</footer>
-
-        <!-- Call to Action -->
-        
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 50px; margin: 0 auto 8px auto; display: block;">
+            <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0;">
+                Membaca → Menulis → Berkarya
+            </p>
+            <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 10px 0;">
+                Copyright © Kresnawan Sasmita Putra — 2026
+            </p>
+            <div style="text-align: center;">
+                <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
+                    ← Kembali ke Beranda
+                </a>
+                <span style="color: #4a5568;">|</span>
+                <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
+                    ↑ Ke Atas
+                </a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
