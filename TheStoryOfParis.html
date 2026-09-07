@@ -8,15 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e293b;
+            --primary: #0f172a;
             --secondary: #b45309;
-            --accent: #d97706;
-            --bg-color: #fafaf9;
-            --card-bg: #ffffff;
+            --accent: #d97706; /* Bisa diubah jadi merah (#dc2626) jika ingin persis warna merah detik */
+            --bg-color: #ffffff;
             --text-main: #334155;
             --text-muted: #64748b;
             --border-color: #e2e8f0;
-            --max-width: 960px;
+            --max-width: 800px;
         }
 
         * {
@@ -29,22 +28,32 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.8;
             padding: 0;
         }
 
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #ffffff;
-            padding: 4rem 1.5rem 3rem 1.5rem;
+        /* Navigasi Atas */
+        .top-nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
             text-align: center;
-            border-bottom: 4px solid var(--accent);
         }
 
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 1.25rem; /* Jarak aman kiri & kanan di HP */
+            padding: 0 1.25rem;
+        }
+
+        /* Header Artikel */
+        header {
+            background: #0f172a;
+            color: #ffffff;
+            padding: 3rem 1.25rem 2.5rem 1.25rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            margin-bottom: 2rem;
         }
 
         .badge {
@@ -53,97 +62,96 @@
             color: #f59e0b;
             padding: 0.35rem 1rem;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             letter-spacing: 0.05em;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             text-transform: uppercase;
             border: 1px solid rgba(245, 158, 11, 0.3);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             color: #f8fafc;
+            line-height: 1.3;
         }
 
         .subtitle {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: #94a3b8;
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
+            max-width: 650px;
+            margin: 0 auto 1.5rem auto;
             font-style: italic;
         }
 
         .meta-info {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #cbd5e1;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 1.5rem;
+            padding-top: 1.25rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
 
         .meta-item strong {
             color: #ffffff;
         }
 
-        main {
-            padding: 2.5rem 0;
+        /* Konten Bersih Tanpa Kartu Utama */
+        main.container {
+            padding-bottom: 3rem;
         }
 
-        /* HANYA 1 BINGKAI LUAR UTAMA */
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
+        section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
         }
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--primary);
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
             border-bottom: 2px solid var(--accent);
-        }
-
-        h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--secondary);
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
         }
 
         p {
             margin-bottom: 1.25rem;
-            text-align: justify;
+            text-align: left;
+            font-size: 1.05rem;
         }
 
+        /* KOTAK KHUSUS KUTIPAN DENGAN GARIS AKSEN DI KIRI (GAYA DETIK) */
         .highlight-quote {
             background: #fffbeb;
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid var(--accent); /* Garis penanda di kiri */
+            border-top: 1px solid #fef3c7;
+            border-right: 1px solid #fef3c7;
+            border-bottom: 1px solid #fef3c7;
             padding: 1.25rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 8px 8px 0;
+            margin: 1.75rem 0;
             font-style: italic;
             color: #78350f;
+            border-radius: 0 8px 8px 0;
         }
 
-        /* DAFTAR BAB TANPA BINGKAI DALAM (BERSIH & RAPI) */
-        .chapter-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
+        /* Daftar Bab Model Garis Pemisah Bersih */
+        .chapter-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            margin-top: 1.5rem;
         }
 
         .chapter-item {
@@ -157,29 +165,32 @@
         }
 
         .chapter-num {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
             color: var(--secondary);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.2rem;
         }
 
         .chapter-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--primary);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .landmark {
-            background: #f1f5f9;
+            background: #f8fafc;
             padding: 0.6rem 0.9rem;
             border-radius: 6px;
             font-size: 0.9rem;
             margin-top: 0.75rem;
             color: #475569;
             border-left: 3px solid #64748b;
+            border: 1px solid #f1f5f9;
+            border-left-width: 3px;
         }
 
         .landmark strong {
@@ -194,35 +205,44 @@
             border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
-            margin-top: 1rem;
-            transition: background 0.2s, transform 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: background 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .btn:hover {
             background: #b45309;
-            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1e24;
+            border-top: 3px solid #0056b3;
+            padding: 2rem 1.25rem;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 3rem;
+        }
+
+        footer img {
+            height: 45px;
+            margin: 0 auto 10px auto;
+            display: block;
         }
 
         @media (min-width: 768px) {
-            h1 { font-size: 3rem; }
-            .chapter-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-            .chapter-item { border-bottom: none; padding-bottom: 0; background: #fafaf9; padding: 1.25rem; border-radius: 8px; border: 1px solid var(--border-color); }
-        }
-
-        /* PENGATURAN KHUSUS LAYAR HP (TIDAK TERLALU KE PINGGIR & TIDAK SEMPIT) */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 0.40rem !important; /* Ada jarak aman kiri-kanan, tidak menempel di tepi layar HP */
+            h1 { font-size: 2.8rem; }
+            .chapter-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
-            .card {
-                padding: 1.25rem !important; /* Bingkai luar pas, tidak terlalu besar paddingnya */
-                margin-bottom: 1.5rem;
-            }
-            p {
-                text-align: left !important; /* Rata kiri agar tulisan tidak renggang-renggang */
-                font-size: 1rem;
-                line-height: 1.6;
+            .chapter-item {
+                border-bottom: 1px solid var(--border-color);
+                padding: 1.25rem;
+                background: #fdfdfd;
+                border-radius: 8px;
+                border: 1px solid var(--border-color);
             }
         }
     </style>
@@ -230,22 +250,20 @@
 <body id="top">
 
     <!-- Navigasi & Logo Atas -->
-    <div class="container" style="text-align: center; padding: 20px 0; background: #ffffff; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; border-radius: 12px;">
-
-        <div class="publisher" style="text-align: center; margin-bottom: 15px; padding: 0 15px;">
+    <div class="top-nav">
+        <div class="container">
             <a href="index.html">
-                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 350px; height: auto; display: block; margin: 0 auto;">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto 12px auto;">
             </a>
-        </div>
-
-        <div class="quick-nav">
-            <a href="index.html#biografi" style="display: inline-block; padding: 8px 16px; margin: 4px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Biografi</a>
-            <a href="index.html#artikel" style="display: inline-block; padding: 8px 16px; margin: 4px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Artikel</a>
-            <a href="index.html#katalog" style="display: inline-block; padding: 8px 16px; margin: 4px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 5px; font-size: 0.9rem;">Koleksi</a>
+            <div>
+                <a href="index.html#biografi" style="display: inline-block; padding: 6px 14px; margin: 2px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">Biografi</a>
+                <a href="index.html#artikel" style="display: inline-block; padding: 6px 14px; margin: 2px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">Artikel</a>
+                <a href="index.html#katalog" style="display: inline-block; padding: 6px 14px; margin: 2px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">Koleksi</a>
+            </div>
         </div>
     </div>
 
-    <!-- Header Utama -->
+    <!-- Header Artikel -->
     <header>
         <div class="container">
             <span class="badge">Pustaka Wbiznet • Ringkasan Eksekutif</span>
@@ -254,21 +272,21 @@
             
             <div class="meta-info">
                 <div class="meta-item">Karya Asli: <strong>Thomas Okey (1906)</strong></div>
-                <div class="meta-item">Penyusun & Penyelaras Aksara: <strong>Kresnawan Sasmita Putra</strong></div>
+                <div class="meta-item">Penyusun: <strong>Kresnawan Sasmita Putra</strong></div>
                 <div class="meta-item">Penerbit: <strong>Pustaka Wbiznet</strong></div>
-                <div class="meta-item">Tanggal: <strong>5 September 2026</strong></div>
             </div>
         </div>
     </header>
 
-    <!-- Konten Utama -->
+    <!-- Konten Utama (Gaya Berita Bersih, Kotak Hanya di Kutipan) -->
     <main class="container">
         
-        <!-- Sinopsis Eksekutif -->
-        <section class="card">
+        <!-- Sinopsis -->
+        <section>
             <h2>Tentang Buku & Filosofi Utama</h2>
             <p>Paris bukanlah sekadar kumpulan batu dan mortir; ia adalah organisme hidup yang memiliki kesadaran korporat yang tak tergoyahkan. Sepanjang sejarahnya, Paris kerap kali mengalami penghinaan, invasi, dan luka yang mendalam, namun ia tidak pernah benar-benar mati. Sebaliknya, seperti seorang "raksasa muda", kota ini secara berkala meledakkan ikat pinggang temboknya, menanggalkan pakaian lama yang sudah usang, serta memperbarui perisai dan busananya tanpa pernah kehilangan esensi jiwanya.</p>
             
+            <!-- KOTAK KUTIPAN KHUSUS DENGAN GARIS TEGAS DI KIRI -->
             <div class="highlight-quote">
                 "Aku tidak akan melupakan ini, bahwa aku tidak pernah bisa memberontak terhadap Prancis tanpa memandang Paris dengan mata yang ramah: ia telah memiliki hatiku sejak masa bayiku... Selama ia terus bertahan, aku tidak akan pernah kekurangan rumah atau tempat bernaung." — <strong>Montaigne</strong>
             </div>
@@ -276,12 +294,12 @@
             <p>Buku saku ini menyajikan 12 bab kronologis yang menelusuri perjalanan peradaban Paris mulai dari pemukiman purba Lutetia, abad pertengahan yang penuh katedral Gotik dan gejolak pertumpahan darah, fajar Renaissance, tragedi fanatisme agama, absolutisme Louis XIV, hingga modernisasi Haussmann dan kebangkitan Republik Ketiga.</p>
         </section>
 
-        <!-- Ringkasan 12 Bab -->
-        <section class="card">
+        <!-- Daftar 12 Bab -->
+        <section>
             <h2>Daftar Bab & Jejak Sejarah</h2>
             <p>Berikut adalah ringkasan dari 12 bagian penting dalam buku saku ini beserta panduan jejak sejarahnya di masa kini:</p>
             
-            <div class="chapter-grid">
+            <div class="chapter-list">
                 
                 <div class="chapter-item">
                     <div class="chapter-num">Bab I</div>
@@ -371,14 +389,14 @@
         </section>
 
         <!-- Flipbook Section -->
-        <section class="card">
+        <section>
             <h2>Baca Buku</h2>
-            <iframe style="width:100%;height:420px" src="https://online.pubhtml5.com/fontf/lkpt/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+            <iframe style="width:100%; height:420px; border:none; border-radius:8px;" src="https://online.pubhtml5.com/fontf/lkpt/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
         </section>
 
         <!-- EBOOK LENGKAP -->
-        <section class="card" style="text-align: center;">
-            <p style="text-align: center;">
+        <section style="text-align: center; border-bottom: none;">
+            <p style="text-align: center; margin-bottom: 1rem;">
                 <strong>Ingin membaca ebook lengkap?</strong>
             </p>
             <a href="http://lynk.id/wbiznet" target="_blank" rel="noopener" class="btn">
@@ -388,31 +406,22 @@
 
     </main>
 
-    <!-- Footer Tema Gelap -->
-    <footer style="background-color: #1a1e24; border-top: 3px solid #0056b3; padding: 18px 20px; text-align: center !important; margin-top: 40px; width: 100%; box-sizing: border-box;">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center !important;">
-
-        <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 50px; margin: 0 auto 8px auto; display: block;">
-
-        <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0; text-align: center !important;">
-          Membaca → Menulis → Berkarya
-        </p>
-
-        <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 10px 0; text-align: center !important;">
-          Copyright © Kresnawan Sasmita Putra — 2026
-        </p>
-
-        <div style="text-align: center !important;">
-          <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
-            ← Kembali ke Beranda
-          </a>
-          <span style="color: #4a5568;">|</span>
-          <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
-            ↑ Ke Atas
-          </a>
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="max-width: 700px;">
+            <img alt="Icon Pustaka Wbiznet" src="icon_logo.png">
+            <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0;">
+                Membaca → Menulis → Berkarya
+            </p>
+            <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 15px 0;">
+                Copyright © Kresnawan Sasmita Putra — 2026
+            </p>
+            <div>
+                <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; margin: 0 8px;">← Kembali ke Beranda</a>
+                <span style="color: #4a5568;">|</span>
+                <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; margin: 0 8px;">↑ Ke Atas</a>
+            </div>
         </div>
-
-      </div>
     </footer>
 
 </body>
