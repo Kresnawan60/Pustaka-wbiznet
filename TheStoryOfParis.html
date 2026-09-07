@@ -28,7 +28,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.65; /* Jarak baris lebih rapat & nyaman dibaca */
+            line-height: 1.65;
             padding: 0;
         }
 
@@ -127,9 +127,9 @@
         }
 
         p {
-            margin-bottom: 1rem; /* Jarak antar paragraf lebih padat */
+            margin-bottom: 1rem;
             text-align: left;
-            font-size: 0.975rem; /* Ukuran huruf pas ala portal berita (tidak terlalu besar) */
+            font-size: 0.975rem;
         }
 
         /* Kotak Kutipan (Quote) */
@@ -195,6 +195,28 @@
 
         .landmark strong {
             color: var(--primary);
+        }
+
+        /* Responsive Video Container */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            padding-bottom: 177.78%; /* Rasio aspek vertikal 9:16 untuk video pendek */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .btn {
@@ -388,54 +410,13 @@
             </div>
         </section>
 
-
-  <!-- VIDEO TERKAIT BUKU -->
-<section>
-  <h2>Video</h2>
-
-  <div class="video">
-    <iframe
-      src="  <!-- VIDEO TERKAIT BUKU -->
-<section>
-  <h2>Video</h2>
-
-  <div class="video">
-    <iframe
-      src=  <!-- VIDEO TERKAIT BUKU -->
-<section>
-  <h2>Video</h2>
-
-  <div class="video">
-    <iframe
-      src=https://www.tiktok.com/@wbiznetchannel/video/7682859874174225671"
-      title="Video terkait buku"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-      title="Video terkait buku"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-      title="Video terkait buku"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-
-
-
-
-
-
-
+        <!-- Video Terkait Buku -->
+        <section>
+            <h2>Video Terkait Buku</h2>
+            <div class="video-container">
+                <iframe src="https://www.tiktok.com/@wbiznetchannel/video/7682859874174225671" title="Video terkait buku" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
 
         <!-- Flipbook Section -->
         <section>
