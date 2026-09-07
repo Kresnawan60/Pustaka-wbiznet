@@ -3,35 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-/* Pengaturan khusus agar nyaman dibaca di HP */
-@media (max-width: 768px) {
-    /* 1. Ubah paragraf jadi rata kiri agar tidak renggang-renggang */
-    p {
-        text-align: left !important;
-        font-size: 1rem; /* Ukuran font ideal untuk HP */
-        line-height: 1.6;
-    }
-
-    /* 2. Hilangkan efek bingkai bertumpuk dengan mengecilkan padding card di HP */
-    .card {
-        padding: 1.25rem !important; /* Membuat card lebih lega di layar kecil */
-        margin-bottom: 1.5rem;
-    }
-
-    /* 3. Pastikan container tidak memakan terlalu banyak ruang samping */
-    .container {
-        padding: 0 1rem !important;
-    }
-}
-
-
-
-
-
-
-
-
     <title>Ringkasan Buku: Paris - Biografi Sang Raksasa Muda | Pustaka Wbiznet</title>
     <meta name="description" content="Ringkasan eksekutif dan landing page buku saku Paris: Biografi Sang Raksasa Muda, adaptasi karya klasik Thomas Okey (1906) oleh Kresnawan Sasmita Putra.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -239,6 +210,22 @@
             h1 { font-size: 3rem; }
             .chapter-grid { grid-template-columns: repeat(2, 1fr); }
         }
+
+        /* === PENGATURAN KHUSUS NYAMAN DIBACA DI HP (DI DALAM STYLE) === */
+        @media (max-width: 768px) {
+            p {
+                text-align: left !important;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            .card {
+                padding: 1.25rem !important;
+                margin-bottom: 1.5rem;
+            }
+            .container {
+                padding: 0 1rem !important;
+            }
+        }
     </style>
 </head>
 <body id="top">
@@ -402,11 +389,10 @@
 
     </main>
 
-    <!-- Footer Tema Gelap - Terjamin 100% Di Tengah untuk Mobile & Desktop -->
+    <!-- Footer Tema Gelap -->
     <footer style="background-color: #1a1e24; border-top: 3px solid #0056b3; padding: 18px 20px; text-align: center !important; margin-top: 40px; width: 100%; box-sizing: border-box;">
       <div style="max-width: 800px; margin: 0 auto; text-align: center !important;">
 
-        <!-- Icon Logo 50px -->
         <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 50px; margin: 0 auto 8px auto; display: block;">
 
         <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0; text-align: center !important;">
@@ -417,7 +403,6 @@
           Copyright © Kresnawan Sasmita Putra — 2026
         </p>
 
-        <!-- Dua Tombol Navigasi: Ke Beranda & Ke Atas -->
         <div style="text-align: center !important;">
           <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
             ← Kembali ke Beranda
