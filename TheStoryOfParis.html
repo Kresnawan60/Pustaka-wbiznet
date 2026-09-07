@@ -197,26 +197,11 @@
             color: var(--primary);
         }
 
-        /* Responsive Video Container */
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 450px;
-            margin: 0 auto;
-            padding-bottom: 177.78%; /* Rasio aspek vertikal 9:16 untuk video pendek */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            background: #000;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        /* Wrapper untuk Penyelarasan Video TikTok */
+        .tiktok-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
         }
 
         .btn {
@@ -410,11 +395,14 @@
             </div>
         </section>
 
-        <!-- Video Terkait Buku -->
+        <!-- Video Terkait Buku (Menggunakan TikTok Native Embed) -->
         <section>
             <h2>Video Terkait Buku</h2>
-            <div class="video-container">
-                <iframe src="https://www.tiktok.com/@wbiznetchannel/video/7682859874174225671" title="Video terkait buku" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="tiktok-wrapper">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wbiznetchannel/video/7682859874174225671" data-video-id="7682859874174225671" style="max-width: 605px; min-width: 325px; width: 100%;">
+                    <section></section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
             </div>
         </section>
 
