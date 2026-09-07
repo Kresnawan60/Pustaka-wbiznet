@@ -10,7 +10,7 @@
         :root {
             --primary: #0f172a;
             --secondary: #b45309;
-            --accent: #d97706; /* Bisa diubah jadi merah (#dc2626) jika ingin persis warna merah detik */
+            --accent: #d97706;
             --bg-color: #ffffff;
             --text-main: #334155;
             --text-muted: #64748b;
@@ -28,7 +28,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.8;
+            line-height: 1.65; /* Jarak baris lebih rapat & nyaman dibaca */
             padding: 0;
         }
 
@@ -36,7 +36,7 @@
         .top-nav {
             background: #ffffff;
             border-bottom: 1px solid var(--border-color);
-            padding: 15px 0;
+            padding: 12px 0;
             text-align: center;
         }
 
@@ -50,66 +50,66 @@
         header {
             background: #0f172a;
             color: #ffffff;
-            padding: 3rem 1.25rem 2.5rem 1.25rem;
+            padding: 2.5rem 1.25rem 2rem 1.25rem;
             text-align: center;
             border-bottom: 4px solid var(--accent);
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
 
         .badge {
             display: inline-block;
             background: rgba(217, 119, 6, 0.2);
             color: #f59e0b;
-            padding: 0.35rem 1rem;
+            padding: 0.3rem 0.85rem;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 0.05em;
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
             text-transform: uppercase;
             border: 1px solid rgba(245, 158, 11, 0.3);
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             color: #f8fafc;
-            line-height: 1.3;
+            line-height: 1.25;
         }
 
         .subtitle {
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #94a3b8;
             max-width: 650px;
-            margin: 0 auto 1.5rem auto;
+            margin: 0 auto 1.25rem auto;
             font-style: italic;
         }
 
         .meta-info {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #cbd5e1;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 1.25rem;
+            padding-top: 1rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.25rem;
+            gap: 1rem;
         }
 
         .meta-item strong {
             color: #ffffff;
         }
 
-        /* Konten Bersih Tanpa Kartu Utama */
+        /* Konten Utama */
         main.container {
             padding-bottom: 3rem;
         }
 
         section {
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.75rem;
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -119,43 +119,44 @@
 
         h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.45rem;
             color: var(--primary);
-            margin-bottom: 1rem;
-            padding-bottom: 0.4rem;
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.3rem;
             border-bottom: 2px solid var(--accent);
         }
 
         p {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem; /* Jarak antar paragraf lebih padat */
             text-align: left;
-            font-size: 1.05rem;
+            font-size: 0.975rem; /* Ukuran huruf pas ala portal berita (tidak terlalu besar) */
         }
 
-        /* KOTAK KHUSUS KUTIPAN DENGAN GARIS AKSEN DI KIRI (GAYA DETIK) */
+        /* Kotak Kutipan (Quote) */
         .highlight-quote {
             background: #fffbeb;
-            border-left: 4px solid var(--accent); /* Garis penanda di kiri */
+            border-left: 4px solid var(--accent);
             border-top: 1px solid #fef3c7;
             border-right: 1px solid #fef3c7;
             border-bottom: 1px solid #fef3c7;
-            padding: 1.25rem 1.5rem;
-            margin: 1.75rem 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
             font-style: italic;
             color: #78350f;
-            border-radius: 0 8px 8px 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
         }
 
         /* Daftar Bab Model Garis Pemisah Bersih */
         .chapter-list {
             display: flex;
             flex-direction: column;
-            gap: 1.75rem;
-            margin-top: 1.5rem;
+            gap: 1.25rem;
+            margin-top: 1.25rem;
         }
 
         .chapter-item {
-            padding-bottom: 1.5rem;
+            padding-bottom: 1.25rem;
             border-bottom: 1px dashed var(--border-color);
         }
 
@@ -165,32 +166,31 @@
         }
 
         .chapter-num {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             color: var(--secondary);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
 
         .chapter-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
+            font-size: 1.125rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
             font-weight: 700;
         }
 
         .landmark {
             background: #f8fafc;
-            padding: 0.6rem 0.9rem;
+            padding: 0.5rem 0.75rem;
             border-radius: 6px;
-            font-size: 0.9rem;
-            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
             color: #475569;
-            border-left: 3px solid #64748b;
             border: 1px solid #f1f5f9;
-            border-left-width: 3px;
+            border-left: 3px solid #64748b;
         }
 
         .landmark strong {
@@ -201,13 +201,14 @@
             display: inline-block;
             background: var(--accent);
             color: #ffffff;
-            padding: 0.85rem 2rem;
+            padding: 0.75rem 1.75rem;
             border-radius: 50px;
             font-weight: 700;
+            font-size: 0.95rem;
             text-decoration: none;
             text-align: center;
             transition: background 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .btn:hover {
@@ -221,25 +222,25 @@
             padding: 2rem 1.25rem;
             text-align: center;
             color: #ffffff;
-            margin-top: 3rem;
+            margin-top: 2.5rem;
         }
 
         footer img {
-            height: 45px;
-            margin: 0 auto 10px auto;
+            height: 40px;
+            margin: 0 auto 8px auto;
             display: block;
         }
 
         @media (min-width: 768px) {
-            h1 { font-size: 2.8rem; }
+            h1 { font-size: 2.5rem; }
             .chapter-list {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
+                gap: 1.25rem;
             }
             .chapter-item {
                 border-bottom: 1px solid var(--border-color);
-                padding: 1.25rem;
+                padding: 1rem;
                 background: #fdfdfd;
                 border-radius: 8px;
                 border: 1px solid var(--border-color);
@@ -253,12 +254,12 @@
     <div class="top-nav">
         <div class="container">
             <a href="index.html">
-                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 320px; height: auto; display: block; margin: 0 auto 12px auto;">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 100%; max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto;">
             </a>
             <div>
-                <a href="index.html#biografi" style="display: inline-block; padding: 6px 14px; margin: 2px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">Biografi</a>
-                <a href="index.html#artikel" style="display: inline-block; padding: 6px 14px; margin: 2px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">Artikel</a>
-                <a href="index.html#katalog" style="display: inline-block; padding: 6px 14px; margin: 2px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; font-size: 0.85rem;">Koleksi</a>
+                <a href="index.html#biografi" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Biografi</a>
+                <a href="index.html#artikel" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Artikel</a>
+                <a href="index.html#katalog" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Koleksi</a>
             </div>
         </div>
     </div>
@@ -278,7 +279,7 @@
         </div>
     </header>
 
-    <!-- Konten Utama (Gaya Berita Bersih, Kotak Hanya di Kutipan) -->
+    <!-- Konten Utama -->
     <main class="container">
         
         <!-- Sinopsis -->
@@ -286,7 +287,6 @@
             <h2>Tentang Buku & Filosofi Utama</h2>
             <p>Paris bukanlah sekadar kumpulan batu dan mortir; ia adalah organisme hidup yang memiliki kesadaran korporat yang tak tergoyahkan. Sepanjang sejarahnya, Paris kerap kali mengalami penghinaan, invasi, dan luka yang mendalam, namun ia tidak pernah benar-benar mati. Sebaliknya, seperti seorang "raksasa muda", kota ini secara berkala meledakkan ikat pinggang temboknya, menanggalkan pakaian lama yang sudah usang, serta memperbarui perisai dan busananya tanpa pernah kehilangan esensi jiwanya.</p>
             
-            <!-- KOTAK KUTIPAN KHUSUS DENGAN GARIS TEGAS DI KIRI -->
             <div class="highlight-quote">
                 "Aku tidak akan melupakan ini, bahwa aku tidak pernah bisa memberontak terhadap Prancis tanpa memandang Paris dengan mata yang ramah: ia telah memiliki hatiku sejak masa bayiku... Selama ia terus bertahan, aku tidak akan pernah kekurangan rumah atau tempat bernaung." — <strong>Montaigne</strong>
             </div>
@@ -410,16 +410,16 @@
     <footer>
         <div class="container" style="max-width: 700px;">
             <img alt="Icon Pustaka Wbiznet" src="icon_logo.png">
-            <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0;">
+            <p style="font-weight: bold; font-size: 0.9em; color: #ffffff; margin: 0 0 4px 0;">
                 Membaca → Menulis → Berkarya
             </p>
-            <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 15px 0;">
+            <p style="color: #a0aec0; font-size: 0.75em; margin: 0 0 12px 0;">
                 Copyright © Kresnawan Sasmita Putra — 2026
             </p>
             <div>
-                <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; margin: 0 8px;">← Kembali ke Beranda</a>
+                <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.8em; margin: 0 6px;">← Kembali ke Beranda</a>
                 <span style="color: #4a5568;">|</span>
-                <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; margin: 0 8px;">↑ Ke Atas</a>
+                <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.8em; margin: 0 6px;">↑ Ke Atas</a>
             </div>
         </div>
     </footer>
