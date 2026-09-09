@@ -22,29 +22,42 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         line-height: 1.7;
     }
 
+    /* =========================
+       NAVIGASI & LOGO ATAS
+       ========================= */
+
+    .top-nav {
+        background: #ffffff;
+        border-bottom: 1px solid #ddd;
+        padding: 18px 10px 12px;
+        text-align: center;
+    }
+
+    .top-nav .container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .top-nav img {
+        width: 280px;
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    .top-nav a {
+        text-decoration: none;
+    }
+
+    /* =========================
+       KONTEN
+       ========================= */
+
     .container {
         max-width: 900px;
         margin: auto;
         padding: 20px;
-    }
-
-    header {
-        background: #ffffff;
-        border-bottom: 1px solid #ddd;
-        padding: 18px 20px;
-        text-align: center;
-    }
-
-    header img {
-        max-width: 190px;
-        width: 100%;
-        height: auto;
-    }
-
-    .breadcrumb {
-        font-size: 14px;
-        color: #777;
-        margin: 15px 0;
     }
 
     .article {
@@ -74,6 +87,10 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         margin-bottom: 25px;
     }
 
+    /* =========================
+       VIDEO TIKTOK
+       ========================= */
+
     .video-box {
         margin: 25px 0;
         padding: 20px;
@@ -81,11 +98,16 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         border: 1px solid #ddd;
         border-radius: 10px;
         text-align: center;
+        overflow: hidden;
     }
 
     .video-box blockquote {
         margin: auto !important;
     }
+
+    /* =========================
+       SUMBER
+       ========================= */
 
     .source-box {
         background: #f1f5f9;
@@ -100,6 +122,10 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         word-break: break-word;
     }
 
+    /* =========================
+       CATATAN
+       ========================= */
+
     .note {
         font-size: 14px;
         color: #666;
@@ -109,12 +135,9 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         margin-top: 20px;
     }
 
-    footer {
-        text-align: center;
-        padding: 25px 15px;
-        color: #777;
-        font-size: 14px;
-    }
+    /* =========================
+       TOMBOL KEMBALI
+       ========================= */
 
     .back {
         display: inline-block;
@@ -130,7 +153,27 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         opacity: 0.9;
     }
 
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+        text-align: center;
+        padding: 25px 15px;
+        color: #777;
+        font-size: 14px;
+    }
+
+    /* =========================
+       TAMPILAN HP
+       ========================= */
+
     @media (max-width: 600px) {
+
+        .container {
+            padding: 12px;
+        }
+
         .article {
             padding: 20px;
         }
@@ -138,198 +181,320 @@ content="Biografi Grace Kelly, aktris Hollywood peraih Academy Award yang kemudi
         h1 {
             font-size: 27px;
         }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+        }
+
+        .top-nav img {
+            width: 250px;
+        }
     }
 </style>
 </head>
 
-<body>
-
-<header>
-
-    <!-- Jika nama file logo Anda berbeda, ubah bagian ini -->
-    <img src="logo_pustaka_wbiznet.png"
-         alt="Pustaka Wbiznet">
-
 <body id="top">
 
-    <!-- Navigasi & Logo Atas -->
+    <!-- =========================
+         NAVIGASI & LOGO ATAS
+         ========================= -->
+
     <div class="top-nav">
+
         <div class="container">
+
             <a href="index.html">
-                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" style="width: 280px; max-width: 280px; height: auto; display: block; margin: 0 auto 10px auto;">
+                <img src="logo_pustaka_wbiznet.png"
+                     alt="Logo Pustaka Wbiznet">
             </a>
+
             <div>
-                <a href="index.html#biografi" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Biografi</a>
-                <a href="index.html#artikel" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Artikel</a>
-                <a href="index.html#katalog" style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">Koleksi</a>
-            </div>
-        </div>
-</header>
 
-
-
-  
-
-    <article class="article">
-
-        <h1>Grace Kelly</h1>
-
-        <p class="subtitle">
-            Dari bintang Hollywood menjadi Princess of Monaco
-        </p>
-
-        <p>
-            <strong>Grace Patricia Kelly</strong> (1929–1982) adalah aktris
-            Amerika yang mencapai ketenaran besar di Hollywood pada era
-            1950-an. Ia dikenal melalui sejumlah film terkenal seperti
-            <em>High Noon</em>, <em>Mogambo</em>,
-            <em>Rear Window</em>, <em>Dial M for Murder</em>,
-            <em>To Catch a Thief</em>, dan
-            <em>The Country Girl</em>.
-        </p>
-
-        <p>
-            Kariernya di dunia perfilman berlangsung relatif singkat.
-            Setelah menikah dengan <strong>Prince Rainier III of Monaco</strong>
-            pada 1956, Grace Kelly meninggalkan dunia perfilman dan
-            menjalani kehidupan sebagai Princess of Monaco.
-        </p>
-
-        <h2>Video Biografi</h2>
-
-        <div class="video-box">
-
-            <blockquote
-                class="tiktok-embed"
-                cite="https://www.tiktok.com/@wbiznetchannel/video/7553164457912962316"
-                data-video-id="7553164457912962316"
-                style="max-width: 605px;min-width: 325px;">
-
-                <section>
-                    <a target="_blank"
-                       href="https://www.tiktok.com/@wbiznetchannel/video/7553164457912962316">
-                        @wbiznetchannel
-                    </a>
-                </section>
-
-            </blockquote>
-
-        </div>
-
-        <p class="note">
-            <strong>Catatan:</strong>
-            Video di atas digunakan sebagai media pendukung untuk
-            membantu pembaca mengenal tokoh yang dibahas.
-            Informasi biografi pada halaman ini tetap mengutamakan
-            sumber tertulis yang dapat ditelusuri.
-        </p>
-
-        <h2>Ringkasan Biografi</h2>
-
-        <p>
-            Grace Kelly lahir pada 12 November 1929 di Philadelphia,
-            Pennsylvania, Amerika Serikat. Ia berasal dari keluarga
-            yang memiliki latar belakang olahraga, bisnis, pendidikan,
-            dan seni. Sejak muda ia memiliki ketertarikan terhadap
-            dunia pertunjukan.
-        </p>
-
-        <p>
-            Setelah menyelesaikan pendidikan, Kelly mengejar karier
-            sebagai aktris di New York sebelum kemudian berpindah
-            ke Hollywood. Namanya mulai dikenal luas setelah tampil
-            dalam <em>High Noon</em> pada 1952.
-        </p>
-
-        <p>
-            Kariernya semakin berkembang melalui film
-            <em>Mogambo</em> dan sejumlah film Alfred Hitchcock,
-            termasuk <em>Rear Window</em>,
-            <em>Dial M for Murder</em>, dan
-            <em>To Catch a Thief</em>.
-        </p>
-
-        <p>
-            Pada 1955, Grace Kelly memenangkan Academy Award
-            untuk Aktris Terbaik melalui film
-            <em>The Country Girl</em>.
-            Pada tahun yang sama ia bertemu Prince Rainier III
-            of Monaco ketika menghadiri Festival Film Cannes.
-        </p>
-
-        <p>
-            Keduanya kemudian menikah pada 1956. Setelah pernikahan
-            tersebut, Grace Kelly meninggalkan karier film dan
-            menjalankan perannya sebagai Princess of Monaco.
-            Pasangan tersebut memiliki tiga anak:
-            Princess Caroline, Prince Albert, dan Princess Stéphanie.
-        </p>
-
-        <p>
-            Grace Kelly meninggal pada September 1982 setelah mengalami
-            kecelakaan mobil di Monaco pada usia 52 tahun.
-            Namanya tetap dikenang sebagai salah satu ikon Hollywood
-            sekaligus tokoh kerajaan Monaco.
-        </p>
-
-        <h2>Sumber Biografi</h2>
-
-        <div class="source-box">
-
-            <p>
-                <strong>Biography.com</strong>
-            </p>
-
-            <p>
-                Grace Kelly — Wedding, Death & Children
-            </p>
-
-            <p>
-                <a href="https://www.biography.com/actors/grace-kelly"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Baca sumber biografi di Biography.com
+                <a href="index.html#biografi"
+                   style="display:inline-block;
+                          padding:5px 12px;
+                          margin:2px;
+                          background-color:#007bff;
+                          color:white;
+                          text-decoration:none;
+                          border-radius:4px;
+                          font-size:0.8rem;">
+                    Biografi
                 </a>
-            </p>
 
-            <p>
-                Sumber tersebut memuat informasi mengenai kehidupan awal
-                Grace Kelly, karier film, penghargaan Academy Award,
-                pernikahannya dengan Prince Rainier III, kehidupan
-                kerajaan, anak-anak, dan wafatnya.
-            </p>
+                <a href="index.html#artikel"
+                   style="display:inline-block;
+                          padding:5px 12px;
+                          margin:2px;
+                          background-color:#28a745;
+                          color:white;
+                          text-decoration:none;
+                          border-radius:4px;
+                          font-size:0.8rem;">
+                    Artikel
+                </a>
+
+                <a href="index.html#katalog"
+                   style="display:inline-block;
+                          padding:5px 12px;
+                          margin:2px;
+                          background-color:#ffc107;
+                          color:black;
+                          text-decoration:none;
+                          border-radius:4px;
+                          font-size:0.8rem;">
+                    Koleksi
+                </a>
+
+            </div>
 
         </div>
 
-        <h2>Data Tokoh</h2>
+    </div>
 
-        <ul>
-            <li><strong>Nama:</strong> Grace Patricia Kelly</li>
-            <li><strong>Lahir:</strong> 12 November 1929</li>
-            <li><strong>Tempat lahir:</strong> Philadelphia, Pennsylvania, Amerika Serikat</li>
-            <li><strong>Profesi:</strong> Aktris</li>
-            <li><strong>Gelar:</strong> Princess of Monaco</li>
-            <li><strong>Suami:</strong> Prince Rainier III of Monaco</li>
-            <li><strong>Anak:</strong> Caroline, Albert, dan Stéphanie</li>
-            <li><strong>Wafat:</strong> September 1982</li>
-        </ul>
 
-        <a class="back"
-           href="index.html">
-           ← Kembali ke Pustaka Wbiznet
-        </a>
+    <!-- =========================
+         ISI BIOGRAFI
+         ========================= -->
 
-    </article>
+    <div class="container">
 
-</div>
+        <article class="article">
 
-<footer>
-    © Pustaka Wbiznet — Perpustakaan Digital Kresnawan Sasmita Putra
-</footer>
+            <h1>Grace Kelly</h1>
 
-<!-- TikTok Embed Script -->
-<script async
-src="https://www.tiktok.com/embed.js"></script>
+            <p class="subtitle">
+                Dari bintang Hollywood menjadi Princess of Monaco
+            </p>
+
+
+            <p>
+                <strong>Grace Patricia Kelly</strong> (1929–1982) adalah
+                aktris Amerika yang mencapai ketenaran besar di Hollywood
+                pada era 1950-an. Ia dikenal melalui sejumlah film terkenal
+                seperti <em>High Noon</em>, <em>Mogambo</em>,
+                <em>Rear Window</em>, <em>Dial M for Murder</em>,
+                <em>To Catch a Thief</em>, dan
+                <em>The Country Girl</em>.
+            </p>
+
+            <p>
+                Kariernya di dunia perfilman berlangsung relatif singkat.
+                Setelah menikah dengan <strong>Prince Rainier III of Monaco</strong>
+                pada 1956, Grace Kelly meninggalkan dunia perfilman dan
+                menjalani kehidupan sebagai Princess of Monaco.
+            </p>
+
+
+            <!-- =========================
+                 VIDEO BIOGRAFI
+                 ========================= -->
+
+            <h2>Video Biografi</h2>
+
+            <div class="video-box">
+
+                <blockquote
+                    class="tiktok-embed"
+                    cite="https://www.tiktok.com/@wbiznetchannel/video/7553164457912962316"
+                    data-video-id="7553164457912962316"
+                    style="max-width:605px;min-width:325px;">
+
+                    <section>
+
+                        <a target="_blank"
+                           href="https://www.tiktok.com/@wbiznetchannel/video/7553164457912962316">
+                            @wbiznetchannel
+                        </a>
+
+                    </section>
+
+                </blockquote>
+
+            </div>
+
+
+            <p class="note">
+                <strong>Catatan:</strong>
+                Video di atas digunakan sebagai media pendukung untuk
+                membantu pembaca mengenal tokoh yang dibahas.
+                Informasi biografi pada halaman ini tetap mengutamakan
+                sumber tertulis yang dapat ditelusuri.
+            </p>
+
+
+            <!-- =========================
+                 RINGKASAN BIOGRAFI
+                 ========================= -->
+
+            <h2>Ringkasan Biografi</h2>
+
+            <p>
+                Grace Kelly lahir pada 12 November 1929 di Philadelphia,
+                Pennsylvania, Amerika Serikat. Ia berasal dari keluarga
+                yang memiliki latar belakang olahraga, bisnis, pendidikan,
+                dan seni. Sejak muda ia memiliki ketertarikan terhadap
+                dunia pertunjukan.
+            </p>
+
+            <p>
+                Setelah menyelesaikan pendidikan, Kelly mengejar karier
+                sebagai aktris di New York sebelum kemudian berpindah
+                ke Hollywood. Namanya mulai dikenal luas setelah tampil
+                dalam <em>High Noon</em> pada 1952.
+            </p>
+
+            <p>
+                Kariernya semakin berkembang melalui film
+                <em>Mogambo</em> dan sejumlah film Alfred Hitchcock,
+                termasuk <em>Rear Window</em>,
+                <em>Dial M for Murder</em>, dan
+                <em>To Catch a Thief</em>.
+            </p>
+
+            <p>
+                Pada 1955, Grace Kelly memenangkan Academy Award
+                untuk Aktris Terbaik melalui film
+                <em>The Country Girl</em>.
+                Pada tahun yang sama ia bertemu Prince Rainier III
+                of Monaco ketika menghadiri Festival Film Cannes.
+            </p>
+
+            <p>
+                Keduanya kemudian menikah pada 1956. Setelah pernikahan
+                tersebut, Grace Kelly meninggalkan karier film dan
+                menjalankan perannya sebagai Princess of Monaco.
+                Pasangan tersebut memiliki tiga anak:
+                Princess Caroline, Prince Albert, dan Princess Stéphanie.
+            </p>
+
+            <p>
+                Grace Kelly meninggal pada September 1982 setelah mengalami
+                kecelakaan mobil di Monaco pada usia 52 tahun.
+                Namanya tetap dikenang sebagai salah satu ikon Hollywood
+                sekaligus tokoh kerajaan Monaco.
+            </p>
+
+
+            <!-- =========================
+                 SUMBER BIOGRAFI
+                 ========================= -->
+
+            <h2>Sumber Biografi</h2>
+
+            <div class="source-box">
+
+                <p>
+                    <strong>Biography.com</strong>
+                </p>
+
+                <p>
+                    Grace Kelly — Wedding, Death & Children
+                </p>
+
+                <p>
+                    <a href="https://www.biography.com/actors/grace-kelly"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Baca sumber biografi di Biography.com
+                    </a>
+                </p>
+
+                <p>
+                    Sumber tersebut memuat informasi mengenai kehidupan awal
+                    Grace Kelly, karier film, penghargaan Academy Award,
+                    pernikahannya dengan Prince Rainier III, kehidupan
+                    kerajaan, anak-anak, dan wafatnya.
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 DATA TOKOH
+                 ========================= -->
+
+            <h2>Data Tokoh</h2>
+
+            <ul>
+
+                <li>
+                    <strong>Nama:</strong>
+                    Grace Patricia Kelly
+                </li>
+
+                <li>
+                    <strong>Lahir:</strong>
+                    12 November 1929
+                </li>
+
+                <li>
+                    <strong>Tempat lahir:</strong>
+                    Philadelphia, Pennsylvania, Amerika Serikat
+                </li>
+
+                <li>
+                    <strong>Profesi:</strong>
+                    Aktris
+                </li>
+
+                <li>
+                    <strong>Gelar:</strong>
+                    Princess of Monaco
+                </li>
+
+                <li>
+                    <strong>Suami:</strong>
+                    Prince Rainier III of Monaco
+                </li>
+
+                <li>
+                    <strong>Anak:</strong>
+                    Caroline, Albert, dan Stéphanie
+                </li>
+
+                <li>
+                    <strong>Wafat:</strong>
+                    September 1982
+                </li>
+
+            </ul>
+
+
+            <!-- KEMBALI KE BERANDA -->
+
+            <a class="back"
+               href="index.html">
+                ← Kembali ke Pustaka Wbiznet
+            </a>
+
+        </article>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+
+        © Pustaka Wbiznet — Perpustakaan Digital Kresnawan Sasmita Putra
+
+    </footer>
+
+
+    <!-- =========================
+         TIKTOK EMBED SCRIPT
+         ========================= -->
+
+    <script async
+            src="https://www.tiktok.com/embed.js">
+    </script>
 
 </body>
 </html>
