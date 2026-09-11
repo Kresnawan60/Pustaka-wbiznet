@@ -56,7 +56,7 @@
     .container {
       max-width: 850px;
       margin: 25px auto;
-      padding: 0 15px;
+      padding: 0 20px; /* Ditingkatkan dari 15px agar tidak mepet ke bingkai HP */
     }
 
     .article {
@@ -173,8 +173,12 @@
     }
 
     @media (max-width: 600px) {
+      .container {
+        padding: 0 15px; /* Padding sisi layar HP agar lebih proporsional */
+      }
+
       .article {
-        padding: 20px 17px;
+        padding: 20px 15px; /* Mengurangi padding dalam artikel di layar kecil */
       }
 
       h1 {
@@ -196,7 +200,7 @@
 
   <!-- HEADER -->
   <!-- Navigasi & Logo Atas -->
-<div class="top-nav">
+  <div class="top-nav">
     <div class="container">
 
         <a href="index.html">
@@ -226,13 +230,13 @@
         </div>
 
     </div>
-</div>
+  </div>
   
-                <a 
+  <div class="container">
     <article class="article">
 
       <h1>
-    Mendengarkan Khutbah Jumat<br>
+        Mendengarkan Khutbah Jumat<br>
         11 September 2026
       </h1>
 
@@ -249,26 +253,19 @@
 
 
       <!-- VIDEO -->
-    
-    <h2>Tiga Bekal Utama Menghadap Sang Pencipta</h2>
+      <h2>Tiga Bekal Utama Menghadap Sang Pencipta</h2>
 
-<div class="video-box">
-
-  <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-md border border-slate-200 my-6">
-
-    <iframe
-      class="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/TBjdmufeXgo"
-      title="Tiga Bekal Utama Menghadap Sang Pencipta"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-
-  </div>
-
-</div>
-
- 
+      <div class="video-box">
+        <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-md border border-slate-200 my-6">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/TBjdmufeXgo"
+            title="Tiga Bekal Utama Menghadap Sang Pencipta"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
 
 
       <!-- PEMBUKA -->
@@ -335,7 +332,7 @@
         Dalam khutbah disampaikan pembagian keadaan hati:
         <strong>qalbun mayyit</strong> (hati yang mati),
         <strong>qalbun maridh</strong> (hati yang sakit), dan
-        <strong>qalbun salim --></strong> (hati yang selamat).
+        <strong>qalbun salim</strong> (hati yang selamat).
       </p>
 
       <div class="arabic">
@@ -538,15 +535,14 @@
       </div>
 
     </article>
+  </div>
 
 
-    <div class="footer">
-      <strong>Pustaka Wbiznet</strong><br>
-      Dokumentasi, catatan, dan arsip digital<br>
-      Kresnawan Sasmita Putra Library<br>
-      <a href="index.html">Kembali ke Pustaka Wbiznet</a>
-    </div>
-
+  <div class="footer">
+    <strong>Pustaka Wbiznet</strong><br>
+    Dokumentasi, catatan, dan arsip digital<br>
+    Kresnawan Sasmita Putra Library<br>
+    <a href="index.html">Kembali ke Pustaka Wbiznet</a>
   </div>
 
 </body>
