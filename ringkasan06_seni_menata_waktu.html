@@ -1,304 +1,132 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[JUDUL BUKU] — Pustaka Wbiznet</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Buku: Seni Menata Waktu di Gerbang Rehat - Pustaka Wbiznet</title>
 
-<style>
-  * { box-sizing: border-box; }
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  body {
-    margin: 0;
-    background: #f5f5f5;
-    color: #222;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.75;
-  }
-
-  .book {
-    max-width: 850px;
-    margin: 24px auto;
-    background: #fff;
-    padding: 28px 34px 45px;
-    box-shadow: 0 2px 12px rgba(0,0,0,.08);
-  }
-
-  .publisher {
-    text-align: center;
-    margin-bottom: 24px;
-  }
-
-  .publisher img {
-    width: min(420px, 90%);
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .title {
-    text-align: center;
-    margin: 20px 0 6px;
-    font-size: clamp(25px, 5vw, 40px);
-    line-height: 1.2;
-  }
-
-  .author {
-    text-align: center;
-    margin: 0 0 24px;
-    font-size: 18px;
-  }
-
-  .cover {
-    text-align: center;
-    margin: 25px 0 35px;
-  }
-
-  .cover img,
-  .book-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-  }
-
-  h1, h2, h3 {
-    line-height: 1.3;
-  }
-
-  h2 {
-    margin-top: 36px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 8px;
-  }
-
-  p {
-    margin: 0 0 16px;
-    text-align: justify;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .quote {
-    margin: 24px 8px;
-    padding: 14px 18px;
-    border-left: 4px solid #777;
-    background: #f7f7f7;
-  }
-
-  ol, ul {
-    padding-left: 28px;
-  }
-
-  .buy {
-    text-align: center;
-    margin: 42px 0 28px;
-  }
-
-  .buy a {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-family: Arial, sans-serif;
-  }
-
-  .video {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    margin: 25px 0;
-  }
-
-  .video iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  footer {
-    margin-top: 45px;
-    padding-top: 18px;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    font: 14px/1.5 Arial, sans-serif;
-    color: #666;
-  }
-
-  @media (max-width: 600px) {
-    .book {
-      margin: 0;
-      padding: 20px 18px 35px;
-      box-shadow: none;
-    }
-
-    p {
-      text-align: left;
-    }
-  }
-</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body style="background-color: #0b0f19; color: #ffffff;" id="top">
 
-<body>
-<main class="book">
+    <header class="border-b border-gold/20 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 text-decoration-none">
+                <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50 p-0.5">
+                <div>
+                    <span class="font-serif font-bold text-base text-white tracking-wide">
+                        <span class="text-gold">PUSTAKA</span> WBIZNET
+                    </span>
+                    <br>
+                    <span class="text-xs text-gray-400 font-serif italic">Buku #6 — Kresnawan Sasmita Putra</span>
+                </div>
+            </a>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px;">
+            <a href="https://pustaka-wbiznet.vercel.app/biografi.html" style="padding: 6px 16px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📂 Biografi</a>
+            <a href="https://pustaka-wbiznet.vercel.app/artikel.html" style="padding: 6px 16px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📝 Artikel</a>
+            <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 6px 16px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📚 Koleksi</a>
+        </div>
+    </header>
 
-  <!-- LOGO PUSTAKA WBIZNET: DITANAM LANGSUNG DI DALAM HTML -->
-  <header class="publisher">
+    <main class="max-w-4xl mx-auto p-4 py-8">
+        
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-serif font-bold text-gold mb-2">SENI MENATA WAKTU DI GERBANG REHAT</h1>
+            <p class="text-lg font-serif italic text-gray-300 mb-4">Dari Cangkir Kopi hingga Grafik Kaset Kehidupan.</p>
+        </div>
 
+        <div class="space-y-6 text-gray-200 leading-relaxed font-serif">
+            
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <p class="mb-0"><strong>Pengantar Singkat:</strong><br> Buku ini lahir dari ruang-ruang perenungan di masa pensiun. Setelah puluhan tahun berada dalam pusaran rutinitas pekerjaan, masa purnabakti memberikan ruang dan kebebasan berpikir untuk meresapi kembali arti waktu, keberanian untuk melambat, serta kepasrahan yang terukur melalui analogi-analogi sederhana.</p>
+            </section>
 
-    <img src="logo_pustaka_wbiznet.png" 
-      alt="Pustaka Wbiznet — Self Publisher">
-  </header>
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <h2 class="text-xl font-bold text-gold mb-3 font-sans">Bab 1: Menyadari Jeda dalam Perjalanan Panjang</h2>
+                <p class="mb-0">Waktu luang bukanlah kekosongan, melainkan ruang bagi pikiran untuk bekerja dengan bebas. Kesadaran utama meliputi: waktu sebagai anugerah tanpa tombol "rewind" (seperti pita kaset yang terus berputar maju), kebebasan berpikir tanpa tekanan target, serta menempatkan waktu pada porsi yang tepat melalui disiplin spiritual.</p>
+            </section>
 
-  <!-- GANTI BAGIAN DI BAWAH INI UNTUK SETIAP BUKU -->
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <h2 class="text-xl font-bold text-gold mb-3 font-sans">Bab 2: Metafora Pita Kaset — Antara Rekaman dan Perbaikan</h2>
+                <p class="mb-0">Hidup ini seperti pita kaset pada tape recorder yang tidak mempunyai tombol <em>rewind</em>Bekas lipatan dan kesalahan masa lalu tidak harus menjadi aib atau terus-menerus dibenci, melainkan pengingat berharga. Tugas kita bukan menghapus sejarah masa lalu, melainkan memastikan rekaman berikutnya berjalan dengan lebih jernih dan bijaksana.</p>
+            </section>
 
-  <h1 class="title">SENI MENATA WAKTU DI GERBANG REHAT</h1>
-Dari Cangkir Kopi hingga Grafik Kaset Kehidupan 
-<br><span></span>
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <h2 class="text-xl font-bold text-gold mb-3 font-sans">Bab 3: Navigasi Jalan Tol dan Lubang Kehidupan</h2>
+                <p class="mb-0">Jika di masa muda kita menuntut jalan yang mulus dan mudah mengeluh saat menghantam guncangan, di ambang pensiun kita melihat lubang-lubang kegagalan masa lalu sebagai guru kesabaran yang membentuk otot batin dan radar spiritual yang kuat.</p>
+            </section>
 
-  <div class="author">by Kresnawan Sasmita Putra</div>
-<img src="cover_seni_menata_waktu.png" alt="cover buku"
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <h2 class="text-xl font-bold text-gold mb-3 font-sans">Bab 4: Singgah di Rest Area: Menikmati Syukur dan Cangkir Kaca di Bawah Tenda</h2>
+                <p class="mb-0">Masa pensiun adalah <em>rest area.</> Kehangatan dialog tanpa kasta di warkop tenda sederhana—menikmati kopi tubruk sambil bersosialisasi dengan berbagai kalangan—mengajarkan kita untuk menikmati hal-hal kecil dan menghargai sesama manusia.</p>
+            </section>
 
-style="width:200px;height:200px;object-fit:contain;">
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <h2 class="text-xl font-bold text-gold mb-3 font-sans">Bab 5: Membongkar Cara Pandang: Melampaui Angka dan Logika Pasar</h2>
+                <p class="mb-0">Belajar menerima ketidakberdayaan manusia melalui analisis pasar digital secara terukur (spot market/take profit yang rasional), beralih pada prinsip syariah yang bermanfaat, serta meneladani filosofi cicak yang sabar berikhtiar tanpa sayap. Kesalahan atau <em>error</em> masa lalu adalah kompas untuk menemukan kebenaran (true).</p>
+            </section>
 
-  <section class="cover"> 
-    <!-- GANTI DENGAN GAMBAR COVER BUKU -->
-  
-  </section>
+            <section class="p-6 rounded-lg border border-gold/20 shadow-md" style="background-color: #0a192f;">
+                <h2 class="text-xl font-bold text-gold mb-3 font-sans">Bab 6 & Penutup: Sinkronisasi Waktu dengan Misi Utama</h2>
+                <p class="mb-0">Manajemen waktu di sisa perjalanan berputar pada ritme spiritual. Menjaga ketepatan waktu ibadah dan menyelaraskan setiap detak waktu dengan perintah Sang Pencipta adalah kunci untuk menuntaskan rekaman kehidupan dengan lapang dada dan penuh rasa syukur.</p>
+            </section>
 
-  <section>
-    <h2>Ringkasan Buku</h2>
-    <p>Seni Menata Waktu di Gerbang Rehat adalah buku reflektif mengenai kehidupan ketika seseorang memasuki masa purnabakti. Buku ini tidak menawarkan manajemen waktu dalam pengertian produktivitas semata, tetapi mengajak pembaca mempertanyakan kembali untuk apa waktu digunakan ketika kesibukan pekerjaan mulai berkurang.
-</p> 
-<p> 
-Perjalanan refleksi dibangun melalui enam tema: menyadari jeda dalam perjalanan panjang, metafora pita kaset dan masa lalu, perjalanan melalui “jalan tol” kehidupan, suasana sederhana di warung kopi, perubahan cara memandang angka dan pasar, hingga akhirnya menyelaraskan waktu dengan misi utama kehidupan. 
-</p>
-<p>
-Buku ini menggunakan metafora yang dekat dengan kehidupan sehari-hari. Pita kaset menjadi gambaran bahwa waktu yang telah berlalu tidak dapat di-rewind. Jalan berlubang menjadi gambaran masalah kehidupan, sedangkan warung kopi menjadi ruang untuk berhenti sejenak, bersosialisasi, dan mensyukuri perjalanan.
-</p>
-<p>
-Pada akhirnya, pengelolaan waktu diarahkan bukan kepada sebanyak mungkin aktivitas, tetapi kepada sinkronisasi waktu dengan tujuan hidup dan tanggung jawab spiritual. Shalat dipandang sebagai salah satu penanda ritme kehidupan dan pengingat agar prioritas tidak kehilangan arah. 
- 
+        </div>
 
-</p>
-  </section>
+        <section class="mt-12 text-center">
+            <h2 class="text-2xl font-serif font-bold text-gold mb-6">Video Terkait</h2>
+            
+            <div class="relative w-full max-w-[315px] mx-auto aspect-[9/16] rounded-xl overflow-hidden shadow-2xl border border-gold/40" style="background-color: #0a192f;">
+                <iframe
+                    src="https://www.youtube.com/embed/RBSmTDhMl7M"
+                    title="Video terkait buku"
+                    class="absolute top-0 left-0 w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
-  <section>
-      <em
-    <h2>kutipan</h1>
-    
-   <p></p>   <li>  Setelah perjalanan panjang, hidup tidak harus dipacu semakin cepat. Ada saatnya kita berhenti, melihat kembali perjalanan, bersyukur, lalu memastikan sisa waktu berjalan menuju tujuan yang benar.
+        <section class="mt-12 p-6 rounded-xl border border-gold/40 shadow-xl text-center" style="background-color: #0a192f;">
+            <h3 class="text-xl font-serif font-bold text-gold mb-4">Flipbook Interaktif: Seni Menata Waktu</h3>
+            <div class="relative w-full max-w-4xl h-[500px] mx-auto rounded-lg overflow-hidden border border-gold/30">
+                <iframe src="https://online.pubhtml5.com/fontf/bvka/" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="w-full h-full"></iframe>
+            </div>
+        </section>
 
-</li>   </em>
-  </section>
+    </main>
 
-  <section>
+    <footer class="border-t border-gold/25 text-gray-300" style="background-color: #0a192f; padding: 36px 16px; text-align: center; margin-top: 40px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p>
+                <strong style="color: #d4af37; font-family: serif; font-size: 1.1rem; letter-spacing: 0.5px;">Kresnawan Sasmita Putra Library</strong>
+            </p>
+            
+            <p style="margin-top: 8px; font-size: 0.85rem; color: #9ca3af;">
+                © 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
+            </p>
+            
+            <p style="margin-top: 16px;">
+                <a href="https://pustaka-wbiznet.vercel.app" style="color: #d4af37; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block;">
+                    ← Kembali ke Katalog Utama Pustaka Wbiznet
+                </a>
+            </p>
+        </div>
+    </footer>
 
-
-    <!-- CONTOH GAMBAR DI DALAM HTML -->
-    <!--
-    <img class="book-image"
-         src="data:image/jpeg;base64,[DATA-GAMBAR]"
-         alt="[Keterangan gambar]">
-    -->
-
-    <p></p>
-  </section>
-
-  <!-- VIDEO OPSIONAL -->
-  <!-- Hapus tanda komentar dan masukkan URL embed jika diperlukan.
-  <section>
-    <h2>Video</h2>
-    <div class="video">
-      <iframe
-        src="[URL-EMBED-VIDEO]"
-        title="Video terkait buku"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-  -->
-  
-  <!-- VIDEO TERKAIT BUKU -->
-<section>
-  <h2>Video</h2>
-
-  <div class="video">
-    <iframe
-      src="https://www.youtube.com/embed/RBSmTDhMl7M"
-      title="Video terkait buku"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<!-- FLIPBOOK -->
-<section class="flipbook">
-  <h2>Baca Buku</h2>
-
-  <iframe
-    style="width:100%;height:500px"
-    src="https://online.pubhtml5.com/fontf/bvka/"
-    seamless="seamless"
-    scrolling="no"
-    frameborder="0"
-    allowtransparency="true"
-    allowfullscreen="true">
-  </iframe>
-</section>
-<!
-
-
-<!-- EBOOK LENGKAP -->
-<section class="buy">
-  <p>
-    <strong>Ingin membaca ebook lengkap?</strong>
-  </p>
-
-  <a href="http://lynk.id/wbiznet"
-     target="_blank"
-     rel="noopener">
-    Download Ebook Lengkap
-  </a>
-</section>
-
-
-  <footer>
-      
-    <!-- Footer Sub-Halaman Ringkasan (Icon 50px + Navigasi Lengkap) -->
-<footer style="background-color: #1a1e24; border-top: 3px solid #0056b3; padding: 18px 20px; text-align: center !important; margin-top: 40px; width: 100%; box-sizing: border-box;">
-  <div style="max-width: 800px; margin: 0 auto; text-align: center !important;">
-    
-    <!-- Icon Logo 50px -->
-    <img alt="Icon Pustaka Wbiznet" src="icon_logo.png" style="height: 50px; margin: 0 auto 8px auto; display: block;">
-
-    <p style="font-weight: bold; font-size: 0.95em; color: #ffffff; margin: 0 0 4px 0; text-align: center !important;">
-      Membaca → Menulis → Berkarya
-    </p>
-
-    <p style="color: #a0aec0; font-size: 0.8em; margin: 0 0 10px 0; text-align: center !important;">
-      Copyright © Kresnawan Sasmita Putra — 2026
-    </p>
-
-    <!-- Dua Tombol Navigasi: Ke Beranda & Ke Atas -->
-    <div style="text-align: center !important;">
-      <a href="index.html" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
-        ← Kembali ke Beranda
-      </a>
-      <span style="color: #4a5568;">|</span>
-      <a href="#top" style="color: #63b3ed; font-weight: bold; text-decoration: none; font-size: 0.85em; display: inline-block; margin: 0 8px;">
-        ↑ Ke Atas
-      </a>
-    </div>
-
-  </div>
-</footer>
-
-</main>
 </body>
 </html>
