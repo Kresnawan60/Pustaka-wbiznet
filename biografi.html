@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Baru Saya</title>
+
+    <!-- 1. INI WAJIB ADA DI DALAM <head> AGAR KELAS TAILWIND BERFUNGSI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- (Opsional) Jika Anda pakai warna kustom 'gold' via Tailwind CDN, bisa tambahkan konfigurasi ini -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37', // Sesuaikan kode warna gold jika punya preferensi sendiri
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #0b0f19; color: #ffffff;">
+
+    <!-- 2. KODE BANNER YANG TADI DI-COPAS DISIMPAN DI SINI (DI DALAM <body>) -->
+    <header class="border-b border-gold/20 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <span class="font-serif font-bold text-base text-white tracking-wide">
+                
+                 <!-- Logo Bulat & Teks Sejajar di Kiri -->
+            <div class="flex items-center space-x-3">
+                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50">
+                <span class="font-serif font-bold text-base text-white tracking-wide"> 
+                
+                <span class="text-gold">PUSTAKA</span> WBIZNET
+            </span>
+            <span class="text-xs text-gray-400 font-serif italic">Arsip Sejarah </span>
+        </div>
+        
+        <!-- TOMBOL 3 WARNA (INLINE CSS - PASTI BERWARNA) -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-bottom: 32px;">
+            <a href="https://pustaka-wbiznet.vercel.app/#biografi" style="padding: 6px 16px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📂 Biografi</a>
+            <a href="https://pustaka-wbiznet.vercel.app/#artikel" style="padding: 6px 16px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📝 Artikel</a>
+            <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 6px 16px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📚 Koleksi</a>
+        </div>
+    </header>
+
+    <!-- ISI KONTEN HALAMAN ANDA DI SINI -->
+   
+   
+   
+    <main class="max-w-4xl mx-auto p-4">
+        <h2 class="text-2xl font-bold mt-6">Biografi & Video <br><em></em></h2>
+       <p><h3></h3> Kumpulan Artikel & Biografi Video  </h1>
+       </p> 
+        <title>Baca Ebook  Online </title>
+            
+    
+           <!-- TEMPAT KATALOG BIOGRAFI & VIDEO -->
+    <div id="biografi" style="margin-top: 40px;">
+      <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+        📚 Koleksi Biografi &amp; Video Narasi
+      </h2>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <!-- Item 1 -->
+        <a href="Jacqueline_Kennedy_Onassis.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Jacqueline Kennedy Onassis</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Ibu Negara AS (1961–1963) &amp; Ikon Budaya Dunia. Dilengkapi artikel biografi dan video narasi.</p>
+        </a>
+
+        <!-- Item 2 -->
+        <a href="biographi_matahari.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e11d48; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">💃 Biografi Mata Hari</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah Penari Eksotis &amp; Agen Rahasia Legendaris Perang Dunia I.</p>
+        </a>
+
+        <!-- Item 3 -->
+        <a href="bio_MargaretThatcher.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Margaret Thatcher</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah PM Inggris yang dijuluki "The Iron Lady".</p>
+        </a>
+
+        <!-- Item 4 -->
+        <a href="alcapone.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #e11d48; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Al Capone</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah mafia dan tokoh kontroversial Amerika Serikat.</p>
+        </a>
+
+        <!-- Item 5 -->
+        <a href="VladimirPutin.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Vladimir Putin</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Perjalanan hidup dari dinas intelijen KGB hingga menjadi tokoh kunci politik Rusia.</p>
+        </a>
+
+        <!-- Item 6 -->
+        <a href="Jackma.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Jack Ma (Pendiri Alibaba)</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">"Hari ini berat, besok akan lebih berat lagi, tetapi lusa akan indah." — Jack Ma</p>
+        </a>
+
+        <!-- Item 7 -->
+        <a href="FidelCastro.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #0284c7; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">🎬 Biografi Fidel Castro</h3>
+          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">"Satu-satunya keinginan saya adalah bertarung sebagai seorang prajurit ide." — Fidel Castro</p>
+        </a>
+
+        <!-- Item 9: Jengis Khan -->
+        <a href="JengisKhan.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Jengis Khan</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">"Jikalau engkau tidak mampu menaklukkan dirimu sendiri, engkau tidak akan pernah mampu menaklukkan dunia." — Jengis Khan</p>
+        </a>
+
+        <!-- Item 10: Columbus -->
+        <a href="columbus.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Christopher Columbus</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">"Kamu tidak akan pernah bisa menyeberangi lautan sampai kamu memiliki keberanian untuk kehilangan pandangan dari pantai." — Christopher Columbus</p>
+        </a>
+
+        <!-- Item 11: Mick Jagger -->
+        <a href="biografi_mick_jagger.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Mick Jagger</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">"Anything worth doing is worth overdoing." — Mick Jagger</p>
+        </a>
+
+        <!-- Item 12: Salahuddin Ayyubi -->
+        <a href="Biografi_Salahuddin_Ayyubi.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Salahuddin Ayyubi</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">Teladan Ksatria dan Pembebas Baitul Maqdis</p>
+        </a>
+
+        <!-- Item 13: Cleopatra -->
+        <a href="Cleopatra.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Cleopatra</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">Cleopatra VII Ratu Terakhir Mesir Kuno</p>
+        </a>
+
+        <!-- Item 14: Mao Zedong -->
+        <a href="MaoZedong.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Mao Zedong</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">Kisah Gelap dan Gemilang Mao Zedong</p>
+        </a>
+
+        <!-- Item 15: Grace Kelly -->
+        <a href="biografi_grace_kelly.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Grace Kelly</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">Aktris Hollywood yang kemudian menjadi Princess of Monaco.</p>
+        </a>
+
+      </div>
+    </div>
+
+        <!-- Item 16: Napoleon Bonaparte -->
+        <a href="Biografi_Video_Napoleon.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px; display: flex; align-items: center; gap: 6px;">🎬 Biografi Napoleon Bonaparte</h3>
+          <p style="margin: 0; font-size: 11px; color: #4a5568; line-height: 1.4;">Napoleon Bonaparte: Pemimpin Militer, Ahli Strategi, dan Paradoks Sejarah Eropa.</p>
+        </a>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- AREA UNDUH APLIKASI -->
+    <div class="app-download-card">
+      <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+        Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
+      </p>
+
+      <!-- Shortlink APK -->
+      <a href="https://go.shr.lc/4gPkS9J" class="btn-install">
+        Download &amp; Install APK
+      </a>
+
+      <!-- Petunjuk iPhone -->
+      <div class="ios-box">
+        <strong>📱 Pengguna iPhone (iOS):</strong><br>
+        Buka web ini di browser <strong>Safari</strong> &rarr; Tekan ikon <strong>Share</strong> (kotak dengan panah ke atas) &rarr; Pilih <strong>"Tambahkan ke Layar Utama"</strong>.
+      </div>
+    </div>
+
+  </div>
+        
+        
+        
+       
+     <!-- ========================================== -->
+    <!-- FOOTER BANNER (NAVY BLUE)                   -->
+    <!-- ========================================== -->
+    <footer class="border-t border-gold/25 text-gray-300" style="background-color: #0a192f; padding: 36px 16px; text-align: center; margin-top: 40px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p>
+                <strong style="color: #d4af37; font-family: serif; font-size: 1.1rem; letter-spacing: 0.5px;">Kresnawan Sasmita Putra Library</strong>
+            </p>
+            <p style="margin-top: 8px; font-size: 0.85rem; color: #9ca3af;">
+                © 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
+            </p>
+            <p style="margin-top: 16px;">
+                <a href="https://pustaka-wbiznet.vercel.app" style="color: #d4af37; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block;">
+                    ← Kembali ke Katalog Utama Pustaka Wbiznet
+                </a>
+            </p>
+        </div>
+    </footer>
+   
+    </main>
+
+
+
+
+
+</body>
+</html>
