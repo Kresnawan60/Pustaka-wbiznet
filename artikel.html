@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Baru Saya</title>
+    <title>Artikel Serba Serbi - Pustaka Wbiznet</title>
 
-    <!-- 1. INI WAJIB ADA DI DALAM <head> AGAR KELAS TAILWIND BERFUNGSI -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- (Opsional) Jika Anda pakai warna kustom 'gold' via Tailwind CDN, bisa tambahkan konfigurasi ini -->
+    <!-- Konfigurasi Warna Kustom Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: '#d4af37', // Sesuaikan kode warna gold jika punya preferensi sendiri
+                        gold: '#d4af37',
                     }
                 }
             }
@@ -23,104 +23,97 @@
 </head>
 <body style="background-color: #0b0f19; color: #ffffff;">
 
-    <!-- 2. KODE BANNER YANG TADI DI-COPAS DISIMPAN DI SINI (DI DALAM <body>) -->
+    <!-- HEADER & NAVIGASI -->
     <header class="border-b border-gold/20 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-            <span class="font-serif font-bold text-base text-white tracking-wide">
-                
-                 <!-- Logo Bulat & Teks Sejajar di Kiri -->
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <!-- Logo & Teks Sejajar -->
             <div class="flex items-center space-x-3">
                 <img src="icon_logo.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50">
-                <span class="font-serif font-bold text-base text-white tracking-wide"> 
-                
-                <span class="text-gold">PUSTAKA</span> WBIZNET
-            </span>
-            <span class="text-xs text-gray-400 font-serif italic">Arsip Sejarah </span>
-        </div>
-        
-        <!-- TOMBOL 3 WARNA (INLINE CSS - PASTI BERWARNA) -->
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-bottom: 32px;">
-            <a href="https://pustaka-wbiznet.vercel.app/biografi.html" style="padding: 6px 16px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📂 Biografi</a>
-            <a href="https://pustaka-wbiznet.vercel.app/artikel.html" style="padding: 6px 16px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📝 Artikel</a>
-            <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 6px 16px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📚 Koleksi</a>
+                <div>
+                    <span class="font-serif font-bold text-base text-white tracking-wide block">
+                        <span class="text-gold">PUSTAKA</span> WBIZNET
+                    </span>
+                    <span class="text-xs text-gray-400 font-serif italic">Arsip Sejarah</span>
+                </div>
+            </div>
+            
+            <!-- Tombol 3 Warna -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px;">
+                <a href="https://pustaka-wbiznet.vercel.app/biografi.html" style="padding: 6px 16px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📂 Biografi</a>
+                <a href="https://pustaka-wbiznet.vercel.app/artikel.html" style="padding: 6px 16px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📝 Artikel</a>
+                <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 6px 16px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📚 Koleksi</a>
+            </div>
+
         </div>
     </header>
 
-    <!-- ISI KONTEN HALAMAN ANDA DI SINI -->
-   
-   
-   
+    <!-- ISI KONTEN UTAMA -->
     <main class="max-w-4xl mx-auto p-4">
-        <h2 class="text-2xl font-bold mt-6">Artikel Serba Serbi <br><em></em></h2>
-       <p><h3></h3> Kumpulan artikel untuk pengetahuan </h1>
-       </p> 
-        <title>Baca Ebook Online </title>
-            <!-- TEMPAT UNTUK Artikel & Tulisan -->
-    <div id="artikel" style="margin-top: 40px;">
-      <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
-        📝 Artikel & Tulisan
-      </h2>
-      
-      <div style="display: flex; flex-direction: column; gap: 12px;">
-        <a href="PerjalananTerjauh.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 PERJALANAN TERJAUH BAGI LAKI-LAKI</h3>
-          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">"Mengapa perjalanan 50 meter melewati belasan rumah tetangga terasa lebih berat daripada perjalanan ribuan kilometer ke luar kota? Sebuah catatan jujur dari seorang hamba..."</p>
-        </a>
-
-        <a href="IlmuEkonomi_PurbayaSadewo.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Purbaya Yudhi Sadewa: Belajar Ekonomi Langsung dari Paul Romer, Peraih Nobel Ekonomi</h3>
-          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah perjalanan studi Purbaya Yudhi Sadewa bersama Paul Romer menunjukkan akar kuat disiplin ilmu ekonomi tingkat tinggi.</p>
-        </a>
-
-        <a href="KutbahJumat_4sept2026.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Mendengar Kutbah Jumat 4 Sept 2026 di Mesjid Nurul Qalam</h3>
-          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Tema: Menghidupkan Hati yang Lalai: Refleksi Nasihat Imam Hasan Al-Basri</p>
-        </a>
-
-        <a href="KutbahJumat_11sept2026.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Mendengar Kutbah Jumat 11 Sept 2026 di Mesjid Nurul Qalam</h3>
-          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Tema: Tiga Bekal Utama Menghadap Sang Pencipta </p>
-        </a>
-
-        <a href="Artikel_HomoEractus.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Jejak Sang Pionir: Evolusi dan Warisan Homo erectus di Nusantara</h3>
-          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Indonesia sebagai laboratorium alam yang menyimpan rahasia bagaimana leluhur kita beradaptasi.</p>
-        </a>
-
-        <a href="biografi10_napoleon_bonaparte.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-          <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Bangkitnya Elang dari Corsica: Kisah Epik Kekuasaan, Cinta, dan Takdir Napoleon & Josephine</h3>
-          <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Dari pulau karang Corsica hingga takhta kekaisaran Eropa, temukan sisi manusiawi sang penakluk dan wanita yang mengubah jalan hidupnya.</p>
-        </a>
-      </div>
-    </div>
+        <h2 class="text-2xl font-bold mt-6">Artikel Serba Serbi</h2>
+        <p class="text-gray-300 text-sm mt-1">Kumpulan artikel untuk menambah wawasan dan pengetahuan.</p> 
         
-            <!-- AREA UNDUH APLIKASI (KOTAK HIJAU) -->
-        <div class="app-download-card">
+        <!-- TEMPAT UNTUK ARTIKEL & TULISAN -->
+        <div id="artikel" style="margin-top: 40px;">
+          <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+            📝 Artikel & Tulisan
+          </h2>
+          
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="PerjalananTerjauh.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 PERJALANAN TERJAUH BAGI LAKI-LAKI</h3>
+              <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">"Mengapa perjalanan 50 meter melewati belasan rumah tetangga terasa lebih berat daripada perjalanan ribuan kilometer ke luar kota? Sebuah catatan jujur dari seorang hamba..."</p>
+            </a>
+
+            <a href="IlmuEkonomi_PurbayaSadewo.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Purbaya Yudhi Sadewa: Belajar Ekonomi Langsung dari Paul Romer, Peraih Nobel Ekonomi</h3>
+              <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Kisah perjalanan studi Purbaya Yudhi Sadewa bersama Paul Romer menunjukkan akar kuat disiplin ilmu ekonomi tingkat tinggi.</p>
+            </a>
+
+            <a href="KutbahJumat_4sept2026.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Mendengar Kutbah Jumat 4 Sept 2026 di Mesjid Nurul Qalam</h3>
+              <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Tema: Menghidupkan Hati yang Lalai: Refleksi Nasihat Imam Hasan Al-Basri</p>
+            </a>
+
+            <a href="KutbahJumat_11sept2026.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Mendengar Kutbah Jumat 11 Sept 2026 di Mesjid Nurul Qalam</h3>
+              <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Tema: Tiga Bekal Utama Menghadap Sang Pencipta</p>
+            </a>
+
+            <a href="Artikel_HomoEractus.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Jejak Sang Pionir: Evolusi dan Warisan Homo erectus di Nusantara</h3>
+              <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Indonesia sebagai laboratorium alam yang menyimpan rahasia bagaimana leluhur kita beradaptasi.</p>
+            </a>
+
+            <a href="biografi10_napoleon_bonaparte.html" style="text-decoration: none; display: block; background-color: #ffffff; border: 1px solid #e2e8f0; border-left: 4px solid #10b981; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <h3 style="margin: 0 0 4px 0; color: #1a202c; font-size: 15px;">📰 Bangkitnya Elang dari Corsica: Kisah Epik Kekuasaan, Cinta, dan Takdir Napoleon & Josephine</h3>
+              <p style="margin: 0; font-size: 12px; color: #4a5568; line-height: 1.4;">Dari pulau karang Corsica hingga takhta kekaisaran Eropa, temukan sisi manusiawi sang penakluk dan wanita yang mengubah jalan hidupnya.</p>
+            </a>
+          </div>
+        </div>
+        
+        <!-- AREA UNDUH APLIKASI (SUDAH DIPERBAIKI STYLING-NYA) -->
+        <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 20px; border-radius: 8px; margin-top: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
           <h3 style="color: #16a34a; font-size: 1.1rem; font-weight: bold; margin-bottom: 8px;">📲 Install Aplikasi Pustaka Wbiznet</h3>
           <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 16px;">
             Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
           </p>
 
-          <!-- Shortlink APK -->
-          <a href="https://go.shr.lc/4gPkS9J" class="btn-install">
+          <!-- Tombol Download APK -->
+          <a href="https://go.shr.lc/4gPkS9J" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; margin-bottom: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
             📥 Download &amp; Install APK
           </a>
 
           <!-- Petunjuk iPhone -->
-          <div class="ios-box">
-            <strong>📱 Pengguna iPhone (iOS):</strong><br>
+          <div style="background-color: rgba(255,255,255,0.05); border-left: 4px solid #16a34a; padding: 12px; border-radius: 4px; font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
+            <strong style="color: #ffffff;">📱 Pengguna iPhone (iOS):</strong><br>
             Buka web ini di browser <strong>Safari</strong> &rarr; Tekan ikon <strong>Share</strong> (kotak dengan panah ke atas) &rarr; Pilih <strong>"Tambahkan ke Layar Utama"</strong>.
           </div>
         </div>
 
     </main>
     
-    
-        
-       
-     <!-- ========================================== -->
-    <!-- FOOTER BANNER (NAVY BLUE)                   -->
-    <!-- ========================================== -->
+    <!-- FOOTER -->
     <footer class="border-t border-gold/25 text-gray-300" style="background-color: #0a192f; padding: 36px 16px; text-align: center; margin-top: 40px;">
         <div style="max-width: 800px; margin: 0 auto;">
             <p>
@@ -136,12 +129,6 @@
             </p>
         </div>
     </footer>
-   
-    </main>
-
-
-
-
 
 </body>
 </html>
