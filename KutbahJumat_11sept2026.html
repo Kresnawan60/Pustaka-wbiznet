@@ -1,254 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul Halaman — Pustaka Wbiznet</title>
 
-  <title>Mendengarkan Khutbah Jumat 11 September 2026 — Pustaka Wbiznet</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <meta name="description"
-    content="Dokumentasi Khutbah Jumat 11 September 2026 di Masjid Nurul Qolam, Jl. Abadi, Tanjung Rejo, Medan. Tema hati yang selamat, rasa malu, amal, dan tidak lalai dari Allah.">
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: #f5f5f5;
-      color: #333;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.8;
-    }
-
-    .header {
-      background: #ffffff;
-      text-align: center;
-      padding: 22px 15px 10px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .header img {
-      max-width: 210px;
-      height: auto;
-    }
-
-    .nav {
-      text-align: center;
-      background: #ffffff;
-      padding: 8px 10px 18px;
-    }
-
-    .nav a {
-      display: inline-block;
-      margin: 4px 8px;
-      padding: 6px 10px;
-      color: #555;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 25px auto;
-      padding: 0 20px; /* Ditingkatkan dari 15px agar tidak mepet ke bingkai HP */
-    }
-
-    .article {
-      background: #ffffff;
-      padding: 28px;
-      border-radius: 8px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.06);
-    }
-
-    h1 {
-      font-size: 28px;
-      line-height: 1.35;
-      text-align: center;
-      margin-top: 0;
-      color: #222;
-    }
-
-    h2 {
-      font-size: 21px;
-      margin-top: 35px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #ddd;
-      color: #333;
-    }
-
-    h3 {
-      font-size: 18px;
-      margin-top: 25px;
-    }
-
-    .meta {
-      text-align: center;
-      color: #666;
-      font-size: 14px;
-      margin-bottom: 25px;
-    }
-
-    .theme {
-      background: #f3f3f3;
-      border-left: 4px solid #777;
-      padding: 15px 18px;
-      margin: 25px 0;
-    }
-
-    .arabic {
-      direction: rtl;
-      text-align: right;
-      font-size: 23px;
-      line-height: 2.1;
-      margin: 18px 0;
-      font-family: "Amiri", "Noto Naskh Arabic", serif;
-    }
-
-    .translation {
-      background: #fafafa;
-      padding: 15px 18px;
-      border-radius: 5px;
-      font-style: italic;
-      color: #555;
-    }
-
-    .video-box {
-      margin: 25px 0;
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      background: #eee;
-      border-radius: 7px;
-    }
-
-    .video-box iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .note {
-      background: #fff8e8;
-      border-left: 4px solid #c9a227;
-      padding: 14px 17px;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-
-    .quote {
-      margin: 25px 0;
-      padding: 16px 20px;
-      border-left: 4px solid #999;
-      background: #fafafa;
-      font-size: 17px;
-    }
-
-    .transcript p {
-      margin: 0 0 17px;
-    }
-
-    .unclear {
-      color: #777;
-      font-style: italic;
-    }
-
-    .footer {
-      margin-top: 35px;
-      padding: 25px 15px;
-      border-top: 1px solid #ccc;
-      text-align: center;
-      color: #777;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 0 15px; /* Padding sisi layar HP agar lebih proporsional */
-      }
-
-      .article {
-        padding: 20px 15px; /* Mengurangi padding dalam artikel di layar kecil */
-      }
-
-      h1 {
-        font-size: 23px;
-      }
-
-      h2 {
-        font-size: 19px;
-      }
-
-      .arabic {
-        font-size: 20px;
-      }
-    }
-  </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+<body style="background-color: #0b0f19; color: #ffffff;" class="font-sans antialiased">
 
-<body id="top">
-
-  <!-- HEADER -->
-  <!-- Navigasi & Logo Atas -->
-  <div class="top-nav">
-    <div class="container">
-
-        <a href="index.html">
-            <img src="logo_pustaka_wbiznet.png"
-                 alt="Logo Pustaka Wbiznet"
-                 style="width: 280px; max-width: 100%; height: auto; display: block; margin: 0 auto 10px auto;">
-        </a>
-
-        <!-- Navigasi Tengah -->
-        <div style="text-align: center;">
-
-            <a href="index.html#biografi"
-               style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">
-               Biografi
-            </a>
-
-            <a href="index.html#artikel"
-               style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #28a745; color: white; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">
-               Artikel
-            </a>
-
-            <a href="index.html#katalog"
-               style="display: inline-block; padding: 5px 12px; margin: 2px; background-color: #ffc107; color: black; text-decoration: none; border-radius: 4px; font-size: 0.8rem;">
-               Koleksi
-            </a>
+    <!-- HEADER & NAVIGASI -->
+    <header class="border-b border-gold/25 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <!-- Logo & Teks -->
+            <div class="flex items-center space-x-3">
+                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50">
+                <div>
+                    <span class="font-serif font-bold text-base text-white tracking-wide block">
+                        <span class="text-gold">PUSTAKA</span> WBIZNET
+                    </span>
+                    <span class="text-xs text-gray-400 font-serif italic">Arsip Digital & Karya</span>
+                </div>
+            </div>
+            
+            <!-- Tombol Navigasi Cepat -->
+            <div class="flex flex-wrap justify-center items-center gap-2">
+                <a href="biografi.html" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md shadow transition">📂 Biografi</a>
+                <a href="artikel.html" class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-medium rounded-md shadow transition">📝 Artikel</a>
+                <a href="index.html#katalog" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-gray-900 text-xs font-medium rounded-md shadow transition">📚 Katalog</a>
+            </div>
 
         </div>
+    </header>
 
-    </div>
-  </div>
-  
-  <div class="container">
-    <article class="article">
+    <!-- KONTEN UTAMA -->
+    <main class="max-w-3xl mx-auto p-4 sm:p-6 mt-6">
+        
+        <!-- Kotak Artikel / Bacaan -->
+        <article style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3);" class="p-6 sm:p-8 rounded-xl shadow-xl">
+            
+            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-gold/10 text-gold border border-gold/30 inline-block mb-3">
+                Mutiara Jumat/ 11 September 2026
+            </span>
 
-      <h1>
-        Mendengarkan Khutbah Jumat<br>
-        11 September 2026
-      </h1>
+            <h1 class="text-xl sm:text-2xl font-serif font-bold text-white mb-4 leading-snug">
+           Hati yang selamat, menjaga rasa malu, memperbanyak amal, serta tidak terlena oleh kehidupan dunia.    
+            </h1>
 
-      <div class="meta">
-        Masjid Nurul Qolam<br>
-        Jl. Abadi, Tanjung Rejo, Medan
-      </div>
+            <div class="border-b border-gold/20 mb-6 pb-2 text-xs text-gray-400">
+                Di Mesjid Nurul Qolam, Jl.Abadi — Tanjung Reja Meda
+            </div>
 
-      <div class="theme">
-        <strong>Catatan tema khutbah:</strong><br>
-        Hati yang selamat, menjaga rasa malu, memperbanyak amal,
-        serta tidak terlena oleh kehidupan dunia.
+            <!-- Paragraf Isi -->
+            <div class="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">               <p>
+                                    
+                              <div class="theme">
+        <strong>Catatan  khutbah:</strong><br>
+        
       </div>
 
 
@@ -535,15 +357,30 @@
       </div>
 
     </article>
-  </div>
+  </div       
+                  
+            </div>
 
+        </article>
 
-  <div class="footer">
-    <strong>Pustaka Wbiznet</strong><br>
-    Dokumentasi, catatan, dan arsip digital<br>
-    Kresnawan Sasmita Putra Library<br>
-    <a href="index.html">Kembali ke Pustaka Wbiznet</a>
-  </div>
+        <!-- Tombol Kembali -->
+        <div class="mt-8 text-center">
+            <a href="artikel.html" class="inline-block text-gold hover:underline text-sm font-medium">
+                ← Kembali ke Arsip Artikel & Tulisan
+            </a>
+        </div>
+
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="border-t border-gold/25 text-gray-400 py-8 px-4 text-center mt-12" style="background-color: #0a192f;">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-gold font-serif font-semibold text-base">Kresnawan Sasmita Putra Library</p>
+            <p class="text-xs text-gray-500 mt-2">
+                © 2026 <strong class="text-white">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
