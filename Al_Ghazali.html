@@ -98,7 +98,7 @@
                     <span class="font-serif font-bold text-base text-white tracking-wide block">
                         <span class="text-gold">PUSTAKA</span> WBIZNET
                     </span>
-                    <span class="text-xs text-gray-400 font-serif italic">Arsip Digital & Karya</span>
+                    <span class="text-xs text-gray-400 font-serif italic">Ebook by Kresnawan Sasmita Putra</span>
                 </div>
             </div>
             
@@ -115,13 +115,13 @@
     <!-- Banner Web Anda -->
     <div class="banner-web">Pratinjau E-book Digital</div>
     
-    <!-- Judul Buku (Sudah Diperbaiki Tanpa Simbol < nyasar) -->
-    <h2 class="text-center text-xl font-bold text-gold my-4">MENUJU CAHAYA KEPASTIAN</h2>
+    <!-- Judul Buku -->
+      <h2 class="text-center text-xl font-bold text-gold my-4">MENUJU CAHAYA KEPASTIAN</h2>
   
     <!-- Tombol Navigasi -->
     <div class="controls">
         <button id="prev-page">Sebelumnya</button>
-        <span class="text-white mx-2">Hal: <span id="page-num"></span> / <span id="page-total-preview"></span> (Pratinjau)</span>
+        <span class="text-white mx-2">Hal: <span id="page-num"></span> / <span id="page-total-preview"></span> </span>
         <button id="next-page">Selanjutnya</button>
     </div>
 
@@ -133,12 +133,11 @@
     <!-- Pesan Batas Pratinjau & Link Lynk.id -->
     <div id="limit-notice">
         <p><b>Batas Pratinjau Tercapai!</b><br>Anda sedang membaca versi gratis (20 halaman awal). Ingin membaca seluruh isi buku secara penuh dan offline?</p>
-        <a href="http://lynk.id/wbiznet/enqz5q9mxvr6/checkout" target="_blank">Unduh Versi Lengkap di Lynk.id</a>
+              <a href="http://lynk.id/wbiznet/enqz5q9mxvr6/checkout" target="_blank">Unduh Versi Lengkap di Lynk.id</a>
     </div>
 
     <script>
-        // PASTIKAN nama file PDF di bawah ini SAMA PERSIS dengan file PDF di folder TrebEdit Anda
-        const url = 'Menuju_Cahaya_Kepastian_ Otobiografi_Al-Ghazali.pdf';
+                const url = 'Menuju_Cahaya_Kepastian_ Otobiografi_Al-Ghazali.pdf';
         const MAX_PREVIEW_PAGES = 20; 
 
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
@@ -195,7 +194,6 @@
             pageNum--;
             queueRenderPage(pageNum);
         }
-        document.getElementById('prev-page').addEventListener('click', onPrevPage);
 
         function onNextPage() {
             if (pageNum >= MAX_PREVIEW_PAGES || pageNum >= pdfDoc.numPages) {
@@ -204,8 +202,46 @@
             pageNum++;
             queueRenderPage(pageNum);
         }
+
+        // Event Listener Tombol Klik
+        document.getElementById('prev-page').addEventListener('click', onPrevPage);
         document.getElementById('next-page').addEventListener('click', onNextPage);
 
+        // Fitur Geser Jari (Touch Swipe untuk HP/Tablet)
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        canvas.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        canvas.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            let threshold = 50; // Batas minimum geseran (dalam piksel)
+            if (touchEndX < touchStartX - threshold) {
+                // Geser ke KIRI -> Halaman Selanjutnya
+                onNextPage();
+            }
+            if (touchEndX > touchStartX + threshold) {
+                // Geser ke KANAN -> Halaman Sebelumnya
+                onPrevPage();
+            }
+        }
+
+        // Navigasi Keyboard (Untuk PC/Laptop)
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                onNextPage();
+            } else if (e.key === 'ArrowLeft') {
+                onPrevPage();
+            }
+        });
+
+        // Muat Dokumen PDF
         pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
             pdfDoc = pdfDoc_;
             document.getElementById('page-total-preview').textContent = MAX_PREVIEW_PAGES;
@@ -220,7 +256,7 @@
         <div class="max-w-2xl mx-auto">
             <p class="text-gold font-serif font-semibold text-base">Kresnawan Sasmita Putra Library</p>
             <p class="text-xs text-gray-500 mt-2">
-                © 2026 <strong class="text-white">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
+                © 2026 <strong class="text-white">Pustaka Wbiznet — Self Publisher</strong>.<br> Seluruh Hak Cipta Dilindungi.
             </p>
         </div>
     </footer>
