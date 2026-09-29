@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book Reader</title>
+    
+    <!-- Memanggil PDF.js melalui CDN (via internet) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 10px;
+        }
+        .controls {
+            margin: 15px 0;
+        }
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+        #pdf-canvas {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Pratinjau E-book Digital</h2>
+    
+    <!-- Tombol Navigasi -->
+    <div class="controls">
+        <button id="prev-page">Sebelumnya</button>
+        <span>Hal: <span id="page-num"></span> / <span id="page-count"></span></span>
+        <button id="next-page">Selanjutnya</button>
+    </div>
+
+    <!-- Area Kanvas Tempat PDF Dirender -->
+    <div>
+        <canvas id="pdf-canvas"></canvas>
+    </div>
+
+    <script>
+        // Lokasi file PDF Anda (bisa berupa link online atau file lokal di folder proyek)
+        const url = 'Menuju Cahaya Kepastian_ Otobiografi Spiritual dan Pemikiran Al-Ghazali.pdf'
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        let pdfDoc = null,
+            pageNum = 1,
+            pageRendering = false,
+            pageNumPending = null,
+            scale = 1.2,
+            canvas = document.getElementById('pdf-canvas'),
+            ctx = canvas.getContext('2d');
+
+        function renderPage(num) {
+            pageRendering = true;
+            pdfDoc.getPage(num).then(function(page) {
+                let viewport = page.getViewport({scale: scale});
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                let renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                let renderTask = page.render(renderContext);
+
+                renderTask.promise.then(function() {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+            });
+
+            document.getElementById('page-num').textContent = num;
+        }
+
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        function onPrevPage() {
+            if (pageNum <= 1) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        }
+        document.getElementById('prev-page').addEventListener('click', onPrevPage);
+
+        function onNextPage() {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        }
+        document.getElementById('next-page').addEventListener('click', onNextPage);
+
+        pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+            pdfDoc = pdfDoc_;
+            document.getElementById('page-count').textContent = pdfDoc.numPages;
+            renderPage(pageNum);
+        });
+    </script>
+</body>
+</html>
