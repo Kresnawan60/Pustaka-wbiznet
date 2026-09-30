@@ -28,11 +28,20 @@
     
     /* Header & Navigasi */
     header { background-color: #1e293b; color: white; padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; }
-    header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
-    header h3 { margin: 0; font-size: 1.1rem; }
-    header h3 span { color: #38bdf8; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; }
-    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+    header .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; display: flex; flex-direction: column; gap: 8px; }
+    
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-brand img { width: 40px; height: 40px; object-fit: cover; border-radius: 50%; border: 2px solid rgba(212, 175, 55, 0.5); }
+    .header-title-area h3 { margin: 0; font-size: 1.1rem; font-family: serif; font-weight: bold; letter-spacing: 0.5px; color: white; }
+    .header-title-area h3 span { color: #d4af37; }
+    .header-title-area span.sub { font-size: 0.75rem; color: #94a3b8; font-family: serif; font-style: italic; display: block; }
+
+    /* Tombol Navigasi Cepat di Header */
+    .nav-quick-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 8px; }
+    .nav-quick-links a { padding: 4px 12px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); color: #ffffff; }
+    .btn-nav-bio { background-color: #2563eb; }
+    .btn-nav-artikel { background-color: #16a34a; }
+    .btn-nav-koleksi { background-color: #f59e0b; color: #111827; }
 
     /* Hero Section */
     .hero-section {
@@ -155,31 +164,35 @@
       .hero-title { font-size: 2rem; }
       .hero-quote { font-size: 1.1rem; }
       .hero-section { padding: 50px 20px; }
-      header h3 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
+<header>
     <div class="container">
-      <h3><span>Pustaka Wbiznet</span></h3>
-  
-<!-- TOMBOL 3 WARNA (INLINE CSS - PASTI BERWARNA) -->
+        <!-- Logo & Teks Sejajar -->
+        <div class="header-brand">
+            <img src="icon_logo.png" alt="Logo Pustaka Wbiznet">
+            <div class="header-title-area">
+                <h3><span>PUSTAKA</span> WBIZNET</h3>
+                <span class="sub">Self Publisher</span>
+            </div>
+        </div>
+        
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-bottom: 32px;">
-    <a href="https://pustaka-wbiznet.vercel.app/biografi.html" style="padding: 3px 10px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📂 Biografi</a>
-    <a href="https://pustaka-wbiznet.vercel.app/artikel.html" style="padding: 3px 10px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📝 Artikel</a>
-    <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 3px 10px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📚 Koleksi</a>
-    </div> <!-- Penutup div container yang sebelumnya kurang -->
-  </header>
- 
+        <!-- Tombol Navigasi 3 Warna -->
+        <div class="nav-quick-links">
+            <a href="#biografi" class="nav-btn btn-nav-bio">📂 Biografi</a>
+            <a href="#artikel" class="nav-btn btn-nav-artikel">📝 Artikel</a>
+            <a href="#katalog" class="nav-btn btn-nav-koleksi">📚 Koleksi</a>
+        </div>
+    </div>
+</header>
 
- 
-
-  <section class="hero-section">
+<section class="hero-section">
     <div class="hero-content">
-      <img src="logo_pustaka_wbiznet.png" alt="Logo Pustaka Wbiznet">
+      
       <span class="hero-badge">Membaca → Menulis → Berkarya</span><br>
       Portofolio & Digital Catalog by 
       <h4 class="hero-title"> Kresnawan Sasmita Putra Library</h4>
@@ -191,7 +204,7 @@
 
       <p class="hero-description">
         Pustaka Wbiznet adalah tempat menyimpan portopolianya Kresnawan Sasmita Putra 
-        sebagai "Menolak Lupa" atas arsip bacaan-bacaannya di masa lalu hingga  memasuki masa rehat — dari kesukaan  membaca dan mencatat, 
+        sebagai "Menolak Lupa" atas arsip bacaan-bacaannya di masa lalu hingga memasuki masa rehat — dari kesukaan membaca dan mencatat, 
         kemudian menulis, hingga menghasilkan berbagai karya.
       </p>
 
@@ -237,9 +250,7 @@
             <a href="https://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-        <a href="https://www.qrcbn.com/check/62-10158-9111-938" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-        
-        
+          <a href="https://www.qrcbn.com/check/62-10158-9111-938" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -264,10 +275,6 @@
             <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-       
-       
-       
-       
         </div>
       </div>
 
@@ -291,11 +298,7 @@
             <a href="https://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-        
-        <a href="https://www.qrcbn.com/check/62-10158-9912-382" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-        
-        
-        
+          <a href="https://www.qrcbn.com/check/62-10158-9912-382" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -319,9 +322,7 @@
             <a href="https://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-        
-        <a href="https://www.qrcbn.com/check/62-10158-4194-251" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-        
+          <a href="https://www.qrcbn.com/check/62-10158-4194-251" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -344,8 +345,7 @@
             <a href="https://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-        <a href="https://www.qrcbn.com/check/62-10158-6613-085" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-        
+          <a href="https://www.qrcbn.com/check/62-10158-6613-085" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -368,9 +368,7 @@
             <a href="https://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-       
-        <a href="https://www.qrcbn.com/check/62-10158-0156-462" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-       
+          <a href="https://www.qrcbn.com/check/62-10158-0156-462" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -393,9 +391,7 @@
             <a href="https://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-     
-       <a href="https://www.qrcbn.com/check/62-10158-5005-856" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-     
+          <a href="https://www.qrcbn.com/check/62-10158-5005-856" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -418,8 +414,7 @@
             <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/lkpt/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-        
-           <a href="https://www.qrcbn.com/check/62-10158-0056-278" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0056-278" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -442,9 +437,7 @@
             <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/dypw/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-       
-       <a href="https://www.qrcbn.com/check/62-10158-3349-359" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
-       
+          <a href="https://www.qrcbn.com/check/62-10158-3349-359" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -467,7 +460,7 @@
             <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/wkku/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-       <a href="https://www.qrcbn.com/check/62-10158-1466-388" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1466-388" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
@@ -522,14 +515,11 @@
         <div>
           <span class="badge">BUKU #13 — TERBARU</span>
           <a href="Pemikiran_Al_Ghazali.html" class="book-card-link">
-            <h3>Menuju Cahaya Kepastian<br>Otobiografi Spiritual dan Pemikiran Imam Al-Ghazali
- 
-</h3>
+            <h3>Menuju Cahaya Kepastian<br>Otobiografi Spiritual dan Pemikiran Imam Al-Ghazali</h3>
             <img src="cover_menuju_cahaya_kepastian.png" alt="Cover Menuju Cahaya Kepastian"> 
           </a>
           <p>
            Buku adaptasi ini merangkai kembali perjalanan otobiografis Al-Ghazali dalam menembus kabut *taqlid*, membedah keterbatasan teologi dan filsafat, hingga meraih puncak pencerahan spiritual (*Ilmu Yakin*) melalui pengalaman batiniah (*Dzauq*).
-.
           </p>
         </div>
         <div class="btn-action-area">
@@ -542,11 +532,6 @@
           <a href="https://www.qrcbn.com/check/62-10158-0529-943" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
-
-
-
-
-
 
     </div> <!-- Tutup book-grid -->
 
