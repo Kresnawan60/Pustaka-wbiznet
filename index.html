@@ -38,10 +38,21 @@
 
     /* Tombol Navigasi Cepat di Header */
     .nav-quick-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 8px; }
-    .nav-quick-links a { padding: 4px 12px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); color: #ffffff; }
+    .nav-quick-links a { padding: 4px 12px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); color: #ffffff; transition: transform 0.1s; }
+    .nav-quick-links a:hover { transform: translateY(-1px); }
+    
     .btn-nav-bio { background-color: #2563eb; }
     .btn-nav-artikel { background-color: #16a34a; }
     .btn-nav-koleksi { background-color: #f59e0b; color: #111827; }
+    /* Tombol Manis untuk Luxury Watch */
+    .btn-nav-watch { 
+      background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); 
+      color: #0b0f19 !important; 
+      font-weight: bold; 
+      border: 1px solid #fef08a; 
+      box-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+    }
+    .btn-nav-watch:hover { background: linear-gradient(135deg, #f59e0b 0%, #d4af37 100%); }
 
     /* Hero Section */
     .hero-section {
@@ -180,12 +191,12 @@
             </div>
         </div>
         
-
-        <!-- Tombol Navigasi 3 Warna -->
+        <!-- Tombol Navigasi Cepat di Header (Sudah Termasuk Luxury Watch) -->
         <div class="nav-quick-links">
             <a href="#biografi" class="nav-btn btn-nav-bio">📂 Biografi</a>
             <a href="#artikel" class="nav-btn btn-nav-artikel">📝 Artikel</a>
             <a href="#katalog" class="nav-btn btn-nav-koleksi">📚 Koleksi</a>
+            <a href="luxurywatch.html" class="nav-btn btn-nav-watch">💎 Luxury Watch</a>
         </div>
     </div>
 </header>
@@ -460,7 +471,7 @@
             <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
           </div>
           <a href="https://online.pubhtml5.com/fontf/wkku/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
-          <a href="https://www.qrcbn.com/check/62-10158-1466-388" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1466-388" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛</a>
         </div>
       </div>
 
@@ -565,7 +576,7 @@
       </div>
     </div>
 
-    <!-- AREA UNDUH APLIKASI -->
+    <!-- AREA UNDUH APLIKASI (APK & PWA) -->
     <div class="app-download-card">
       <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
         Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
