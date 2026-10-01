@@ -1,81 +1,610 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audemars Piguet Royal Oak — Koleksi Eksklusif | Pustaka Wbiznet</title>
+<head> 
+  <meta name="google-site-verification" content="OXmtOKCji2tDFJ0UmsWhYkhnB1OUQc8GDUEABPAl_bg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio & Digital Catalog by Kresnawan Sasmita Putra Library">
 
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <title>Pustaka Wbiznet — Membaca, Menulis, Berkarya</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pustaka-wbiznet.vercel.app/">
+  <meta property="og:title" content="Pustaka Wbiznet — Membaca → Menulis → Berkarya">
+  <meta property="og:description" content="Portofolio & Digital Catalog by Kresnawan Sasmita Putra Library">
+  <meta property="og:image" content="https://pustaka-wbiznet.vercel.app/logo_pustaka_wbiznet.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#d4af37',
-                    }
-                }
-            }
-        }
-    </script>
+  <!-- PWA & Favicon -->
+  <link rel="icon" href="img/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e293b">
+
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+    
+    /* Header & Navigasi */
+    header { background-color: #1e293b; color: white; padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; }
+    header .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; display: flex; flex-direction: column; gap: 8px; }
+    
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-brand img { width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.5); }
+    .header-title-area h3 { margin: 0; font-size: 1.1rem; font-family: serif; font-weight: bold; letter-spacing: 0.5px; color: white; }
+    .header-title-area h3 span { color: #d4af37; }
+    .header-title-area span.sub { font-size: 0.75rem; color: #94a3b8; font-family: serif; font-style: italic; display: block; }
+
+    /* Tombol Navigasi Cepat di Header */
+    .nav-quick-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 8px; }
+    .nav-quick-links a { padding: 4px 12px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); color: #ffffff; transition: transform 0.1s; }
+    .nav-quick-links a:hover { transform: translateY(-1px); }
+    
+    .btn-nav-bio { background-color: #2563eb; }
+    .btn-nav-artikel { background-color: #16a34a; }
+    .btn-nav-koleksi { background-color: #f59e0b; color: #111827; }
+    /* Tombol Manis untuk Luxury Watch */
+    .btn-nav-watch { 
+      background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%); 
+      color: #0b0f19 !important; 
+      font-weight: bold; 
+      border: 1px solid #fef08a; 
+      box-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+    }
+    .btn-nav-watch:hover { background: linear-gradient(135deg, #f59e0b 0%, #d4af37 100%); }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 35px 15px;
+      text-align: center;
+      border-bottom: 4px solid #38bdf8;
+    }
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .hero-content img { max-width: 150px; height: auto; margin: 0 auto 15px auto; display: block; }
+    .hero-badge {
+      background-color: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .hero-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 12px 0; line-height: 1.3; }
+    .hero-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      border-left: 3px solid #38bdf8;
+      margin: 15px auto;
+      padding: 10px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .hero-description { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+    .btn-hero-primary {
+      background-color: #0284c7;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+
+    /* Grid Buku & Kartu */
+    .main-container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+    .section-divider {
+      border: 0;
+      height: 2px;
+      background: linear-gradient(to right, #cbd5e1, #0284c7, #cbd5e1);
+      margin: 25px 0 20px 0;
+    }
+    .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .book-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
+    .book-card-link { text-decoration: none; color: inherit; display: block; }
+    .book-card img { max-width: 180px; width: 100%; height: auto; display: block; margin: 0 auto 12px auto; border-radius: 6px; transition: transform 0.2s; }
+    .book-card-link:hover img { transform: scale(1.02); }
+    .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.1rem; line-height: 1.3; }
+    .book-card p { font-size: 0.9rem; color: #64748b; flex-grow: 1; line-height: 1.5; }
+    .badge { background-color: #0284c7; color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
+    
+    /* Tombol Aksi Buku */
+    .btn-action-area { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+    .btn-row { display: flex; gap: 8px; }
+    .btn { display: block; width: 100%; padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; }
+    .btn-ringkasan { background-color: #0284c7; color: white; font-size: 0.9rem; padding: 11px; }
+    .btn-detail { background-color: #475569; color: white; }
+    .btn-beli { background-color: #10b981; color: white; }
+    .btn-flipbook { background-color: #d97706; color: white; }
+    .btn-qrcbn { background-color: #0f172a; color: #d4af37; border: 1px solid rgba(212, 175, 55, 0.4); text-align: center; font-size: 0.85rem; padding: 9px; border-radius: 6px; text-decoration: none; display: block; margin-top: 6px; font-weight: 600; }
+    
+    /* Area Download APK & PWA */
+    .app-download-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px;
+      margin-top: 35px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .btn-install {
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      padding: 14px 24px;
+      background-color: #28a745;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(40,167,69,0.2);
+      transition: background-color 0.2s;
+    }
+    .btn-install:hover { background-color: #218838; }
+    .ios-box {
+      margin-top: 15px;
+      background: #f0f4f8;
+      border: 1px solid #d0d7de;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #333;
+      text-align: left;
+      line-height: 1.4;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer { text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
+    footer img { max-width: 80px; height: auto; margin-bottom: 10px; }
+
+    @media (min-width: 600px) {
+      .hero-title { font-size: 2rem; }
+      .hero-quote { font-size: 1.1rem; }
+      .hero-section { padding: 50px 20px; }
+    }
+  </style>
 </head>
-<body style="background-color: #0b0f19; color: #ffffff;" class="font-sans antialiased">
+<body>
 
-    <!-- HEADER & NAVIGASI -->
-    <header class="border-b border-gold/25 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            
-            <!-- Logo & Teks -->
-            <div class="flex items-center space-x-3">
-                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50">
-                <div>
-                    <span class="font-serif font-bold text-base text-white tracking-wide block">
-                        <span class="text-gold">PUSTAKA</span> WBIZNET
-                    </span>
-                    <span class="text-xs text-gray-400 font-serif italic">Arsip Digital & Koleksi Khusus</span>
-                </div>
+<header>
+    <div class="container">
+        <!-- Logo & Teks Sejajar -->
+        <div class="header-brand">
+            <img src="icon_logo.png" alt="Logo Pustaka Wbiznet">
+            <div class="header-title-area">
+                <h3><span>PUSTAKA</span> WBIZNET</h3>
+                <span class="sub">Self Publisher</span>
             </div>
-            
-            <!-- Tombol Navigasi Cepat -->
-            <div class="flex flex-wrap justify-center items-center gap-2">
-                <a href="index.html" class="px-3 py-1.5 bg-gray-700 hover:bg-gray-600 text-white text-xs font-medium rounded-md shadow transition">🏠 Beranda</a>
-                <a href="index.html#katalog" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-gray-900 text-xs font-medium rounded-md shadow transition">📚 Katalog Buku</a>
-                <a href="biografi.html" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md shadow transition">📂 Biografi</a>
-                <!-- Menu Khusus Jam Tangan -->
-                <span class="px-3 py-1.5 bg-gold text-gray-900 text-xs font-bold rounded-md shadow">💎 Watch Gallery</span>
-            </div>
-
         </div>
-    </header>
-
-    <!-- KONTEN UTAMA: EMBED BLOG JAM TANGAN -->
-    <main class="max-w-4xl mx-auto px-4 py-8">
-        <div class="mb-6 text-center">
-            <h1 class="text-2xl sm:text-3xl font-serif font-bold text-gold">Luxury Watch Showcase</h1>
-            <p class="text-sm text-gray-400 mt-1">Kurasi jam tangan mewah original .</p>
+        
+        <!-- Tombol Navigasi Cepat di Header (Sudah Termasuk Luxury Watch) -->
+        <div class="nav-quick-links">
+            <a href="#biografi" class="nav-btn btn-nav-bio">📂 Biografi</a>
+            <a href="#artikel" class="nav-btn btn-nav-artikel">📝 Artikel</a>
+            <a href="#katalog" class="nav-btn btn-nav-koleksi">📚 Koleksi</a>
+            <a href="luxurywatch.html" class="nav-btn btn-nav-watch">💎 Luxury Watch</a>
         </div>
+    </div>
+</header>
 
-        <div class="blog-container rounded-xl overflow-hidden border border-gold/30 shadow-2xl bg-[#0a192f]">
-            <iframe 
-                src="https://luxurywatchbroker.blogspot.com/2026/10/audemars-piguet-royal-oak-diamond-bezel.html" 
-                width="100%" 
-                height="650px" 
-                style="border: none;" 
-                title="Luxury Watch Broker Embed">
-            </iframe>
+<section class="hero-section">
+    <div class="hero-content">
+      
+      <span class="hero-badge">Membaca → Menulis → Berkarya</span><br>
+      Portofolio & Digital Catalog by 
+      <h4 class="hero-title"> Kresnawan Sasmita Putra Library</h4>
+      
+      <blockquote class="hero-quote">
+        "Ketika pekerjaan berakhir, bukan berarti perjalanan berhenti. 
+        Masih ada waktu untuk membaca, belajar, menulis, dan menghasilkan karya."
+      </blockquote>
+
+      <p class="hero-description">
+        Pustaka Wbiznet adalah tempat menyimpan portopolianya Kresnawan Sasmita Putra 
+        sebagai "Menolak Lupa" atas arsip bacaan-bacaannya di masa lalu hingga memasuki masa rehat — dari kesukaan membaca dan mencatat, 
+        kemudian menulis, hingga menghasilkan berbagai karya.
+      </p>
+
+      <div>
+        <a href="#katalog" class="btn-hero-primary">Jelajahi Karya</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="main-container">
+
+    <hr class="section-divider">
+
+    <h2 id="katalog" style="font-size: 1.3rem;">
+      Dari Purnabakti Menuju Karya
+    </h2>
+
+    <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 25px;">
+      Purnabakti memberikan waktu. Menulis memberikan ruang. Berkarya memberikan arti.
+    </p>
+
+    <!-- KATALOG BUKU -->
+    <div class="book-grid">
+
+      <!-- BUKU 1 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #1</span>
+          <a href="ringkasan01_pensiun.html" class="book-card-link">
+            <h3>Pensiun Bukan Akhir Perjalanan</h3>
+            <img src="cover_pensiun.png" alt="Cover Pensiun Bukan Akhir Perjalanan">
+          </a>
+          <p>
+            Sebuah catatan tentang kehidupan setelah pensiun dan bagaimana 
+            masa purnabakti dapat menjadi awal perjalanan baru untuk belajar, 
+            bekerja dengan cara berbeda, menulis, dan tetap memberikan manfaat.
+          </p>
         </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="border-t border-gold/25 text-gray-400 py-8 px-4 text-center mt-12" style="background-color: #0a192f;">
-        <div class="max-w-2xl mx-auto">
-            <p class="text-gold font-serif font-semibold text-base">Kresnawan Sasmita Putra Library</p>
-            <p class="text-xs text-gray-500 mt-2">
-                © 2026 <strong class="text-white">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
-            </p>
+        <div class="btn-action-area">
+          <a href="ringkasan01_pensiun.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="ringkasan01_pensiun.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-9111-938" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
-    </footer>
+      </div>
 
+      <!-- BUKU 2 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #2</span>
+          <a href="ringkasan02_retirement.html" class="book-card-link">
+            <h3>Retirement is Not the End of the Journey</h3>
+            <img src="cover_retirement.png" alt="Cover Retirement is Not the End of the Journey">
+          </a>
+          <p>
+            Edisi bahasa Inggris yang membawa gagasan yang sama: 
+            masa setelah karier bukan akhir dari perjalanan, 
+            melainkan kesempatan untuk menemukan kembali tujuan.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan02_retirement.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+        </div>
+      </div>
+
+      <!-- BUKU 3 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #3</span>
+          <a href="ringkasan_90hari.html" class="book-card-link">
+            <h3>90 Hari Melejitkan Penjualan Produk Digital</h3>
+            <img src="cover_90hari.png" alt="Cover 90 Hari Melejitkan Penjualan Produk Digital">
+          </a>
+          <p>
+            Catatan praktis tentang perjalanan mempelajari dunia penjualan 
+            digital, mulai dari pemasaran hingga menemukan cara menjual produk.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan_90hari.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="ringkasan_90hari.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-9912-382" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 4 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #4</span>
+          <a href="ringkasan04_1776_jan1949.html" class="book-card-link">
+            <h3>It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)</h3>
+            <img src="cover-1776.png" alt="Cover It's 1776 in Indonesia">
+          </a>
+          <p>
+            Catatan penelusuran sejarah yang lahir dari ketertarikan 
+            untuk membaca kembali perjuangan Indonesia mempertahankan kemerdekaan.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan04_1776_jan1949.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Ebook04_1776.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-4194-251" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 5 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #5</span>
+          <a href="ringkasan05_abraham.html" class="book-card-link">
+            <h3>Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian</h3>
+            <img src="cover-abraham.jpg" alt="Cover Abraham Lincoln">
+          </a>
+          <p>
+            Kisah perjalanan hidup Abraham Lincoln mengenai kepemimpinan, integritas, kebebasan, dan tanggung jawab.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan05_abraham.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-6613-085" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 6 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #6</span>
+          <a href="ringkasan06_seni_menata_waktu.html" class="book-card-link">
+            <h3>Seni Menata Waktu di Gerbang Rehat</h3>
+            <img src="cover_seni_menata_waktu.png" alt="Cover Seni Menata Waktu">
+          </a>
+          <p>
+            Catatan tentang waktu, istirahat, ritme hidup, dan bagaimana menata kembali kehidupan saat memasuki fase tenang.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan06_seni_menata_waktu.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0156-462" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 7 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #7</span>
+          <a href="ringkasan07_sriwijaya_poros_maritim_dunia.html" class="book-card-link">
+            <h3>Sriwijaya Poros Maritim Dunia</h3>
+            <img src="cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
+          </a>
+          <p>
+            Penelusuran sejarah mengenai Sriwijaya, ruang maritim Nusantara, dan jaringan dunia maritim masa lalu.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan07_sriwijaya_poros_maritim_dunia.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Ebook7_Sriwijaya.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-5005-856" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 8 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #8</span>
+          <a href="TheStoryOfParis.html" class="book-card-link">
+            <h3>PARIS: BIOGRAFI SANG RAKSASA MUDA</h3>
+            <img src="Cover_Paris.png" alt="Cover Buku Paris">
+          </a>
+          <p>
+            Kisah sebuah kota yang bangkit dari reruntuhan, menelusuri perjalanan peradaban Paris mulai dari Lutetia hingga modernisasi Haussmann.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="TheStoryOfParis.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/lkpt/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0056-278" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 9 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #9</span>
+          <a href="ringkasan09_sains_menjadi_kaya.html" class="book-card-link">
+            <h3>SAINS MENJADI KAYA</h3>
+            <img src="cover09_SainsMenjadiKaya.png" alt="Cover Buku Sains Menjadi Kaya">
+          </a>
+          <p>
+           Buku ini adalah sebuah naskah yang merangkum Catatan Aksi Nyata. Ia disusun bukan untuk menggurui, melainkan sebagai kawan bagi Anda yang siap membuktikan hukum kelimpahan melalui tindakan yang efisien di tempat Anda berada saat ini.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan09_sains_menjadi_kaya.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/dypw/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-3349-359" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 10 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #10</span>
+          <a href="Napoleon_and_Josephine.html" class="book-card-link">
+            <h3>NAPOLEON & JOSEPHINE: Bangkitnya Elang dari Corsica</h3>
+            <img src="coverbukuNapoleon.png" alt="Cover Buku Napoleon & Josephine">
+          </a>
+          <p>
+           Kisah epik perjalanan hidup Napoleon Bonaparte dari pulau Corsica menuju takhta kekaisaran Eropa, dipadukan dengan sketsa kehidupan dan pesona Permaisuri Josephine.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="Napoleon_and_Josephine.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="biografi10_napoleon_bonaparte.html" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/wkku/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1466-388" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛</a>
+        </div>
+      </div>
+
+      <!-- BUKU 11 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #11</span>
+          <a href="50tahun_di_wallstreet.html" class="book-card-link">
+            <h3>50 Tahun di Wall Street: Catatan, Spekulasi, dan Pelajaran Abadi</h3>
+            <img src="cover_50tahun.png" alt="Cover Buku 50 Tahun Di Wall Street">
+          </a>
+          <p>
+           Buku memoar klasik karya Henry Clews yang kini disusun ulang dan diadaptasi ke dalam Bahasa Indonesia oleh Kresnawan Sasmita Putra.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="50tahun_di_wallstreet.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Buku11_50tahun.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="http://lynk.id/wbiznet/l50pexr65mpz" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/snum/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-9565-743" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 12 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #12</span>
+          <a href="jejak_pangeran_champa.html" class="book-card-link">
+            <h3>Jejak Pangeran Champa</h3>
+            <img src="cover_jejak_pangeran_champa.png" alt="Cover Jejak Pangeran Champa">
+          </a>
+          <p>
+           Romansa Laku Spiritual dan Simbolisme Visual dalam Serat Selarasa.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="jejak_pangeran_champa.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Ebook12_JejakPengeranChampa.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="http://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook_Jejak_Pangeran_Champa.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-3070-849" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+      <!-- BUKU 13 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #13 — TERBARU</span>
+          <a href="Pemikiran_Al_Ghazali.html" class="book-card-link">
+            <h3>Menuju Cahaya Kepastian<br>Otobiografi Spiritual dan Pemikiran Imam Al-Ghazali</h3>
+            <img src="cover_menuju_cahaya_kepastian.png" alt="Cover Menuju Cahaya Kepastian"> 
+          </a>
+          <p>
+           Buku adaptasi ini merangkai kembali perjalanan otobiografis Al-Ghazali dalam menembus kabut *taqlid*, membedah keterbatasan teologi dan filsafat, hingga meraih puncak pencerahan spiritual (*Ilmu Yakin*) melalui pengalaman batiniah (*Dzauq*).
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="Pemikiran_Al_Ghazali.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Al_Ghazali.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="http://lynk.id/wbiznet/enqz5q9mxvr6" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook_Pemikiran_Al_Ghazali.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0529-943" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+    </div> <!-- Tutup book-grid -->
+
+    <!-- TEMPAT UNTUK ARTIKEL & TULISAN -->
+    <div id="artikel" style="margin-top: 40px;">
+      <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+        📂 Halaman Artikel
+      </h2>
+      <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px; line-height: 1.5;">
+          Temukan berbagai koleksi artikel pilihan, catatan sejarah, opini, dan ulasan menarik lainnya secara lengkap pada halaman khusus arsip tulisan kami.
+        </p>
+        <a href="artikel.html" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+          📖 Buka Arsip Artikel & Tulisan Lengkap
+        </a>
+      </div>
+    </div>
+    
+    <!-- TEMPAT UNTUK BIOGRAFI -->
+    <div id="biografi" style="margin-top: 40px;">
+      <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+        📂 Halaman Biografi
+      </h2>
+      <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px; line-height: 1.5;">
+          Mengenal lebih dekat profil, perjalanan karier, latar belakang, serta rekam jejak Tokoh lengkap pada halaman khusus biografi.
+        </p>
+        <a href="biografi.html" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+          📂 Buka Halaman Biografi Lengkap
+        </a>
+      </div>
+    </div>
+
+    <!-- AREA UNDUH APLIKASI (APK & PWA) -->
+    <div class="app-download-card">
+      <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+        Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
+      </p>
+
+      <a href="https://go.shr.lc/4gPkS9J" class="btn-install">
+        Download &amp; Install APK
+      </a>
+
+      <div class="ios-box">
+        <strong>📱 Pengguna iPhone (iOS):</strong><br>
+        Buka web ini di browser <strong>Safari</strong> &rarr; Tekan ikon <strong>Share</strong> (kotak dengan panah ke atas) &rarr; Pilih <strong>"Tambahkan ke Layar Utama"</strong>.
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <img src="icon_logo.png" alt="Icon Pustaka Wbiznet">
+    <p>Membaca → Menulis → Berkarya</p>
+    <p>Copyright © Kresnawan Sasmita Putra — 2026</p>
+  </footer>
+
+  <!-- Script Service Worker (PWA) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>
