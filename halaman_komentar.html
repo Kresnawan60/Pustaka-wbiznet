@@ -179,13 +179,10 @@
             <p style="margin-top: 6px; font-size: 0.50rem; color: #9ca3af;">
                 © 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
             </p>
-            
-           
-            </p>
         </div>
     </footer>
 
-    <!-- SCRIPT PENGIRIMAN FORM (WEB3FORMS) -->
+    <!-- SCRIPT PENGIRIMAN FORM (WEB3FORMS HASIL PERBAIKAN) -->
     <script>
         const form = document.getElementById('contactForm');
         const formStatus = document.getElementById('formStatus');
@@ -213,25 +210,36 @@
                 body: json
             })
             .then(async (response) => {
-                let json = await response.json();
+                let resJson = await response.json();
                 if (response.status == 200) {
-                    formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 flex items-center gap-3';
-                    formStatus.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i> <span>Terima kasih! Pesan/saran Anda berhasil terkirim.</span>`;
+                    // Tampilkan notifikasi hijau terang
+                    formStatus.style.display = 'flex';
+                    formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-950/90 text-emerald-300 border-2 border-emerald-400 flex items-center gap-3 shadow-lg';
+                    formStatus.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i> <span><strong>Berhasil!</strong> Terima kasih, pesan/saran Anda berhasil terkirim.</span>`;
+                    
                     form.reset();
+
+                    // Otomatis scroll layar ke kotak notifikasi
+                    formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-950/80 text-rose-300 border border-rose-500/40 flex items-center gap-3';
-                    formStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 text-lg"></i> <span>${json.message || 'Gagal mengirim pesan. Silakan coba lagi.'}</span>`;
+                    formStatus.style.display = 'flex';
+                    formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-950/90 text-rose-300 border-2 border-rose-400 flex items-center gap-3 shadow-lg';
+                    formStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 text-xl"></i> <span>${resJson.message || 'Gagal mengirim pesan. Silakan coba lagi.'}</span>`;
+                    
+                    formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
             })
             .catch(error => {
-                formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-950/80 text-rose-300 border border-rose-500/40 flex items-center gap-3';
-                formStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 text-lg"></i> <span>Terjadi kesalahan koneksi. Silakan coba lagi.</span>`;
+                formStatus.style.display = 'flex';
+                formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-950/90 text-rose-300 border-2 border-rose-400 flex items-center gap-3 shadow-lg';
+                formStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 text-xl"></i> <span>Terjadi kesalahan koneksi. Silakan coba lagi.</span>`;
+                
+                formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
             })
             .then(function() {
                 btnText.textContent = 'Kirim Pesan Sekarang';
                 btnIcon.className = 'fa-solid fa-paper-plane text-xs';
                 submitBtn.disabled = false;
-                formStatus.classList.remove('hidden');
             });
         });
     </script>
