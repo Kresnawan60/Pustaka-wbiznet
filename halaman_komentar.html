@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="OXmtOKCji2tDFJ0UmsWhYkhnB1OUQc8GDUEABPAl_bg" />
+    <meta name="description" content="Portofolio & Digital Catalog by Kresnawan Sasmita Putra Library">
+
+    <title>Halaman Interaksi — Pustaka Wbiznet</title>
+
+    <!-- Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Konfigurasi Tailwind Kustom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #0b0f19; color: #ffffff;" class="font-sans min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- BANNER HEADER / NAVIGASI -->
+    <header class="border-b border-gold/20 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50 p-0.3">
+                <div>
+                    <span class="font-serif font-bold text-base text-white tracking-wide block leading-tight">
+                        <span class="text-gold">PUSTAKA</span> WBIZNET
+                    </span>
+                    <span class="text-xs text-gray-400 font-serif italic">Halaman Komentar & Pesan</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TOMBOL 3 WARNA NAVIGASI -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-bottom: 16px; padding: 0 16px;">
+            <a href="https://pustaka-wbiznet.vercel.app/biografi.html" style="padding: 6px 16px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📂 Biografi</a>
+            <a href="https://pustaka-wbiznet.vercel.app/artikel.html" style="padding: 6px 16px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📝 Artikel</a>
+            <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 6px 16px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">📚 Koleksi</a>
+        </div>
+    </header>
+
+    <!-- ISI KONTEN UTAMA -->
+    <main class="max-w-4xl mx-auto p-4 w-full flex-grow">
+        
+        <!-- SECTION PEMBUKA / HALAMAN INTERAKSI -->
+        <section class="mb-10 text-center max-w-2xl mx-auto">
+            <h1 class="text-2xl sm:text-3xl font-bold mt-6 text-gold font-serif">Halaman Interaksi</h1>
+            <p class="text-gray-300 mt-3 leading-relaxed text-sm sm:text-base">
+                Terima kasih telah mengunjungi website saya. Sebagai pemula tentu banyak kekurangannya, saya sangat terbuka menerima saran-saran untuk kebaikan di masa mendatang.
+            </p>
+        </section>
+
+        <!-- SECTION FORMULIR KOMENTAR & PESAN -->
+        <section id="komentar" class="py-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="rounded-2xl p-6 sm:p-8 border border-gold/30 shadow-2xl" style="background-color: #0a192f;">
+                    
+                    <div class="text-center mb-6">
+                        <h2 class="text-xl font-bold text-gold font-serif mb-1">Formulir Komentar</h2>
+                        <p class="text-xs text-gray-400">Silakan kirimkan saran, pertanyaan, atau permintaan file eBook melalui formulir di bawah ini.</p>
+                    </div>
+
+                    <!-- NOTIFIKASI STATUS -->
+                    <div id="formStatus" class="hidden mb-6 p-4 rounded-xl text-sm font-medium"></div>
+
+                    <!-- FORM UTAMA -->
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="4fc081bf-4e2e-44bb-b656-612c1a8df659">
+                        <!-- Subject Email -->
+                        <input type="hidden" name="subject" value="Pesan Interaksi Baru dari Pustaka Wbiznet">
+                        <!-- Custom Botcheck -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!-- Nama Lengkap -->
+                        <div>
+                            <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-gold mb-2">
+                                Nama Lengkap
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-400">
+                                    <i class="fa-regular fa-user"></i>
+                                </span>
+                                <input type="text" id="name" name="name" required placeholder="Contoh: Budi Santoso"
+                                    class="w-full pl-10 pr-4 py-2.5 bg-[#0b0f19] border border-gray-700 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Alamat Email -->
+                        <div>
+                            <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-gold mb-2">
+                                Alamat Email Anda
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-400">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </span>
+                                <input type="email" id="email" name="email" required placeholder="nama@email.com"
+                                    class="w-full pl-10 pr-4 py-2.5 bg-[#0b0f19] border border-gray-700 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all">
+                            </div>
+                        </div>
+
+                        <!-- Jenis Pesan / Topik -->
+                        <div>
+                            <label for="category" class="block text-xs font-semibold uppercase tracking-wider text-gold mb-2">
+                                Kategori Pesan
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-400">
+                                    <i class="fa-solid fa-list-check"></i>
+                                </span>
+                                <select id="category" name="category" required
+                                    class="w-full pl-10 pr-4 py-2.5 bg-[#0b0f19] border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all appearance-none">
+                                    <option value="Saran & Masukan">Saran & Masukan (Kritik Membangun)</option>
+                                    <option value="Permintaan File eBook">Permintaan File eBook / Koleksi Pustaka</option>
+                                    <option value="Pertanyaan Umum">Pertanyaan Umum / Diskusi</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Isi Pesan -->
+                        <div>
+                            <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-gold mb-2">
+                                Pesan / Detail Permintaan
+                            </label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tuliskan saran Anda, atau sebutkan judul eBook yang ingin Anda minta di sini..."
+                                class="w-full p-3.5 bg-[#0b0f19] border border-gray-700 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-all resize-none"></textarea>
+                        </div>
+
+                        <!-- Tombol Kirim -->
+                        <button type="submit" id="submitBtn"
+                            class="w-full py-3 px-6 bg-gold hover:bg-yellow-600 active:bg-yellow-700 text-gray-900 font-semibold rounded-xl text-sm shadow-md transition-all duration-200 flex items-center justify-center gap-2">
+                            <span id="btnText">Kirim Pesan Sekarang</span>
+                            <i id="btnIcon" class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER BANNER - NAVY BLUE -->
+    <footer class="border-t border-gold/25 text-gray-300" style="background-color: #0a192f; padding: 20px 16px; text-align: center; margin-top: 24px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <!-- Logo & Judul Pustaka -->
+            <img src="icon_logo.png" alt="Icon Pustaka Wbiznet" class="max-w-[40px] h-auto mb-3 mx-auto block">
+            
+            <p>
+                <strong style="color: #d4af37; font-family: serif; font-size: 0.80rem; letter-spacing: 0.4px;">Kresnawan Sasmita Putra Library</strong>
+            </p>
+            
+            <!-- Tombol Email Langsung -->
+            <div class="my-4">
+                <a href="mailto:pustaka.wbiznet@hotmail.com" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium rounded-lg shadow transition inline-flex items-center gap-2" style="text-decoration: none;">
+                    <i class="fa-regular fa-envelope"></i> Kirim Email Langsung
+                </a>
+            </div>
+
+            <!-- Hak Cipta -->
+            <p style="margin-top: 6px; font-size: 0.50rem; color: #9ca3af;">
+                © 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
+            </p>
+            
+           
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PENGIRIMAN FORM (WEB3FORMS) -->
+    <script>
+        const form = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            btnText.textContent = 'Mengirim...';
+            btnIcon.className = 'fa-solid fa-spinner animate-spin text-xs';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 flex items-center gap-3';
+                    formStatus.innerHTML = `<i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i> <span>Terima kasih! Pesan/saran Anda berhasil terkirim.</span>`;
+                    form.reset();
+                } else {
+                    formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-950/80 text-rose-300 border border-rose-500/40 flex items-center gap-3';
+                    formStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 text-lg"></i> <span>${json.message || 'Gagal mengirim pesan. Silakan coba lagi.'}</span>`;
+                }
+            })
+            .catch(error => {
+                formStatus.className = 'mb-6 p-4 rounded-xl text-sm font-medium bg-rose-950/80 text-rose-300 border border-rose-500/40 flex items-center gap-3';
+                formStatus.innerHTML = `<i class="fa-solid fa-circle-xmark text-rose-400 text-lg"></i> <span>Terjadi kesalahan koneksi. Silakan coba lagi.</span>`;
+            })
+            .then(function() {
+                btnText.textContent = 'Kirim Pesan Sekarang';
+                btnIcon.className = 'fa-solid fa-paper-plane text-xs';
+                submitBtn.disabled = false;
+                formStatus.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
