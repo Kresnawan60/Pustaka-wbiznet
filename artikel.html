@@ -147,21 +147,38 @@
     </main>
     
     <!-- FOOTER -->
-    <footer class="border-t border-gold/25 text-gray-300" style="background-color: #0a192f; padding: 36px 16px; text-align: center; margin-top: 40px;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <p>
-                <strong style="color: #d4af37; font-family: serif; font-size: 1.1rem; letter-spacing: 0.5px;">Kresnawan Sasmita Putra Library</strong>
-            </p>
-            <p style="margin-top: 8px; font-size: 0.85rem; color: #9ca3af;">
-                © 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>.<br> Seluruh Hak Cipta Dilindungi.
-            </p>
-            <p style="margin-top: 16px;">
-                <a href="https://pustaka-wbiznet.vercel.app" style="color: #d4af37; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block;">
-                    ← Kembali ke Katalog Utama Pustaka Wbiznet
-                </a>
-            </p>
-        </div>
-    </footer>
+    
+  </div>
 
+  <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem;">
+
+  <img src="icon_logo.png" alt="Icon Pustaka Wbiznet" style="max-width: 60px; height: auto; margin-bottom: 12px; display: block;">
+
+  <!-- Teks Nama Library (Rata Tengah) -->
+           <p>
+                <strong style="color: #d4af37; font-family: serif; font-size: 0.80rem; letter-spacing: 0.4px;">Kresnawan Sasmita Putra Library</strong>
+            </p>
+
+
+    <!-- Tombol menu Kirim Email/Pesan -->
+  <a href="halaman_komentar.html" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 6px 14px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); margin-bottom: 15px;">
+    ✉️ Kirim Email/Pesan/Komentar
+  </a>
+
+
+
+  <!-- Copyright -->
+  <p style="text-align: center; margin: 0; color: #94a3b8; font-size: 0.75rem;">
+    Copyright © Pustaka Wbiznet — 2026
+  </p>
+
+</footer>
+
+  <!-- Script Service Worker (PWA) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>
