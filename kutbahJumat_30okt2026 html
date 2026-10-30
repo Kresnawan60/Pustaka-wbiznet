@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari-Hari Kebahagiaan Seorang Mukmin — Pustaka Wbiznet</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #0b0f19; color: #ffffff;" class="font-sans antialiased">
+
+    <!-- HEADER & NAVIGASI -->
+    <header class="border-b border-gold/25 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <!-- Logo & Teks -->
+            <div class="flex items-center space-x-3">
+                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet" class="w-10 h-10 object-cover rounded-full border-2 border-gold/50">
+                <div>
+                    <span class="font-serif font-bold text-base text-white tracking-wide block">
+                        <span class="text-gold">PUSTAKA</span> WBIZNET
+                    </span>
+                    <span class="text-xs text-gray-400 font-serif italic">Arsip Digital & Karya</span>
+                </div>
+            </div>
+            
+            <!-- Tombol Navigasi Cepat -->
+            <div class="flex flex-wrap justify-center items-center gap-2">
+                <a href="biografi.html" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium rounded-md shadow transition">📂 Biografi</a>
+                <a href="artikel.html" class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-medium rounded-md shadow transition">📝 Artikel</a>
+                <a href="index.html#katalog" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-gray-900 text-xs font-medium rounded-md shadow transition">📚 Katalog</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="max-w-3xl mx-auto p-4 sm:p-6 mt-6">
+        
+        <!-- Kotak Artikel / Bacaan -->
+        <article style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3);" class="p-6 sm:p-8 rounded-xl shadow-xl">
+            
+            <span class="text-xs font-semibold px-2.5 py-1 rounded bg-gold/10 text-gold border border-gold/30 inline-block mb-3">
+                Catatan Khutbah & Renungan Diri
+            </span>
+
+            <h1 class="text-xl sm:text-2xl font-serif font-bold text-white mb-4 leading-snug">
+                Hari-Hari Kebahagiaan Seorang Mukmin & Pertanggungjawaban Sebelum Berpulang
+            </h1>
+
+            <div class="border-b border-gold/20 mb-6 pb-2 text-xs text-gray-400">
+                Catatan Khutbah Jumat, 30 Oktober 2026 (Masjid Nurul Qolam, Jl. Abadi, Tanjung Rejo, Medan)
+            </div>
+
+            <!-- QUOTE UTAMA / INTI KHUTBAH -->
+            <div class="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                <blockquote class="italic border-l-2 border-gold pl-4 text-gold/90 my-2">
+                    "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ — Anas bin Malik menyebutkan ada hari-hari kebahagiaan sejati bagi seorang mukmin: hari yang dilalui tanpa dosa, hari saat menutup usia dengan husnul khatimah, serta hari dipanggil menuju surga Allah."
+                </blockquote>
+                <p class="text-gray-300">
+                    Setiap manusia merindukan kebahagiaan. Namun kebahagiaan sejati bukanlah seberapa banyak harta atau tingginya jabatan, melainkan jiwa yang selamat (kalbun salim) ketika menghadap Allah SWT serta kesadaran untuk menyelesaikan segala tanggungan antar sesama manusia sebelum ajal menjemput.
+                </p>
+            </div>
+
+            <!-- BACAAN UTAMA / RENUNGAN -->
+            <section class="mt-8 border-t border-gold/20 pt-6">
+                <h2 class="text-lg sm:text-xl font-serif font-bold text-gold mb-4">
+                    💡 Tiga Hari Kebahagiaan Menurut Anas bin Malik
+                </h2>
+                <div class="space-y-4 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        Sebagaimana disampaikan dalam khutbah, Anas bin Malik RA menjelaskan bahwa hakikat kebahagiaan seorang mukmin terangkum dalam tiga momentum utama:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 pl-2">
+                        <li><strong>Hari Tanpa Dosa:</strong> Satu hari yang dilewati dari bangun tidur hingga tertidur kembali tanpa dicatat melakukan perbuatan dosa kepada Allah maupun manusia.</li>
+                        <li><strong>Hari Wafat dalam Keadaan Beriman:</strong> Hari ketika seorang hamba meninggalkan dunia ini dengan membawa iman dan sanggup mengucapkan kalimat <em>Laa ilaha illallah</em> di akhir hayatnya.</li>
+                        <li><strong>Hari Dimasukkan ke Dalam Surga:</strong> Hari ketika Allah SWT memanggil jiwa yang tenang (<em>Ya ayyatuhan nafsul muthma'innah</em>) untuk kembali ke rida-Nya dan masuk ke dalam surga-Nya.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- POIN PEMBELAJARAN -->
+            <section class="mt-10">
+                <h2 class="text-lg sm:text-xl font-serif font-bold text-gold mb-4 border-b border-gold/20 pb-2">
+                    📜 Hikmah Khutbah Bagi Jamaah & Diri Kita
+                </h2>
+
+                <div class="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    <div>
+                        <h3 class="text-base font-serif font-semibold text-white mb-1">1. Segera Bertobat (Taubatan Nasuha)</h3>
+                        <p class="text-sm text-gray-300">
+                            Manusia adalah tempatnya salah dan dosa. Cara menutup dosa-dosa masa lalu adalah dengan penyesalan sungguh-sungguh, memohon ampunan, serta bertekad tidak mengulanginya lagi sebelum jasad dikembalikan ke asalnya.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base font-serif font-semibold text-white mb-1">2. Menuntaskan Hak Sesama Manusia (Hablum Minannas)</h3>
+                        <p class="text-sm text-gray-300">
+                            Menjelang wafatnya, Rasulullah SAW mengumpulkan para sahabat untuk menawarkan qisas dan melunasi hutang jika pernah menzalimi atau meminjam sesuatu. Ini mengajarkan pentingnya menyelesaikan segala urusan sesama manusia di dunia sebelum dihisab di akhirat.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-base font-serif font-semibold text-white mb-1">3. Mengejar Akhir Hayat yang Baik (Husnul Khatimah)</h3>
+                        <p class="text-sm text-gray-300">
+                            Jasad yang kita pakai ini berubah dan memua seiring waktu hingga menjadi tua. Yang paling menentukan adalah kondisi akhir hayat kita, sehingga doa memohon husnul khatimah harus senantiasa diistiqamahkan.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMASI LOKASI & CATATAN ARSIP -->
+            <section class="mt-10 pt-6 border-t border-gold/20">
+                <h2 class="text-lg sm:text-xl font-serif font-bold text-gold mb-4">
+                    📌 Catatan Digital & Dokumentasi
+                </h2>
+                <ul class="space-y-2 text-gray-300 text-sm sm:text-base">
+                    <li><strong>Tema Khutbah</strong>: Hari Kebahagiaan Mukmin, Taubat, & Pertanggungjawaban Urusan Sesama</li>
+                    <li><strong>Lokasi Masjid</strong>: Masjid Nurul Qolam, Jl. Abadi, Kel. Tanjung Rejo, Medan</li>
+                    <li><strong>Waktu Pelaksanaan</strong>: Salat Jumat, 30 Oktober 2026</li>
+                    <li><strong>Penerbit Digital</strong>: Pustaka Wbiznet—Self Publisher</li>
+                </ul>
+            </section>
+
+        </article>
+
+        <!-- Tombol Kembali -->
+        <div class="mt-8 text-center">
+            <a href="artikel.html" class="inline-block text-gold hover:underline text-sm font-medium">
+                ← Kembali ke Arsip Artikel & Tulisan
+            </a>
+        </div>
+
+    </main>
+    
+    <!-- FOOTER -->
+    <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem;">
+      
+      <img src="icon_logo.png" alt="Icon Pustaka Wbiznet" style="max-width: 80px; height: auto; margin-bottom: 12px; display: block;">
+
+      <!-- Teks Nama Library (Rata Tengah) -->
+      <p style="text-align: center; margin: 0 0 15px 0; font-weight: 600; line-height: 1.4;">
+        Kresnawan Sasmita Putra<br>Library
+      </p>
+
+      <!-- Tombol Kirim Email -->
+      <a href="mailto:pustaka.wbiznet@hotmail.com" class="px-3 py-1.5 bg-green-600 hover:bg-green-700 text-white text-xs font-medium rounded-md shadow transition" style="display: inline-block; margin-bottom: 15px; text-decoration: none;">
+        ✉️ Kirim Email
+      </a>
+
+      <!-- Copyright -->
+      <p style="text-align: center; margin: 0; color: #94a3b8; font-size: 0.75rem;">
+        Copyright © Pustaka Wbiznet — 2026
+      </p>
+
+    </footer>
+
+</body>
+</html>
