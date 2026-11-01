@@ -179,15 +179,18 @@
             font-family: Georgia, serif;
         }
 
-        /* VIDEO EMBED RESPONSIVE */
+        /* VIDEO EMBED SHORTS STYLE (9:16 VERTICAL) */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ratio */
+            width: 100%;
+            max-width: 340px; /* Membatasi lebar agar tetap proporsional ala layar HP di mode desktop */
+            margin: 20px auto 0 auto; /* Posisi otomatis di tengah */
+            padding-bottom: 177.78%; /* Rasio vertikal 9:16 (16 / 9 * 100) */
             height: 0;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 12px;
             border: 2px solid var(--gold-primary);
-            margin-top: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
         }
 
         .video-wrapper iframe {
@@ -267,6 +270,7 @@
             .hero-banner h1 { font-size: 1.5rem; }
             .hero-banner h3.sub-title { font-size: 1rem; }
             section { padding: 20px; }
+            .video-wrapper { max-width: 100%; } /* Di HP kecil menyesuaikan lebar layar penuh */
         }
     </style>
 </head>
@@ -303,7 +307,7 @@
     <!-- KONTEN UTAMA -->
     <main class="container">
 
-        <!-- SECTION 1: VIDEO EMBED -->
+        <!-- SECTION 1: VIDEO EMBED (SHORTS STYLE) -->
         <section>
             <h2>🎬 Cuplikan & Bedah Novel (Jilid 2)</h2>
             <p style="color: var(--text-muted);">Saksikan tayangan ulasan mendalam mengenai dinamika operasional PKS, audit KTU, hingga pertarungan diplomasi di jantung perkebunan:</p>
@@ -324,7 +328,7 @@
             <h2>⚙️ Pilar Utama Ekosistem Industri dalam Cerita</h2>
             <ul class="feature-list">
                 <li><strong>Infrastruktur & Keamanan Hulu:</strong> Disiplin perawatan jalan tanah merah dengan pengerasan <em>sirtu</em> berkala, aturan <em>stop tonase</em> saat hujan, serta kehandalan para <em>centeng</em> malam menjaga kebun dari sindikat pencuri TBS ("ninja sawit").</li>
-                <li><strong>Presisi Hilir Pabrik (PKS):</strong> Efisiensi mesin <em>EFB Shredder</em> pencacah jangkos untuk pupuk piringan dan penyelamatan <em>oil losses</em>, kepatuhan lori 2 ton, serta pengambilan sampel komposit 3 titik di <em>storage tank</em> demi menjaga kadar ALB murni.</li>
+                <li><strong>Presisi Hilir Pabrik (PKS):</strong> Efisiensi mesin <em>EFB Shredder</em> pencacah jangkos untuk pupuk piringan dan penyelamatan <em>oil losses</em>, kepatuhan lori 2 ton, serta pengambilan sampel komposit 3 titik di <i>storage tank</i> demi menjaga kadar ALB murni.</li>
                 <li><strong>Tata Kelola & Audit KTU:</strong> Pengawasan berlapis Kepala Tata Usaha (KTU) bersama Manajer Pabrik dalam verifikasi surat jalan CPO, laporan <em>sounding stick</em>, hingga audit <em>stock opname</em> akhir tahun (pupuk, oli, solar, CPO).</li>
                 <li><strong>Garis Suci Kesejahteraan:</strong> Prinsip kepemimpinan mutlak bahwa <strong>upah para pemanen di garis bawah adalah garis suci</strong> yang tidak boleh tertunda saat krisis, dipadukan dengan penghargaan masa kerja (<em>jubelium</em>) bagi pekerja setia.</li>
             </ul>
@@ -345,6 +349,6 @@
     <footer>
         <p>© 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.</p>
     </footer>
- 
+
 </body>
 </html>
