@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategi Lindung Nilai Kas Perusahaan & Edukasi Emas Komoditas BPF Medan</title>
+    <title>Strategi Lindung Nilai Kas Perusahaan &amp; Edukasi Emas Komoditas BPF Medan</title>
 
     <!-- TAILWIND CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,38 +19,139 @@
             }
         }
     </script>
-</head>
-<body style="background-color: #0b0f19; color: #ffffff; font-family: sans-serif;">
 
-    <!-- HEADER SITES -->
-    <header class="border-b border-gold/20 sticky top-0 z-50 backdrop-blur" style="background-color: #0a192f;">
-        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full border-2 border-gold/50 flex items-center justify-center font-serif font-bold text-gold text-lg">W</div>
-                <span class="font-serif font-bold text-base text-white tracking-wide">
-                    <span class="text-gold">PUSTAKA</span> WBIZNET
-                </span>
+    <style>
+      /* Header & Navigasi Saja (Sesuai Contoh) */
+      .site-nav-header {
+        background-color: #1e293b;
+        color: #ffffff;
+        padding: 0.8rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      }
+      .site-nav-header .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .site-nav-header .header-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .site-nav-header .header-brand img {
+        width: 46px;
+        height: 46px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid rgba(212, 175, 55, 0.6);
+      }
+      .site-nav-header .header-title-area h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-family: Georgia, serif;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+      }
+      .site-nav-header .header-title-area h3 span {
+        color: #fbbf24;
+      }
+      .site-nav-header .header-title-area span.sub {
+        font-size: 0.75rem;
+        color: #cbd5e1;
+        font-family: Georgia, serif;
+        font-style: italic;
+        display: block;
+      }
+      .site-nav-header .nav-quick-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        padding-top: 8px;
+      }
+      .site-nav-header .nav-quick-links a {
+        padding: 5px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 6px;
+        text-decoration: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+        transition: transform 0.12s ease, filter 0.12s ease;
+      }
+      .site-nav-header .nav-quick-links a:hover {
+        transform: translateY(-1px);
+        filter: brightness(1.08);
+      }
+      .site-nav-header .btn-nav-bio {
+        background-color: #3b82f6;
+        color: #ffffff !important;
+      }
+      .site-nav-header .btn-nav-artikel {
+        background-color: #22c55e;
+        color: #ffffff !important;
+      }
+      .site-nav-header .btn-nav-koleksi {
+        background-color: #fbbf24;
+        color: #111827 !important;
+      }
+      .site-nav-header .btn-nav-watch {
+        background: linear-gradient(135deg, #fbbf24 0%, #eab308 100%);
+        color: #111827 !important;
+        font-weight: 700;
+        border: 1px solid #fef08a;
+        box-shadow: 0 2px 6px rgba(251, 191, 36, 0.35);
+      }
+      .site-nav-header .btn-nav-gold {
+        background: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
+        color: #111827 !important;
+        font-weight: 700;
+        border: 1px solid #fef9c3;
+        box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);
+      }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-white font-sans">
+
+    <!-- HEADER & NAVIGASI UTAMA -->
+    <header class="site-nav-header">
+        <div class="nav-container">
+            <div class="header-brand">
+                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet">
+                <div class="header-title-area">
+                    <h3><span>PUSTAKA</span> WBIZNET</h3>
+                    <span class="sub">Kajian &amp; Edukasi Finansial</span>
+                </div>
             </div>
-            <span class="text-xs text-gray-400 font-serif italic">Kajian & Edukasi Finansial</span>
-        </div>
-        
-        <!-- NAVIGASI UTAMA -->
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; padding-bottom: 16px;">
-            <a href="https://pustaka-wbiznet.vercel.app/#biografi" style="padding: 6px 16px; background-color: #2563eb; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none;">📂 Biografi</a>
-            <a href="https://pustaka-wbiznet.vercel.app/#artikel" style="padding: 6px 16px; background-color: #16a34a; color: #ffffff; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none;">📝 Artikel</a>
-            <a href="https://pustaka-wbiznet.vercel.app/#katalog" style="padding: 6px 16px; background-color: #f59e0b; color: #111827; font-size: 13px; font-weight: 500; border-radius: 6px; text-decoration: none;">📚 Koleksi</a>
+
+            <nav aria-label="Navigasi Utama" class="nav-quick-links">
+                <a href="biografi.html" class="btn-nav-bio">📂 Biografi</a>
+                <a href="artikel.html" class="btn-nav-artikel">📝 Artikel</a>
+                <a href="#katalog" class="btn-nav-koleksi">📚 Koleksi</a>
+                <a href="luxurywatch.html" class="btn-nav-watch">💎 Luxury Watch</a>
+                <a href="artikel_BPF.html" class="btn-nav-gold">📊 Gold Trade 📈</a>
+            </nav>
         </div>
     </header>
 
     <!-- ISI KONTEN HALAMAN -->
     <main class="max-w-4xl mx-auto p-4 py-8">
         <article class="space-y-6">
-            
+
             <!-- JUDUL UTAMA -->
             <header class="border-b border-gold/20 pb-6">
-                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Kajian Analisis Keuangan & Lindung Nilai Kas (Hedging)</span>
+                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Kajian Analisis Keuangan &amp; Lindung Nilai Kas (Hedging)</span>
                 <h1 class="text-2xl md:text-3xl font-serif font-bold mt-2 text-white leading-snug">
-                    Mengapa Kas Perusahaan & Investor Mapan Membutuhkan Emas Sebagai Aset Lindung Nilai (<i>Safe Haven</i>)?
+                    Mengapa Kas Perusahaan &amp; Investor Mapan Membutuhkan Emas Sebagai Aset Lindung Nilai (<i>Safe Haven</i>)?
                 </h1>
                 <p class="text-base md:text-lg text-gold/90 font-serif italic mt-2">
                     Mengadopsi Prinsip <strong>Gold Standard</strong> Sejarah Moneter Dunia untuk Menjaga Stabilitas Arus Kas dan Portofolio di Pasar Komoditas Berjangka (Loco London / XUL10)
@@ -83,6 +184,13 @@
                 <p>
                     Memegang emas batangan fisik memiliki keterbatasan dalam hal biaya penyimpanan brankas yang besar dan ketidakmampuan menghasilkan keuntungan saat harga pasar turun. Sebaliknya, perdagangan komoditas emas berjangka resmi menawarkan efisiensi tinggi:
                 </p>
+
+                <!-- VIDEO DARI FILE GITHUB -->
+                <video controls playsinline preload="metadata" class="w-full max-w-[400px] h-auto block mx-auto rounded-lg">
+                    <source src="penjelasan Trading BPF.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung pemutar video HTML5.
+                </video>
+
                 <ul class="list-disc pl-5 space-y-2 text-gray-300">
                     <li><strong>Peluang Dua Arah (<i>Two-Way Opportunity</i>):</strong> Investor dan perusahaan dapat meraih potensi profit baik saat harga emas dunia naik (<i>buy/long</i>) maupun saat terjadi koreksi turun (<i>sell/short</i>). Fleksibilitas ini sangat krusial untuk kegiatan <i>hedging</i>.</li>
                     <li><strong>Likuiditas Tinggi &amp; Efisiensi Modal:</strong> Transaksi dapat disesuaikan secara cepat sesuai dinamika pasar tanpa kendala alur pengiriman fisik.</li>
@@ -93,7 +201,7 @@
                     Sesuai Peraturan <em>Badan Pengawas Perdagangan Berjangka Komoditi (Bappebti)</em>, keamanan modal nasabah dilindungi secara ketat oleh hukum:
                 </p>
                 <ul class="list-disc pl-5 space-y-2 text-gray-300">
-                    <li><strong>100% Dana Transaksi Wajib di Rekening Terpisah (<strong>Segregated Account</strong>):</strong> Seluruh dana nasabah disimpan di Bank Penyimpanan Resmi (seperti BCA, Mandiri, BNI, CIMB Niaga,BRI) dan dipisahkan penuh dari rekening operasional pialang.</li>
+                    <li><strong>100% Dana Transaksi Wajib di Rekening Terpisah (<strong>Segregated Account</strong>):</strong> Seluruh dana nasabah disimpan di Bank Penyimpanan Resmi (seperti BCA, Mandiri, BNI, CCB) dan dipisahkan penuh dari rekening operasional pialang.</li>
                     <li><strong>Pengawasan Kliring (PT KBI):</strong> Rekening terpisah ini diverifikasi dan diawasi langsung oleh Lembaga Kliring Berjangka (PT Kliring Berjangka Indonesia / KBI).</li>
                 </ul>
 
@@ -108,77 +216,74 @@
                     <li><strong>Kendali Dana &amp; Ketajaman Nasabah:</strong> Setelah akun aktif, <strong>pemilik uang sendiri yang melakukan trading dan mengendalikan dananya</strong>, sehingga wajib berhati-hati, tajam membaca situasi, serta disiplin mengelola risiko. Pialang hanya <strong>memberikan arahan</strong>.</li>
                 </ul>
 
-            <!-- EMBED GRAFIK HARGA EMAS -->
-            <section class="space-y-4 pt-4 border-t border-gold/20">
-                <h2 class="text-xl font-serif font-semibold text-gold">📈 Pantauan Grafik Pergerakan Harga Emas</h2>
-                <p class="text-sm text-gray-300">
-                    Grafik interaktif berikut membantu memantau arah pergerakan harga emas global sebagai referensi bacaan pasar sebelum mengambil keputusan mandiri:
-                </p>
+                <!-- EMBED GRAFIK HARGA EMAS -->
+                <section class="space-y-4 pt-4 border-t border-gold/20">
+                    <h2 class="text-xl font-serif font-semibold text-gold">📈 Pantauan Grafik Pergerakan Harga Emas</h2>
+                    <p class="text-sm text-gray-300">
+                        Grafik interaktif berikut membantu memantau arah pergerakan harga emas global sebagai referensi bacaan pasar sebelum mengambil keputusan mandiri:
+                    </p>
 
-                <div class="w-full rounded-lg overflow-hidden border border-gold/30 shadow-md" style="background-color: #0a192f;">
-                    <iframe
-                        src="https://s.tradingview.com/widgetembed/?frameElementId=tv_gold_chart&symbol=OANDA%3AXAUUSD&interval=60&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=0a192f&theme=dark&style=1&timezone=Asia%2FJakarta&withdateranges=1&studies=%5B%5D&utm_source=pustaka-wbiznet.vercel.app&utm_medium=widget&utm_campaign=chart&utm_term=OANDA%3AXAUUSD"
-                        class="w-full h-96 md:h-[460px]"
-                        style="border: 0;"
-                        loading="lazy"
-                        allowfullscreen
-                        title="Grafik Pergerakan Harga Emas XAU/USD">
-                    </iframe>
-                </div>
+                    <div class="w-full rounded-lg overflow-hidden border border-gold/30 shadow-md bg-[#0a192f]">
+                        <iframe
+                            src="https://s.tradingview.com/widgetembed/?frameElementId=tv_gold_chart&symbol=OANDA%3AXAUUSD&interval=60&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=0a192f&theme=dark&style=1&timezone=Asia%2FJakarta&withdateranges=1&studies=%5B%5D&utm_source=pustaka-wbiznet.vercel.app&utm_medium=widget&utm_campaign=chart&utm_term=OANDA%3AXAUUSD"
+                            class="w-full h-96 md:h-[460px] border-0"
+                            loading="lazy"
+                            allowfullscreen
+                            title="Grafik Pergerakan Harga Emas XAU/USD">
+                        </iframe>
+                    </div>
 
-                <p class="text-xs text-gray-400 italic">
-                    *Catatan: Grafik di atas merupakan widget pantauan pergerakan harga emas pasar global (zona waktu WIB) sebagai alat bantu visual edukatif, bukan acuan eksekusi otomatis maupun jaminan hasil transaksi.
-                </p>
-            </section>
-
-
+                    <p class="text-xs text-gray-400 italic">
+                        *Catatan: Grafik di atas merupakan widget pantauan pergerakan harga emas pasar global (zona waktu WIB) sebagai alat bantu visual edukatif, bukan acuan eksekusi otomatis maupun jaminan hasil transaksi.
+                    </p>
+                </section>
 
                 <div class="bg-amber-950/30 border border-gold/30 p-4 rounded-lg mt-4">
                     <p class="text-xs md:text-sm text-gray-300">
-                        <strong class="text-gold">Catatan &amp; Disclaimer:</strong> Simulasi di atas bersifat ilustrasi edukatif dan bukan jaminan profit. Seluruh keputusan serta risiko transaksi berada pada pemilik dana yang menjalankan trading sendiri; pialang berperan memberi arahan dan informasi. Jika sudah memahami poin-poin ini dan ingin berdiskusi lebih lanjut, silakan hubungi<br> <strong></strong> <a href="https://wa.me/6281370959401?text=INFO%20EMAS%20BPF" target="_blank" rel="noopener noreferrer" class="text-gold underline"><br>👉 WhatsApp—Kresnawan Sasmita Putra</a> ( <strong>INFO EMAS BPF</strong>).
+                        <strong class="text-gold">Catatan &amp; Disclaimer:</strong> Simulasi di atas bersifat ilustrasi edukatif dan bukan jaminan profit. Seluruh keputusan serta risiko transaksi berada pada pemilik dana yang menjalankan trading sendiri; pialang berperan memberi arahan dan informasi. Jika sudah memahami poin-poin ini dan ingin berdiskusi lebih lanjut, silakan hubungi <strong>Kresnawan Sasmita Putra</strong> melalui WhatsApp di <a href="https://wa.me/6281470959401?text=INFO%20EMAS%20BPF" target="_blank" rel="noopener noreferrer" class="text-gold underline">wa.me/6281470959401</a> (ketik <strong>INFO EMAS BPF</strong>).
                     </p>
                 </div>
             </section>
 
             <!-- DAFTAR LEGALITAS RESMI -->
-            <div class="my-6 p-5 rounded-lg border border-gold/30" style="background-color: #0a192f;">
+            <div class="my-6 p-5 rounded-lg border border-gold/30 bg-[#0a192f]">
                 <h3 class="text-lg font-serif font-bold text-gold border-b border-gold/20 pb-2 mb-3">🛡️ Legalitas Resmi PT BestProfit Futures (BPF)</h3>
+
                 <!-- FOTO GEDUNG KANTOR BPF MEDAN -->
                 <div class="my-4 text-center">
                     <img src="KantorBPF.png" alt="Gedung Kantor PT BestProfit Futures Cabang Medan" class="w-full max-w-md mx-auto h-auto rounded-lg border border-gold/30 shadow-md">
                     <p class="text-xs text-gray-400 mt-2 italic">Gedung Kantor PT BestProfit Futures Cabang Medan (Komplek Grand Jati Junction)</p>
                 </div>
+
                 <!-- DAFTAR IZIN RESMI -->
                 <ul class="space-y-2 text-sm text-gray-300 my-3">
                     <li>• <strong>Izin Pialang Berjangka Bappebti:</strong> No. 499/BAPPEBTI/SI/X/2004</li>
                     <li>• <strong>Izin SPA Bappebti:</strong> No. 1157/BAPPEBTI/SP/3/2007</li>
                     <li>• <strong>Anggota Bursa Berjangka Jakarta (BBJ):</strong> No. SPAB-071/BBJ/05/04</li>
                     <li>• <strong>Anggota Kliring Berjangka Indonesia (KBI):</strong> No. 48/AK-KBI/I/2007</li>
-                    
                     <li>
-    <strong>✅ Cek Fatwa DSN-MUI No. 82, di Parameter Komoditi Syariah, Klik 👇:</strong>
-    <a href="http://bappebti.go.id/artikel/detail/129" target="_blank" rel="noopener noreferrer" class="text-gold underline hover:text-yellow-300">
-        bappebti.go.id/artikel/detail/129
-    </a>
-</li>
-
+                        <strong>✅ Cek Fatwa DSN-MUI No. 82, di Parameter Komoditi Syariah, Klik 👇:</strong>
+                        <a href="http://bappebti.go.id/artikel/detail/129" target="_blank" rel="noopener noreferrer" class="text-gold underline hover:text-yellow-300">
+                            bappebti.go.id/artikel/detail/129
+                        </a>
+                    </li>
                 </ul>
-                
-                
-                
+
                 <!-- TOMBOL LINK VERIFIKASI BAPPEBTI -->
                 <div class="pt-3 text-center md:text-left">
-                    <a href="https://share.google/1ygUozEJbQVjpOwRZ" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 18px; background-color: #2563eb; color: #ffffff; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: bold;"> 🔍 Cek Verifikasi Izin BPF di Situs Resmi Bappebti </a>
+                    <a href="https://share.google/1ygUozEJbQVjpOwRZ" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md no-underline text-[13px] font-bold transition">
+                        🔍 Cek Verifikasi Izin BPF di Situs Resmi Bappebti
+                    </a>
                 </div>
-                <p class="text-xs text-gray-400 mt-3 italic"> *Keaslian legalitas dapat diverifikasi mandiri kapan saja melalui situs resmi Bappebti. </p>
+                <p class="text-xs text-gray-400 mt-3 italic">*Keaslian legalitas dapat diverifikasi mandiri kapan saja melalui situs resmi Bappebti.</p>
             </div>
 
             <!-- EMBED VIDEO PENJELASAN -->
             <section class="space-y-4 pt-4 border-t border-gold/20">
                 <h2 class="text-xl font-serif font-semibold text-gold">🎥 Kajian Video Edukasi Singkat</h2>
                 <p class="text-sm text-gray-300">Simak ulasan visual ringkas mengenai mekanisme peluang emas komoditas dan transparansi rekening terpisah melalui tayangan video di bawah ini:</p>
-                
-                <!-- KONTEN EMBED TIKTOK / YOUTUBE -->
+
+                <!-- KONTEN EMBED TIKTOK -->
                 <div class="flex justify-center my-4">
                     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wbiznetchannel/video/7709327446109113607" data-video-id="7709327446109113607" style="max-width: 605px; min-width: 325px;">
                         <section>
@@ -190,12 +295,12 @@
             </section>
 
             <!-- SEKSI KONTAK & JANJI TEMU (KONSULTAN PRIBADI) -->
-            <section class="mt-8 p-6 rounded-lg border border-gold/40 text-center space-y-4" style="background-color: #0a192f;">
-                <h3 class="text-xl font-serif font-bold text-gold">Layanan Edukasi & Konsultasi Portofolio Emas</h3>
+            <section class="mt-8 p-6 rounded-lg border border-gold/40 text-center space-y-4 bg-[#0a192f]">
+                <h3 class="text-xl font-serif font-bold text-gold">Layanan Edukasi &amp; Konsultasi Portofolio Emas</h3>
                 <p class="text-sm text-gray-300 max-w-2xl mx-auto">
                     Untuk pemetaan risiko, simulasi transaksi, atau janji temu konsultasi tatap muka (didampingi tim konsultan senior) di kantor operasional kami:
                 </p>
-                
+
                 <div class="text-sm text-gray-200 space-y-1 py-2">
                     <p>👤 <strong>Konsultan Hubungan Nasabah:</strong> Kresnawan Sasmita Putra</p>
                     <p>🏢 <strong>Perusahaan Pialang:</strong> PT BestProfit Futures (BPF) Cabang Medan</p>
@@ -205,7 +310,7 @@
                 </div>
 
                 <div class="pt-2">
-                    <a href="https://wa.me/6281470959401?text=INFO%20EMAS%20BPF" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 12px 28px; background-color: #16a34a; color: #ffffff; font-weight: bold; border-radius: 8px; text-decoration: none; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+                    <a href="https://wa.me/6281470959401?text=INFO%20EMAS%20BPF" target="_blank" rel="noopener noreferrer" class="inline-block px-7 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg no-underline text-sm shadow-md transition">
                         💬 Hubungi Pak Kresnawan via WhatsApp
                     </a>
                 </div>
@@ -217,16 +322,16 @@
         </article>
 
         <!-- FOOTER HALAMAN -->
-        <footer class="border-t border-gold/25 text-gray-300" style="background-color: #0a192f; padding: 36px 16px; text-align: center; margin-top: 40px; border-radius: 8px;">
-            <div style="max-width: 800px; margin: 0 auto;">
+        <footer class="border-t border-gold/25 text-gray-300 bg-[#0a192f] py-9 px-4 text-center mt-10 rounded-lg">
+            <div class="max-w-3xl mx-auto">
                 <p>
-                    <strong style="color: #d4af37; font-family: serif; font-size: 1.1rem; letter-spacing: 0.5px;">Kresnawan Sasmita Putra Library</strong>
+                    <strong class="text-gold font-serif text-lg tracking-wide">Kresnawan Sasmita Putra Library</strong>
                 </p>
-                <p style="margin-top: 8px; font-size: 0.85rem; color: #9ca3af;">
-                    © 2026 <strong style="color: #ffffff;">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
+                <p class="mt-2 text-xs text-gray-400">
+                    © 2026 <strong class="text-white">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
                 </p>
-                <p style="margin-top: 16px;">
-                    <a href="https://pustaka-wbiznet.vercel.app" style="color: #d4af37; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: inline-block;">
+                <p class="mt-4">
+                    <a href="https://pustaka-wbiznet.vercel.app" class="text-gold hover:underline no-underline text-sm font-medium inline-block">
                         ← Kembali ke Katalog Utama Pustaka Wbiznet
                     </a>
                 </p>
