@@ -20,18 +20,26 @@
   <!-- PWA & Favicon -->
   <link rel="icon" href="img/favicon.png">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1e293b">
+  <meta name="theme-color" content="#0a192f">
 
   <style>
     * { box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #13294b 0%, #0a192f 55%, #060e1a 100%);
+      background-attachment: fixed;
+      color: #e2e8f0;
+    }
     
     /* Header & Navigasi */
-    header { background-color: #1e293b; color: white; padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; }
+    header { background-color: #071222; color: white; padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(212, 175, 55, 0.35); }
     header .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; display: flex; flex-direction: column; gap: 8px; }
     
     .header-brand { display: flex; align-items: center; gap: 12px; }
-    .header-brand img { width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.5); }
+    .header-brand img { width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.6); }
     .header-title-area h3 { margin: 0; font-size: 1.1rem; font-family: serif; font-weight: bold; letter-spacing: 0.5px; color: white; }
     .header-title-area h3 span { color: #d4af37; }
     .header-title-area span.sub { font-size: 0.75rem; color: #94a3b8; font-family: serif; font-style: italic; display: block; }
@@ -44,7 +52,6 @@
     .btn-nav-bio { background-color: #2563eb; }
     .btn-nav-artikel { background-color: #16a34a; }
     .btn-nav-koleksi { background-color: #f59e0b; color: #111827; }
-        /* Tombol Manis untuk Luxury Watch */
     .btn-nav-watch { 
       background: linear-gradient(135deg, #f59e0b 0%, #d4af37 100%); 
       color: #111827 !important; 
@@ -52,8 +59,6 @@
       border: 1px solid #fef08a; 
       box-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
     }
-
-    /* Tombol Khusus Gold Trade */
     .btn-nav-gold {
       background: linear-gradient(135deg, #f59e0b 0%, #d4af37 100%);
       color: #111827 !important;
@@ -65,34 +70,33 @@
       background: linear-gradient(135deg, #fbbf24 0%, #eab308 100%);
     }
 
-
     /* Hero Section */
     .hero-section {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      background: linear-gradient(135deg, rgba(15, 29, 54, 0.92) 0%, rgba(7, 15, 29, 0.96) 100%);
       color: #ffffff;
       padding: 35px 15px;
       text-align: center;
-      border-bottom: 4px solid #38bdf8;
+      border-bottom: 3px solid #d4af37;
     }
     .hero-content { max-width: 850px; margin: 0 auto; }
     .hero-content img { max-width: 150px; height: auto; margin: 0 auto 15px auto; display: block; }
     .hero-badge {
-      background-color: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
+      background-color: rgba(212, 175, 55, 0.14);
+      color: #d4af37;
       padding: 4px 12px;
       border-radius: 20px;
       font-size: 0.8rem;
       font-weight: 600;
       display: inline-block;
       margin-bottom: 12px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border: 1px solid rgba(212, 175, 55, 0.45);
     }
-    .hero-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 12px 0; line-height: 1.3; }
+    .hero-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 12px 0; line-height: 1.3; color: #ffffff; }
     .hero-quote {
       font-style: italic;
       font-size: 0.95rem;
       color: #e2e8f0;
-      border-left: 3px solid #38bdf8;
+      border-left: 3px solid #d4af37;
       margin: 15px auto;
       padding: 10px 15px;
       background: rgba(255, 255, 255, 0.05);
@@ -100,7 +104,7 @@
       text-align: left;
       line-height: 1.5;
     }
-    .hero-description { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+    .hero-description { font-size: 0.9rem; color: #cbd5e1; margin-bottom: 20px; line-height: 1.5; }
     .btn-hero-primary {
       background-color: #0284c7;
       color: #ffffff;
@@ -112,32 +116,30 @@
       display: inline-block;
     }
 
-/* Pilihan 1: Teks Putih (Latar Hijau) */
-.btn-nav-email { background-color: #16a34a; color: #ffffff !important; }
-
-/* Pilihan 2: Teks Kuning (Latar Hijau) */
-.btn-nav-email-kuning { background-color: #16a34a; color: #facc15 !important; }
-
-
-
-
-
-
     /* Grid Buku & Kartu */
     .main-container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
     .section-divider {
       border: 0;
       height: 2px;
-      background: linear-gradient(to right, #cbd5e1, #0284c7, #cbd5e1);
+      background: linear-gradient(to right, transparent, #d4af37, transparent);
       margin: 25px 0 20px 0;
     }
     .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .book-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
+    .book-card {
+      background: #11223a;
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     .book-card-link { text-decoration: none; color: inherit; display: block; }
     .book-card img { max-width: 180px; width: 100%; height: auto; display: block; margin: 0 auto 12px auto; border-radius: 6px; transition: transform 0.2s; }
     .book-card-link:hover img { transform: scale(1.02); }
-    .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.1rem; line-height: 1.3; }
-    .book-card p { font-size: 0.9rem; color: #64748b; flex-grow: 1; line-height: 1.5; }
+    .book-card h3 { margin-top: 0; color: #f8fafc; font-size: 1.1rem; line-height: 1.3; }
+    .book-card p { font-size: 0.9rem; color: #cbd5e1; flex-grow: 1; line-height: 1.5; }
     .badge { background-color: #0284c7; color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
     
     /* Tombol Aksi Buku */
@@ -148,17 +150,17 @@
     .btn-detail { background-color: #475569; color: white; }
     .btn-beli { background-color: #10b981; color: white; }
     .btn-flipbook { background-color: #d97706; color: white; }
-    .btn-qrcbn { background-color: #0f172a; color: #d4af37; border: 1px solid rgba(212, 175, 55, 0.4); text-align: center; font-size: 0.85rem; padding: 9px; border-radius: 6px; text-decoration: none; display: block; margin-top: 6px; font-weight: 600; }
+    .btn-qrcbn { background-color: #071222; color: #d4af37; border: 1px solid rgba(212, 175, 55, 0.45); text-align: center; font-size: 0.85rem; padding: 9px; border-radius: 6px; text-decoration: none; display: block; margin-top: 6px; font-weight: 600; }
     
     /* Area Download APK & PWA */
     .app-download-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
+      background: #11223a;
+      border: 1px solid rgba(212, 175, 55, 0.35);
       border-radius: 12px;
       padding: 24px 20px;
       margin-top: 35px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
     .btn-install {
       display: inline-block;
@@ -177,12 +179,12 @@
     .btn-install:hover { background-color: #218838; }
     .ios-box {
       margin-top: 15px;
-      background: #f0f4f8;
-      border: 1px solid #d0d7de;
+      background: #0a192f;
+      border: 1px solid rgba(212, 175, 55, 0.3);
       padding: 12px;
       border-radius: 8px;
       font-size: 13px;
-      color: #333;
+      color: #e2e8f0;
       text-align: left;
       line-height: 1.4;
       max-width: 450px;
@@ -191,7 +193,7 @@
     }
 
     /* Footer */
-    footer { text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
+    footer { text-align: center; padding: 25px 15px; background-color: #071222; color: white; margin-top: 40px; font-size: 0.85rem; border-top: 2px solid rgba(212, 175, 55, 0.4); }
     footer img { max-width: 80px; height: auto; margin-bottom: 10px; }
 
     @media (min-width: 600px) {
@@ -205,7 +207,6 @@
 
 <header>
     <div class="container">
-        <!-- Logo & Teks Sejajar -->
         <div class="header-brand">
             <img src="icon_logo.png" alt="Logo Pustaka Wbiznet">
             <div class="header-title-area">
@@ -214,25 +215,18 @@
             </div>
         </div>
         
-        <!-- Tombol Navigasi Cepat di Header (Sudah Termasuk Luxury Watch) -->
         <div class="nav-quick-links">
             <a href="biografi.html" class="nav-btn btn-nav-bio">📂 Biografi</a>
             <a href="artikel.html" class="nav-btn btn-nav-artikel">📝 Artikel</a>
             <a href="#katalog" class="nav-btn btn-nav-koleksi">📚 Koleksi</a>
             <a href="luxurywatch.html" class="nav-btn btn-nav-watch">💎 Luxury Watch</a>
-              <a  href="artikel_BPF.html" class="nav-btn btn-nav-gold">📊 Gold Trade  📈 </a>
-            
-            
-            
-            
-            
+            <a href="artikel_BPF.html" class="nav-btn btn-nav-gold">📊 Gold Trade 📈</a>
         </div>
     </div>
 </header>
 
 <section class="hero-section">
     <div class="hero-content">
-      
       <span class="hero-badge">Membaca → Menulis → Berkarya</span><br>
       Portofolio & Digital Catalog by 
       <h4 class="hero-title"> Kresnawan Sasmita Putra Library</h4>
@@ -252,30 +246,29 @@
         <a href="#katalog" class="btn-hero-primary">Jelajahi Karya</a>
       </div>
     </div>
-  </section>
+</section>
 
-  <div class="main-container">
+<div class="main-container">
 
     <hr class="section-divider">
 
-    <h2 id="katalog" style="font-size: 1.3rem;">
-  Rak Buku Pustaka Wbiznet <br>
-</h2>
+    <h2 id="katalog" style="font-size: 1.3rem; color: #d4af37; margin-bottom: 4px;">
+      Rak Buku Pustaka Wbiznet
+    </h2>
 
-<p style="font-size: 0.95rem; color: #64748b; margin-bottom: 25px;">
-  Koleksi Buku/Ebook
-</p>
+    <p style="font-size: 0.95rem; color: #cbd5e1; margin-top: 0; margin-bottom: 25px;">
+      Koleksi Buku/Ebook
+    </p>
 
-<iframe 
-  style="width: 100%; height: 500px; border: none;" 
-  src="https://pubhtml5.com/bookcase/uqrcf" 
-  seamless="seamless" 
-  scrolling="no" 
-  frameborder="0" 
-  allowtransparency="true" 
-  allowfullscreen>
-</iframe>
-
+    <iframe 
+      style="width: 100%; height: 500px; border: none;" 
+      src="https://pubhtml5.com/bookcase/uqrcf" 
+      seamless="seamless" 
+      scrolling="no" 
+      frameborder="0" 
+      allowtransparency="true" 
+      allowfullscreen>
+    </iframe>
 
     <!-- KATALOG BUKU -->
     <div class="book-grid">
@@ -556,7 +549,7 @@
             <a href="Ebook12_JejakPengeranChampa.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
             <a href="http://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="readbook_Jejak_Pangeran_Champa.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="readbook_Jejak_Pangeran_Champa.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-3070-849" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
@@ -579,7 +572,7 @@
             <a href="Al_Ghazali.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
             <a href="http://lynk.id/wbiznet/enqz5q9mxvr6" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="readbook_Pemikiran_Al_Ghazali.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="readbook_Pemikiran_Al_Ghazali.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-0529-943" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
@@ -589,23 +582,20 @@
         <div>
           <span class="badge">BUKU #14—TERBARU</span>
           <a href="Misteri_Lembah_Yang_Hilang.html" class="book-card-link">
-            <h3>Misteri Lembah Yang Hilang<br>Catatan Perjalanan John Lewis Burckhardt (1822)
-
- </h3>
+            <h3>Misteri Lembah Yang Hilang<br>Catatan Perjalanan John Lewis Burckhardt (1822)</h3>
             <img src="coverbuku_misteri_lembah.jpg" alt="Cover Misteri Lembah Yang Hilang"> 
           </a>
           <p>
            Ditemani seorang pemandu lokal yang siap mencabut belati kapan saja jika penyamarannya terbongkar, Burckhardt berjalan di antara tebing raksasa yang mencekam hingga menemukan kembali Petra—Kota Batu Merah Muda yang hilang selama ratusan tahun.
-
           </p>
         </div>
         <div class="btn-action-area">
           <a href="Misteri_Lembah_Yang_Hilang.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
             <a href="pdfbook14_misteri.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
-            <a href=" https://lynk.id/wbiznet/86vvknwxx995" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/86vvknwxx995" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="readbook14.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="readbook14.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-2447-397" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
@@ -613,159 +603,121 @@
       <!-- BUKU 15 -->
       <div class="book-card">
         <div>
-          <span class="badge">BUKU #15 </span>
+          <span class="badge">BUKU #15</span>
           <a href="jejak_sunyi_di_gunung_suci.html" class="book-card-link">
-            <h3>Jejak Sunyi di Gunung Suci<br>Catatan Perjalanan John Lewis Burckhardt (1816)
-
- </h3>
-            <img src="coverbook_jejak_sunyi_gunung_suci.png" alt="Cover Jejak Sunyi di Gunung Suci "> 
+            <h3>Jejak Sunyi di Gunung Suci<br>Catatan Perjalanan John Lewis Burckhardt (1816)</h3>
+            <img src="coverbook_jejak_sunyi_gunung_suci.png" alt="Cover Jejak Sunyi di Gunung Suci"> 
           </a>
           <p>
-           Setelah melintasi celah gaib El-Siq dan menemukan kembali kota mawar batu Petra pada tahun 1812 (Seri 1—Misteri Lembah Yang Hilang), penjelajah Swiss ternama John Lewis Burckhardt yang menyamar sebagai sarjana Muslim bergelar Sheikh Ibrahim ibn Abdallah melanjutkan misi ilmiahnya pada tahun 1816 menembus pedalaman  Semenanjung Sinai.
- <br><p></p>
-Di balik keganasan Gurun El-Ty dan tebing granit yang membara, Sheikh Ibrahim tidak hanya mencatat prasasti-prasasti purba di Wady Mokatteb, tetapi juga mempertaruhkan nyawa saat ditarik menggunakan keranjang katrol menuju benteng kuno Biara Saint Catherine abad ke-6. 
- 
-
+           Setelah melintasi celah gaib El-Siq dan menemukan kembali kota mawar batu Petra pada tahun 1812 (Seri 1—Misteri Lembah Yang Hilang), penjelajah Swiss ternama John Lewis Burckhardt yang menyamar sebagai sarjana Muslim bergelar Sheikh Ibrahim ibn Abdallah melanjutkan misi ilmiahnya pada tahun 1816 menembus pedalaman Semenanjung Sinai.
+           <br><br>
+           Di balik keganasan Gurun El-Ty dan tebing granit yang membara, Sheikh Ibrahim tidak hanya mencatat prasasti-prasasti purba di Wady Mokatteb, tetapi juga mempertaruhkan nyawa saat ditarik menggunakan keranjang katrol menuju benteng kuno Biara Saint Catherine abad ke-6.
           </p>
         </div>
         <div class="btn-action-area">
           <a href="jejak_sunyi_di_gunung_suci.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
             <a href="pdfbook15_jejaksunyidigunungsuci.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
-            <a href=" http://lynk.id/wbiznet/meyyojoy7v8j" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="http://lynk.id/wbiznet/meyyojoy7v8j" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="readbook15.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="readbook15.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-1344-424" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
-         <!-- BUKU 16 -->
+      <!-- BUKU 16 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #16</span>
           <a href="readbook16.html" class="book-card-link">
-            <h3>Rahasia Labirin Batu Hitam<br>Catatan Perjalanan John Lewis Burckhardt (1816)
-
- </h3>
-            <img src="coverbook16_rahasia_labirin_batu_hitam.png" alt="Cover Rahasia Labirin Batu Hitam "> 
+            <h3>Rahasia Labirin Batu Hitam<br>Catatan Perjalanan John Lewis Burckhardt (1816)</h3>
+            <img src="coverbook16_rahasia_labirin_batu_hitam.png" alt="Cover Rahasia Labirin Batu Hitam"> 
           </a>
           <p>
-           buku ini menyajikan ketegangan penyamaran, rahasia arsitektur batu basalt hitam yang langka, serta keberanian seorang penjelajah dalam menyelamatkan ingatan sejarah dunia.
-
-
-
+           Buku ini menyajikan ketegangan penyamaran, rahasia arsitektur batu basalt hitam yang langka, serta keberanian seorang penjelajah dalam menyelamatkan ingatan sejarah dunia.
           </p>
         </div>
         <div class="btn-action-area">
           <a href="ringkasan16_rahasia_labirin_batu_hitam.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
             <a href="pdfbook16_rahasia_labirin_batu_hitam.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
-            <a href=" http://lynk.id/wbiznet/1d331nrmgx8g" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="http://lynk.id/wbiznet/1d331nrmgx8g" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="readbook16.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="readbook16.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-8266-740" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
-      
 
-         <!-- BUKU 17 -->
+      <!-- BUKU 17 -->
       <div class="book-card">
         <div>
-          <span class="badge">BUKU #17 </span>
+          <span class="badge">BUKU #17</span>
           <a href="readbook17.html" class="book-card-link">
-            <h3>Aroma Sawit Dan Bara Cinta<br>Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti 
-
-
-
- </h3>
-            <img src="coverbook17_aroma_sawit_dan_bara_cinta.png" alt="Cover Aroma Sawit dan Bara Cinta "> 
+            <h3>Aroma Sawit Dan Bara Cinta<br>Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti</h3>
+            <img src="coverbook17_aroma_sawit_dan_bara_cinta.png" alt="Cover Aroma Sawit dan Bara Cinta"> 
           </a>
           <p>
-           Di mana ada integritas, kecerdasan strategi, dan cinta yang murni, tembok dendam tertua sekalipun akan runtuh menjadi fondasi kejayaan yang tak tergoyahkan." 
-
-
-
+           Di mana ada integritas, kecerdasan strategi, dan cinta yang murni, tembok dendam tertua sekalipun akan runtuh menjadi fondasi kejayaan yang tak tergoyahkan."
           </p>
         </div>
         <div class="btn-action-area">
           <a href="ringkasan17_aroma_sawit_dan_bara_cinta.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
             <a href="pdfbook17_aroma_sawit_dan_bara_cinta.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
-            <a href=" https://lynk.id/wbiznet/jozz2mozo8gx" target="_blank" class="btn btn-beli">Beli</a>
+            <a href="https://lynk.id/wbiznet/jozz2mozo8gx" target="_blank" class="btn btn-beli">Beli</a>
           </div>
-          <a href="readbook17.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="readbook17.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-3036-911" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
-
-<!-- BUKU 18 -->
+      <!-- BUKU 18 -->
       <div class="book-card">
         <div>
           <span class="badge">BUKU #18</span>
           <a href="readbook18_pembebasan_yerusalem_1187.html" class="book-card-link">
-            <h3>Pembebasan Yerusalem 1187 dalam Komparasi Naskah Primer
-
-
-
-
- </h3>
-            <img src="coverbook18_pembebasan_yerusalem_1187.png" alt="Cover Pembebasan Yerusalem 1187 "> 
+            <h3>Pembebasan Yerusalem 1187 dalam Komparasi Naskah Primer</h3>
+            <img src="coverbook18_pembebasan_yerusalem_1187.png" alt="Cover Pembebasan Yerusalem 1187"> 
           </a>
           <p>
            Ebook "Pembebasan Yerusalem 1187 dalam Komparasi Naskah Primer" menyingkap detik-detik paling menegangkan dari dua sudut pandang saksi mata abad ke-12 yang saling bertolak belakang namun saling melengkapi
-
-
-
-
           </p>
         </div>
         <div class="btn-action-area">
           <a href="ringkasan18_pembebasan_yerusalem_1187.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
             <a href="pdfbook18_pembebasan_yerusalem_1187.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
-            <a href=" https://lynk.id/wbiznet/p1pxmx5pwd9d" target="_blank" class="btn btn-beli">Beli di Lynk</a>
+            <a href="https://lynk.id/wbiznet/p1pxmx5pwd9d" target="_blank" class="btn btn-beli">Beli di Lynk</a>
           </div>
-          <a href=" https://play.google.com/store/books/details?id=jBUdEgAAQBAJ" target="_blank" class="btn btn-beli">Beli di Google book</a>
-          </div>
+          <a href="https://play.google.com/store/books/details?id=jBUdEgAAQBAJ" target="_blank" class="btn btn-beli">Beli di Google book</a>
           <a href="readbook18_pembebasan_yerusalem_1187.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
           <a href="https://www.qrcbn.com/check/62-10158-4314-228" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
 
-<!-- BUKU 19 -->
+      <!-- BUKU 19 -->
       <div class="book-card">
         <div>
-          <span class="badge">BUKU #19 —TERBARU</span>
+          <span class="badge">BUKU #19—TERBARU</span>
           <a href="readbook19_aromasawit_jilid2.html" class="book-card-link">
-            <h3>Aroma Sawit & Bara Cinta Jilid 2
-Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Audit di Ujung Tahun
- </h3>
-            <img src="Coverjilid2_aromasawit.png" alt="Cover Aroma Sawit & Bara Cinta — Jilid 2 ">  
+            <h3>Aroma Sawit & Bara Cinta Jilid 2<br>Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Audit di Ujung Tahun</h3>
+            <img src="Coverjilid2_aromasawit.png" alt="Cover Aroma Sawit & Bara Cinta — Jilid 2">  
           </a>
           <p>
            Ebook "Aroma Sawit & Bara Cinta — Jilid 2" Jilid kedua dari kisah ini membuka tabir rahasia tentang apa yang sesungguhnya terjadi di balik layar sebuah imperium perkebunan—sebuah perjalanan di mana setiap deviasi harus dikunci dengan kerja sama, dan setiap kebijakan pemimpin diuji oleh realitas lapangan.
-
-
-
-
           </p>
         </div>
         <div class="btn-action-area">
           <a href="ringkasan19_aromasawit_jilid2.html" class="btn btn-ringkasan">Baca Ringkasan</a>
           <div class="btn-row">
             <a href="pdfbook19_aromasawit2.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
-            <a href=" http://lynk.id/wbiznet/3d1vmmpxzx1x/" target="_blank" class="btn btn-beli">Beli di Lynk</a>
+            <a href="http://lynk.id/wbiznet/3d1vmmpxzx1x/" target="_blank" class="btn btn-beli">Beli di Lynk</a>
           </div>
-          <a href=" https://play.google.com/store/books/" target="_blank" class="btn btn-beli">Beli di Google book</a>
-          </div>
-          <a href="readbook19_aromasawit_jilid2.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
-          <a href="https://www.qrcbn.com/check/62-10158-1975-266 " target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+          <a href="https://play.google.com/store/books/" target="_blank" class="btn btn-beli">Beli di Google book</a>
+          <a href="readbook19_aromasawit_jilid2.html" target="_blank" class="btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1975-266" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
         </div>
       </div>
-
-
-
 
     </div> <!-- Tutup book-grid -->
 
@@ -774,7 +726,7 @@ Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Aud
       <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
         📂 Halaman Artikel
       </h2>
-      <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+      <div style="background-color: #071222; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
         <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px; line-height: 1.5;">
           Temukan berbagai koleksi artikel pilihan, catatan sejarah, opini, dan ulasan menarik lainnya secara lengkap pada halaman khusus arsip tulisan kami.
         </p>
@@ -789,7 +741,7 @@ Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Aud
       <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
         📂 Halaman Biografi
       </h2>
-      <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+      <div style="background-color: #071222; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
         <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px; line-height: 1.5;">
           Mengenal lebih dekat profil, perjalanan karier, latar belakang, serta rekam jejak Tokoh lengkap pada halaman khusus biografi.
         </p>
@@ -801,7 +753,7 @@ Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Aud
 
     <!-- AREA UNDUH APLIKASI (APK & PWA) -->
     <div class="app-download-card">
-      <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+      <p style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 16px;">
         Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
       </p>
 
@@ -817,29 +769,23 @@ Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Aud
 
   </div>
 
-  <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem;">
+  <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px 15px; background-color: #071222; color: white; margin-top: 40px; font-size: 0.85rem;">
   
-  <img src="icon_logo.png" alt="Icon Pustaka Wbiznet" style="max-width: 60px; height: auto; margin-bottom: 12px; display: block;">
+    <img src="icon_logo.png" alt="Icon Pustaka Wbiznet" style="max-width: 60px; height: auto; margin-bottom: 12px; display: block;">
 
-  <!-- Teks Nama Library (Rata Tengah) -->
-           <p>
-                <strong style="color: #d4af37; font-family: serif; font-size: 0.80rem; letter-spacing: 0.4px;">Kresnawan Sasmita Putra Library</strong>
-            </p>
-
+    <p>
+      <strong style="color: #d4af37; font-family: serif; font-size: 0.80rem; letter-spacing: 0.4px;">Kresnawan Sasmita Putra Library</strong>
+    </p>
   
-    <!-- Tombol menu Kirim Email/Pesan -->
-  <a href="halaman_komentar.html" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 6px 14px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); margin-bottom: 15px;">
-    ✉️ Kirim Email/Pesan/Komentar
-  </a>
+    <a href="halaman_komentar.html" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 6px 14px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); margin-bottom: 15px;">
+      ✉️ Kirim Email/Pesan/Komentar
+    </a>
 
+    <p style="text-align: center; margin: 0; color: #94a3b8; font-size: 0.75rem;">
+      Copyright © Pustaka Wbiznet — 2026
+    </p>
 
-
-  <!-- Copyright -->
-  <p style="text-align: center; margin: 0; color: #94a3b8; font-size: 0.75rem;">
-    Copyright © Pustaka Wbiznet — 2026
-  </p>
-
-</footer>
+  </footer>
 
   <!-- Script Service Worker (PWA) -->
   <script>
