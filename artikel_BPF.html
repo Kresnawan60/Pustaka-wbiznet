@@ -1,451 +1,851 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <!-- Preview Gambar & Info Saat Link Dibagikan (Open Graph) -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pustaka-wbiznet.vercel.app/artikel_BPF.html">
-    <meta property="og:title" content="Edukasi Kontrak Emas Berjangka (Loco London / XUL10)">
-    <meta property="og:description" content="Ringkasan mekanisme, keamanan rekening terpisah, simulasi hitungan, serta catatan risiko sebelum bertransaksi.">
-    <meta property="og:image" content="https://pustaka-wbiznet.vercel.app/emas_bpf.jpg">
+<head> 
+  <meta name="google-site-verification" content="OXmtOKCji2tDFJ0UmsWhYkhnB1OUQc8GDUEABPAl_bg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio & Digital Catalog by Kresnawan Sasmita Putra Library">
 
-    <!-- Preview untuk kartu tautan -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Edukasi Kontrak Emas Berjangka (Loco London / XUL10)">
-    <meta name="twitter:description" content="Ringkasan mekanisme, keamanan rekening terpisah, simulasi hitungan, serta catatan risiko sebelum bertransaksi.">
-    <meta name="twitter:image" content="https://pustaka-wbiznet.vercel.app/emas_bpf.jpg">
+  <title>Pustaka Wbiznet — Membaca, Menulis, Berkarya</title>
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pustaka-wbiznet.vercel.app/">
+  <meta property="og:title" content="Pustaka Wbiznet — Membaca → Menulis → Berkarya">
+  <meta property="og:description" content="Portofolio & Digital Catalog by Kresnawan Sasmita Putra Library">
+  <meta property="og:image" content="https://pustaka-wbiznet.vercel.app/logo_pustaka_wbiznet.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strategi Lindung Nilai Kas Perusahaan &amp; Edukasi Emas Komoditas BPF Medan</title>
+  <!-- PWA & Favicon -->
+  <link rel="icon" href="img/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e293b">
 
-    <!-- TAILWIND CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
+    
+    /* Header & Navigasi */
+    header { background-color: #1e293b; color: white; padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; }
+    header .container { max-width: 1100px; margin: 0 auto; padding: 0 15px; display: flex; flex-direction: column; gap: 8px; }
+    
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-brand img { width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 1px solid rgba(212, 175, 55, 0.5); }
+    .header-title-area h3 { margin: 0; font-size: 1.1rem; font-family: serif; font-weight: bold; letter-spacing: 0.5px; color: white; }
+    .header-title-area h3 span { color: #d4af37; }
+    .header-title-area span.sub { font-size: 0.75rem; color: #94a3b8; font-family: serif; font-style: italic; display: block; }
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#d4af37',
-                    }
-                }
-            }
-        }
-    </script>
+    /* Tombol Navigasi Cepat di Header */
+    .nav-quick-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 8px; }
+    .nav-quick-links a { padding: 4px 12px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); color: #ffffff; transition: transform 0.1s; }
+    .nav-quick-links a:hover { transform: translateY(-1px); }
+    
+    .btn-nav-bio { background-color: #2563eb; }
+    .btn-nav-artikel { background-color: #16a34a; }
+    .btn-nav-koleksi { background-color: #f59e0b; color: #111827; }
+        /* Tombol Manis untuk Luxury Watch */
+    .btn-nav-watch { 
+      background: linear-gradient(135deg, #f59e0b 0%, #d4af37 100%); 
+      color: #111827 !important; 
+      font-weight: bold; 
+      border: 1px solid #fef08a; 
+      box-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+    }
 
-    <style>
-      /* Header & Navigasi Saja */
-      .site-nav-header {
-        background-color: #1e293b;
-        color: #ffffff;
-        padding: 0.8rem 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-      }
-      .site-nav-header .nav-container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      .site-nav-header .header-brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .site-nav-header .header-brand img {
-        width: 46px;
-        height: 46px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 1px solid rgba(212, 175, 55, 0.6);
-      }
-      .site-nav-header .header-title-area h3 {
-        margin: 0;
-        font-size: 1.1rem;
-        font-family: Georgia, serif;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-        color: #ffffff;
-      }
-      .site-nav-header .header-title-area h3 span {
-        color: #fbbf24;
-      }
-      .site-nav-header .header-title-area span.sub {
-        font-size: 0.75rem;
-        color: #cbd5e1;
-        font-family: Georgia, serif;
-        font-style: italic;
-        display: block;
-      }
-      .site-nav-header .nav-quick-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-top: 1px solid rgba(255, 255, 255, 0.14);
-        padding-top: 8px;
-      }
-      .site-nav-header .nav-quick-links a {
-        padding: 5px 12px;
-        font-size: 12px;
-        font-weight: 600;
-        border-radius: 6px;
-        text-decoration: none;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-        color: #ffffff;
-        transition: transform 0.12s ease, filter 0.12s ease;
-      }
-      .site-nav-header .nav-quick-links a:hover {
-        transform: translateY(-1px);
-        filter: brightness(1.08);
-      }
-      .site-nav-header .btn-nav-bio {
-        background-color: #3b82f6;
-        color: #ffffff !important;
-      }
-      .site-nav-header .btn-nav-artikel {
-        background-color: #22c55e;
-        color: #ffffff !important;
-      }
-      .site-nav-header .btn-nav-koleksi {
-        background-color: #fbbf24;
-        color: #111827 !important;
-      }
-      .site-nav-header .btn-nav-watch {
-        background: linear-gradient(135deg, #fbbf24 0%, #eab308 100%);
-        color: #111827 !important;
-        font-weight: 700;
-        border: 1px solid #fef08a;
-        box-shadow: 0 2px 6px rgba(251, 191, 36, 0.35);
-      }
-      .site-nav-header .btn-nav-gold {
-        background: linear-gradient(135deg, #fde047 0%, #f59e0b 100%);
-        color: #111827 !important;
-        font-weight: 700;
-        border: 1px solid #fef9c3;
-        box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4);
-      }
-    </style>
+    /* Tombol Khusus Gold Trade */
+    .btn-nav-gold {
+      background: linear-gradient(135deg, #f59e0b 0%, #d4af37 100%);
+      color: #111827 !important;
+      font-weight: bold;
+      border: 1px solid #fde68a;
+      box-shadow: 0 2px 4px rgba(212, 175, 55, 0.35);
+    }
+    .btn-nav-gold:hover {
+      background: linear-gradient(135deg, #fbbf24 0%, #eab308 100%);
+    }
+
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 35px 15px;
+      text-align: center;
+      border-bottom: 4px solid #38bdf8;
+    }
+    .hero-content { max-width: 850px; margin: 0 auto; }
+    .hero-content img { max-width: 150px; height: auto; margin: 0 auto 15px auto; display: block; }
+    .hero-badge {
+      background-color: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    .hero-title { font-size: 1.5rem; font-weight: 700; margin: 0 0 12px 0; line-height: 1.3; }
+    .hero-quote {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      border-left: 3px solid #38bdf8;
+      margin: 15px auto;
+      padding: 10px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .hero-description { font-size: 0.9rem; color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+    .btn-hero-primary {
+      background-color: #0284c7;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.85rem;
+      display: inline-block;
+    }
+
+/* Pilihan 1: Teks Putih (Latar Hijau) */
+.btn-nav-email { background-color: #16a34a; color: #ffffff !important; }
+
+/* Pilihan 2: Teks Kuning (Latar Hijau) */
+.btn-nav-email-kuning { background-color: #16a34a; color: #facc15 !important; }
+
+
+
+
+
+
+    /* Grid Buku & Kartu */
+    .main-container { max-width: 1100px; margin: 20px auto; padding: 0 15px; }
+    .section-divider {
+      border: 0;
+      height: 2px;
+      background: linear-gradient(to right, #cbd5e1, #0284c7, #cbd5e1);
+      margin: 25px 0 20px 0;
+    }
+    .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .book-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; }
+    .book-card-link { text-decoration: none; color: inherit; display: block; }
+    .book-card img { max-width: 180px; width: 100%; height: auto; display: block; margin: 0 auto 12px auto; border-radius: 6px; transition: transform 0.2s; }
+    .book-card-link:hover img { transform: scale(1.02); }
+    .book-card h3 { margin-top: 0; color: #1e293b; font-size: 1.1rem; line-height: 1.3; }
+    .book-card p { font-size: 0.9rem; color: #64748b; flex-grow: 1; line-height: 1.5; }
+    .badge { background-color: #0284c7; color: white; font-size: 0.7rem; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; font-weight: bold; }
+    
+    /* Tombol Aksi Buku */
+    .btn-action-area { display: flex; flex-direction: column; gap: 8px; margin-top: 15px; }
+    .btn-row { display: flex; gap: 8px; }
+    .btn { display: block; width: 100%; padding: 10px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: bold; text-align: center; }
+    .btn-ringkasan { background-color: #0284c7; color: white; font-size: 0.9rem; padding: 11px; }
+    .btn-detail { background-color: #475569; color: white; }
+    .btn-beli { background-color: #10b981; color: white; }
+    .btn-flipbook { background-color: #d97706; color: white; }
+    .btn-qrcbn { background-color: #0f172a; color: #d4af37; border: 1px solid rgba(212, 175, 55, 0.4); text-align: center; font-size: 0.85rem; padding: 9px; border-radius: 6px; text-decoration: none; display: block; margin-top: 6px; font-weight: 600; }
+    
+    /* Area Download APK & PWA */
+    .app-download-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px 20px;
+      margin-top: 35px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .btn-install {
+      display: inline-block;
+      width: 100%;
+      max-width: 320px;
+      padding: 14px 24px;
+      background-color: #28a745;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(40,167,69,0.2);
+      transition: background-color 0.2s;
+    }
+    .btn-install:hover { background-color: #218838; }
+    .ios-box {
+      margin-top: 15px;
+      background: #f0f4f8;
+      border: 1px solid #d0d7de;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #333;
+      text-align: left;
+      line-height: 1.4;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer { text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem; }
+    footer img { max-width: 80px; height: auto; margin-bottom: 10px; }
+
+    @media (min-width: 600px) {
+      .hero-title { font-size: 2rem; }
+      .hero-quote { font-size: 1.1rem; }
+      .hero-section { padding: 50px 20px; }
+    }
+  </style>
 </head>
-<body class="bg-[#0b0f19] text-white font-sans">
+<body>
 
-    <!-- HEADER & NAVIGASI UTAMA -->
-    <header class="site-nav-header">
-        <div class="nav-container">
-            <div class="header-brand">
-                <img src="icon_logo.png" alt="Logo Pustaka Wbiznet">
-                <div class="header-title-area">
-                    <h3><span>PUSTAKA</span> WBIZNET</h3>
-                    <span class="sub">Kajian &amp; Edukasi Finansial</span>
-                </div>
+<header>
+    <div class="container">
+        <!-- Logo & Teks Sejajar -->
+        <div class="header-brand">
+            <img src="icon_logo.png" alt="Logo Pustaka Wbiznet">
+            <div class="header-title-area">
+                <h3><span>PUSTAKA</span> WBIZNET</h3>
+                <span class="sub">Self Publisher</span>
             </div>
-
-            <nav aria-label="Navigasi Utama" class="nav-quick-links">
-                <a href="biografi.html" class="btn-nav-bio">📂 Biografi</a>
-                <a href="artikel.html" class="btn-nav-artikel">📝 Artikel</a>
-                <a href="#katalog" class="btn-nav-koleksi">📚 Koleksi</a>
-                <a href="luxurywatch.html" class="btn-nav-watch">💎 Luxury Watch</a>
-                <a href="artikel_BPF.html" class="btn-nav-gold">📊 Gold Trade 📈</a>
-            </nav>
         </div>
-    </header>
+        
+        <!-- Tombol Navigasi Cepat di Header (Sudah Termasuk Luxury Watch) -->
+        <div class="nav-quick-links">
+            <a href="biografi.html" class="nav-btn btn-nav-bio">📂 Biografi</a>
+            <a href="artikel.html" class="nav-btn btn-nav-artikel">📝 Artikel</a>
+            <a href="#katalog" class="nav-btn btn-nav-koleksi">📚 Koleksi</a>
+            <a href="luxurywatch.html" class="nav-btn btn-nav-watch">💎 Luxury Watch</a>
+              <a  href="artikel_BPF.html" class="nav-btn btn-nav-gold">📊 Gold Trade  📈 </a>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</header>
 
-    <!-- ISI KONTEN HALAMAN -->
-    <main class="max-w-4xl mx-auto p-4 py-8">
-        <article class="space-y-6">
+<section class="hero-section">
+    <div class="hero-content">
+      
+      <span class="hero-badge">Membaca → Menulis → Berkarya</span><br>
+      Portofolio & Digital Catalog by 
+      <h4 class="hero-title"> Kresnawan Sasmita Putra Library</h4>
+      
+      <blockquote class="hero-quote">
+        "Ketika pekerjaan berakhir, bukan berarti perjalanan berhenti. 
+        Masih ada waktu untuk membaca, belajar, menulis, dan menghasilkan karya."
+      </blockquote>
 
-            <!-- JUDUL UTAMA -->
-            <header class="border-b border-gold/20 pb-6">
-                <span class="text-xs uppercase tracking-widest text-gold font-semibold">Kajian Analisis Keuangan &amp; Lindung Nilai Kas (Hedging)</span>
-                <h1 class="text-2xl md:text-3xl font-serif font-bold mt-2 text-white leading-snug">
-                    Mengapa Kas Perusahaan &amp; Investor Mapan Membutuhkan Emas Sebagai Aset Lindung Nilai (<i>Safe Haven</i>)?
-                </h1>
-                <p class="text-base md:text-lg text-gold/90 font-serif italic mt-2">
-                    Mengadopsi Prinsip <strong>Gold Standard</strong> Sejarah Moneter Dunia untuk Menjaga Stabilitas Arus Kas dan Portofolio di Pasar Komoditas Berjangka (Loco London / XUL10)
-                </p>
-                <div class="flex flex-wrap items-center gap-3 mt-4 text-xs md:text-sm text-gray-400">
-                    <span>Penulis / Penyusun: <strong class="text-white">Kresnawan Sasmita Putra</strong></span>
-                    <span>•</span>
-                    <span>PT BestProfit Futures (BPF) Cabang Medan</span>
-                </div>
-            </header>
+      <p class="hero-description">
+        Pustaka Wbiznet adalah tempat menyimpan portopolianya Kresnawan Sasmita Putra 
+        sebagai "Menolak Lupa" atas arsip bacaan-bacaannya di masa lalu hingga memasuki masa rehat — dari kesukaan membaca dan mencatat, 
+        kemudian menulis, hingga menghasilkan berbagai karya.
+      </p>
 
-            <!-- KONTEN ARTIKEL TEKS -->
-            <section class="space-y-3 md:space-y-4 text-gray-300 leading-normal md:leading-relaxed text-left md:text-justify">
-                <div class="bg-blue-950/40 border-l-4 border-gold p-4 rounded-r">
-                    <p class="text-sm text-gold font-semibold">Ringkasan Eksekutif:</p>
-                    <p class="text-xs md:text-sm text-gray-300 mt-1">
-                        Dalam dunia bisnis dan investasi modern, menjaga ketahanan arus kas (<em>cash flow</em>) dari gerusan inflasi dan fluktuasi nilai tukar adalah hal yang vital. Artikel ini mengulas sejarah jaminan emas moneter serta mekanisme perdagangan komoditas berjangka resmi Bappebti sebagai instrumen lindung nilai (<em>hedging</em>, yaitu upaya menjaga nilai dana dari inflasi dan gejolak pasar) dan <em>safe haven</em> (aset yang cenderung bertahan saat kondisi ekonomi tidak menentu).
-                    </p>
-                </div>
+      <div>
+        <a href="#katalog" class="btn-hero-primary">Jelajahi Karya</a>
+      </div>
+    </div>
+  </section>
 
-                <h2 class="text-xl font-serif font-semibold text-gold mt-4 mb-2">1. Pembelajaran dari Sejarah Moneter: <em>The Gold Standard</em></h2>
-                <p>
-                    Sebelum era uang kertas modern (<em>fiat money</em>), negara-negara di dunia menerapkan sistem <em>Gold Standard</em> (sistem moneter masa lalu di mana nilai mata uang dikaitkan langsung dengan cadangan emas), di mana setiap lembar uang yang dicetak wajib dijamin oleh cadangan emas fisik di brankas bank sentral. Hal ini dilakukan karena emas merupakan satu-satunya aset riil yang nilainya diakui secara global, tahan terhadap inflasi, dan tidak dapat dibeli atau dimanipulasi oleh krisis politik.
-                </p>
-                <p>
-                    Prinsip sejarah ini kini banyak diadopsi oleh pemilik bisnis (<i>corporate treasury</i>) dan investor mapan (<i>surplus fund</i> Rp100 juta ke atas). Menyimpan seluruh cadangan kas hanya dalam mata uang tunai memiliki risiko penurunan daya beli secara bertahap. Pengalokasian dana ke aset emas berfungsi sebagai benteng pertahanan utama arus kas perusahaan.
-                </p>
+  <div class="main-container">
 
-                <h2 class="text-xl font-serif font-semibold text-gold pt-2">2. Keunggulan Kontrak Berjangka Emas (Loco London / XUL10)</h2>
-                <p>
-                    Memegang emas batangan fisik memiliki keterbatasan dalam hal biaya penyimpanan brankas yang besar dan ketidakmampuan menghasilkan keuntungan saat harga pasar turun. Sebaliknya, perdagangan kontrak harga emas (<em>Loco London / XUL10</em>, yaitu acuan transaksi pergerakan harga emas global dengan kurs tetap $1 = Rp10.000, bukan penyerahan emas fisik):
-                </p>
+    <hr class="section-divider">
 
-                <!-- VIDEO DARI FILE GITHUB -->
-                <video controls playsinline preload="metadata" class="w-full max-w-[400px] h-auto block mx-auto rounded-lg">
-                    <source src="penjelasan Trading BPF.mp4" type="video/mp4">
-                    Browser Anda tidak mendukung pemutar video HTML5.
-                </video>
+    <h2 id="katalog" style="font-size: 1.3rem;">
+  Rak Buku Pustaka Wbiznet <br>
+</h2>
 
-                <ul class="list-disc pl-5 space-y-2 text-gray-300">
-                    <li><strong>Peluang Dua Arah (<em>Two-Way Opportunity</em> — peluang dua arah: bisa untung saat harga naik maupun turun):</strong> Investor dan perusahaan dapat meraih potensi profit baik saat harga emas dunia naik (<i>buy/long</i>) maupun saat terjadi koreksi turun (<i>sell/short</i>). Fleksibilitas ini sangat krusial untuk kegiatan <i>hedging</i>.</li>
-                    <li><strong>Likuiditas Tinggi &amp; Efisiensi Modal:</strong> Transaksi dapat disesuaikan secara cepat sesuai dinamika pasar tanpa kendala alur pengiriman fisik.</li>
-                </ul>
+<p style="font-size: 0.95rem; color: #64748b; margin-bottom: 25px;">
+  Koleksi Buku/Ebook
+</p>
 
-                <h2 class="text-xl font-serif font-semibold text-gold pt-2">3. Keamanan Dana Terjamin: <em>Segregated Account</em> di KBI &amp; Bappebti</h2>
-                <p>
-                    Sesuai Peraturan <em>Badan Pengawas Perdagangan Berjangka Komoditi</em> (Bappebti: Badan Pengawas Perdagangan Berjangka Komoditi, lembaga pemerintah yang mengawasi perdagangan berjangka komoditi di Indonesia), keamanan modal nasabah dilindungi secara ketat oleh hukum:
-                </p>
-                <ul class="list-disc pl-5 space-y-2 text-gray-300">
-                    <li>
-                        <strong>100% Dana Transaksi Wajib di Rekening Terpisah (<em>Segregated Account</em>):</strong><br>
-                        Seluruh dana nasabah disimpan di rekening terpisah (<strong>segregated account</strong>, yaitu rekening khusus nasabah yang dipisahkan dari dana operasional perusahaan) di Bank Penyimpanan Resmi (seperti BCA, Mandiri, BNI, CIMB Niaga, BRI) dan dipisahkan penuh dari rekening operasional pialang.
-                    </li>
-                    <li><strong>Pengawasan Kliring (PT KBI):</strong> Rekening terpisah ini diverifikasi dan diawasi langsung oleh Lembaga Kliring Berjangka (PT Kliring Berjangka Indonesia / KBI).</li>
-                </ul>
+<iframe 
+  style="width: 100%; height: 500px; border: none;" 
+  src="https://pubhtml5.com/bookcase/uqrcf" 
+  seamless="seamless" 
+  scrolling="no" 
+  frameborder="0" 
+  allowtransparency="true" 
+  allowfullscreen>
+</iframe>
 
-                <h2 class="text-xl font-serif font-semibold text-gold pt-2">4. Ringkasan Praktis: Harga vs Fisik, 2 Rekening, Simulasi &amp; Kendali Mandiri</h2>
-                <p>
-                    Agar calon peserta memiliki gambaran operasional yang utuh sejak awal, perhatikan empat poin utama dalam perdagangan kontrak harga emas ini:
-                </p>
-                <ul class="list-disc pl-5 space-y-3 text-gray-300">
-                    <li><strong>Perdagangan Harga Emas (Bukan Fisik):</strong> Yang ditransaksikan adalah pergerakan harga kontrak emas, bukan penyerahan fisik emas batangan.</li>
-                    <li><strong>Wajib 2 Rekening Terpisah:</strong> Nasabah wajib menyiapkan <strong>Rekening Pribadi</strong> (tujuan penarikan keuntungan dari rekening dagang) dan <strong>Rekening Dagang terpisah</strong> (khusus untuk bertransaksi di pasar).</li>
-                    <li>
-                        <strong>Acuan Margin 1 Lot = Rp10 Juta, Nilai 1 Poin = Rp1 Juta &amp; Simulasi Potongan (Kode XUL10, Fix Rate $1 = Rp10.000):</strong>
-                        <p class="mt-1.5">
-                            Dalam kontrak berjangka ini, kebutuhan margin per <strong>1 Lot</strong> (satuan ukuran kontrak transaksi) adalah <strong>$1.000 atau Rp10.000.000 per Lot</strong>, sedangkan nilai pergerakan harga (<em>contract size</em>) adalah <strong>$100 atau Rp1.000.000 per 1 Poin</strong> (per Lot). Setiap penyelesaian transaksi memiliki potongan <strong>komisi/fee</strong> (biaya jasa transaksi) <strong>$30 (Rp300.000)</strong> + <strong>PPN/Tax 11%</strong> (pajak sebesar 11%) <strong>$3,3 (Rp33.000)</strong> = <strong>$33,3 atau Rp333.000 per Lot</strong>.
-                        </p>
-                        <p class="mt-2">
-                            <strong>Ilustrasi edukatif (bukan jaminan hasil) — contoh dana $10.000 (Rp100.000.000) dengan porsi transaksi 30% atau 3 Lot ($3.000 / Rp30.000.000) dan sisa 70% (7 Lot / Rp70.000.000) sebagai dana cadangan ketahanan pasar, target 1 Poin:</strong>
-                        </p>
 
-                        <p class="mt-3 mb-1.5 font-semibold text-gold">Tampilan dalam bentuk tabel:</p>
-                        <div class="overflow-x-auto rounded-lg border border-gold/30 my-2">
-                            <table class="w-full text-left text-xs md:text-sm text-gray-200 border-collapse">
-                                <thead class="bg-[#1e293b] text-gold">
-                                    <tr>
-                                        <th class="p-2.5 border border-gold/25">Komponen</th>
-                                        <th class="p-2.5 border border-gold/25">Nilai Acuan</th>
-                                        <th class="p-2.5 border border-gold/25">Ringkasan</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-[#0b1324]">
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Margin 1 Lot</td>
-                                        <td class="p-2.5 border border-gold/20">$1.000 (Rp10 jt)</td>
-                                        <td class="p-2.5 border border-gold/20">Acuan 1 Lot XUL10</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Nilai 1 Poin</td>
-                                        <td class="p-2.5 border border-gold/20">$100 (Rp1 jt)</td>
-                                        <td class="p-2.5 border border-gold/20">Per Lot gerak 1 poin</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Potongan / Lot</td>
-                                        <td class="p-2.5 border border-gold/20">$33,3 (Rp333 rb)</td>
-                                        <td class="p-2.5 border border-gold/20">Fee $30 + Tax $3,3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Alokasi 30%</td>
-                                        <td class="p-2.5 border border-gold/20">$3.000 (Rp30 jt)</td>
-                                        <td class="p-2.5 border border-gold/20">3 Lot masuk pasar</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Cadangan 70%</td>
-                                        <td class="p-2.5 border border-gold/20">$7.000 (Rp70 jt)</td>
-                                        <td class="p-2.5 border border-gold/20">7 Lot dana cadangan</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Hasil Kotor</td>
-                                        <td class="p-2.5 border border-gold/20">$300 (Rp3 jt)</td>
-                                        <td class="p-2.5 border border-gold/20">3 Lot &times; 1 Poin</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="p-2.5 border border-gold/20 font-semibold">Total Potongan</td>
-                                        <td class="p-2.5 border border-gold/20">$99,9 (Rp999 rb)</td>
-                                        <td class="p-2.5 border border-gold/20">3 Lot &times; Rp333.000</td>
-                                    </tr>
-                                    <tr class="bg-amber-950/25">
-                                        <td class="p-2.5 border border-gold/20 font-bold text-gold">Hasil Bersih</td>
-                                        <td class="p-2.5 border border-gold/20 font-bold text-gold">$200,1 (Rp2,001 jt)</td>
-                                        <td class="p-2.5 border border-gold/20">Kotor dikurangi potongan</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="text-xs text-gray-400 italic mt-2">
-                            *Catatan: Ilustrasi ini menggunakan contoh modal $10.000 (Rp100.000.000) dengan kurs tetap XUL10 ($1 = Rp10.000), bukan jaminan profit atau kepastian hasil transaksi.
-                        </p>
-                        <p class="text-xs md:text-sm text-amber-200/90 bg-amber-950/30 border-l-2 border-gold px-3 py-2 rounded-r mt-2">
-                            <strong class="text-gold">Catatan penting:</strong> Perdagangan berjangka memiliki potensi hasil sekaligus risiko kerugian. Karena transaksi dan penutupan posisi (<em>closing</em>) dilakukan mandiri oleh pemilik akun, pastikan Anda memahami mekanismenya terlebih dahulu dan menggunakan dana yang memang siap dialokasikan sesuai profil risiko Anda.
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Kendali Dana &amp; Ketajaman Nasabah:</strong> Setelah akun aktif, <strong>pemilik uang sendiri yang melakukan trading dan mengendalikan dananya</strong>, sehingga wajib berhati-hati, tajam membaca situasi, serta disiplin mengelola risiko. Pialang hanya <strong>memberikan arahan</strong>.
-                    </li>
-                </ul>
+    <!-- KATALOG BUKU -->
+    <div class="book-grid">
 
-                <!-- EMBED GRAFIK HARGA EMAS -->
-                <section class="space-y-4 pt-4 border-t border-gold/20">
-                    <h2 class="text-xl font-serif font-semibold text-gold">📈 Pantauan Grafik Pergerakan Harga Emas</h2>
-                    <p class="text-sm text-gray-300">
-                        Grafik interaktif berikut membantu memantau arah pergerakan harga emas global sebagai referensi bacaan pasar sebelum mengambil keputusan mandiri:
-                    </p>
+      <!-- BUKU 1 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #1</span>
+          <a href="ringkasan01_pensiun.html" class="book-card-link">
+            <h3>Pensiun Bukan Akhir Perjalanan</h3>
+            <img src="cover_pensiun.png" alt="Cover Pensiun Bukan Akhir Perjalanan">
+          </a>
+          <p>
+            Sebuah catatan tentang kehidupan setelah pensiun dan bagaimana 
+            masa purnabakti dapat menjadi awal perjalanan baru untuk belajar, 
+            bekerja dengan cara berbeda, menulis, dan tetap memberikan manfaat.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan01_pensiun.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="ringkasan01_pensiun.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/mnwdg71lmk7k/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/mfok/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-9111-938" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                    <div class="w-full rounded-lg overflow-hidden border border-gold/30 shadow-md bg-[#0a192f]">
-                        <iframe
-                            src="https://s.tradingview.com/widgetembed/?frameElementId=tv_gold_chart&symbol=OANDA%3AXAUUSD&interval=60&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=0a192f&theme=dark&style=1&timezone=Asia%2FJakarta&withdateranges=1&studies=%5B%5D&utm_source=pustaka-wbiznet.vercel.app&utm_medium=widget&utm_campaign=chart&utm_term=OANDA%3AXAUUSD"
-                            class="w-full h-96 md:h-[460px] border-0"
-                            loading="lazy"
-                            allowfullscreen
-                            title="Grafik Pergerakan Harga Emas XAU/USD">
-                        </iframe>
-                    </div>
+      <!-- BUKU 2 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #2</span>
+          <a href="ringkasan02_retirement.html" class="book-card-link">
+            <h3>Retirement is Not the End of the Journey</h3>
+            <img src="cover_retirement.png" alt="Cover Retirement is Not the End of the Journey">
+          </a>
+          <p>
+            Edisi bahasa Inggris yang membawa gagasan yang sama: 
+            masa setelah karier bukan akhir dari perjalanan, 
+            melainkan kesempatan untuk menemukan kembali tujuan.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan02_retirement.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8gkrl4ozdpjj/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/untl/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+        </div>
+      </div>
 
-                    <p class="text-xs text-gray-400 italic">
-                        *Catatan: Grafik di atas merupakan widget pantauan pergerakan harga emas pasar global (zona waktu WIB) sebagai alat bantu visual edukatif, bukan acuan eksekusi otomatis maupun jaminan hasil transaksi.
-                    </p>
-                </section>
+      <!-- BUKU 3 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #3</span>
+          <a href="ringkasan_90hari.html" class="book-card-link">
+            <h3>90 Hari Melejitkan Penjualan Produk Digital</h3>
+            <img src="cover_90hari.png" alt="Cover 90 Hari Melejitkan Penjualan Produk Digital">
+          </a>
+          <p>
+            Catatan praktis tentang perjalanan mempelajari dunia penjualan 
+            digital, mulai dari pemasaran hingga menemukan cara menjual produk.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan_90hari.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="ringkasan_90hari.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/yvym79gp0k2d/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/zlbx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-9912-382" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <div class="bg-amber-950/30 border border-gold/30 p-4 rounded-lg mt-4">
-                    <p class="text-xs md:text-sm text-gray-300">
-                        <strong class="text-gold">Catatan &amp; Disclaimer:</strong> Simulasi di atas bersifat ilustrasi edukatif dan bukan jaminan profit. Seluruh keputusan serta risiko transaksi berada pada pemilik dana yang menjalankan trading sendiri; pialang berperan memberi arahan dan informasi. Jika sudah memahami poin-poin ini dan ingin berdiskusi lebih lanjut, silakan hubungi <strong>Kresnawan Sasmita Putra</strong> melalui <a href="https://wa.me/6281470959401?text=INFO%20EMAS%20BPF" target="_blank" rel="noopener noreferrer" class="text-gold underline">WhatsApp</a> (ketik <strong>INFO EMAS BPF</strong>).
-                    </p>
-                </div>
-            </section>
+      <!-- BUKU 4 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #4</span>
+          <a href="ringkasan04_1776_jan1949.html" class="book-card-link">
+            <h3>It's 1776 in Indonesia: Ulasan Strategis Perjuangan dan Konflik Kolonial (1942–1949)</h3>
+            <img src="cover-1776.png" alt="Cover It's 1776 in Indonesia">
+          </a>
+          <p>
+            Catatan penelusuran sejarah yang lahir dari ketertarikan 
+            untuk membaca kembali perjuangan Indonesia mempertahankan kemerdekaan.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan04_1776_jan1949.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Ebook04_1776.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/zlpzdx6lzw39/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/nbfx/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-4194-251" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-            <!-- DAFTAR LEGALITAS RESMI -->
-            <div class="my-6 p-5 rounded-lg border border-gold/30 bg-[#0a192f]">
-                <h3 class="text-lg font-serif font-bold text-gold border-b border-gold/20 pb-2 mb-3">🛡️ Legalitas Resmi PT BestProfit Futures (BPF)</h3>
+      <!-- BUKU 5 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #5</span>
+          <a href="ringkasan05_abraham.html" class="book-card-link">
+            <h3>Abraham Lincoln: Jejak Sang Pembebas dari Kabin Kayu hingga Menuju Keabadian</h3>
+            <img src="cover-abraham.jpg" alt="Cover Abraham Lincoln">
+          </a>
+          <p>
+            Kisah perjalanan hidup Abraham Lincoln mengenai kepemimpinan, integritas, kebebasan, dan tanggung jawab.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan05_abraham.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/jr9qoly03mk6/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/sikp/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-6613-085" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <!-- FOTO GEDUNG KANTOR BPF MEDAN -->
-                <div class="my-4 text-center">
-                    <img src="KantorBPF.png" alt="Gedung Kantor PT BestProfit Futures Cabang Medan" class="w-full max-w-md mx-auto h-auto rounded-lg border border-gold/30 shadow-md">
-                    <p class="text-xs text-gray-400 mt-2 italic">Gedung Kantor PT BestProfit Futures Cabang Medan (Komplek Grand Jati Junction)</p>
-                </div>
+      <!-- BUKU 6 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #6</span>
+          <a href="ringkasan06_seni_menata_waktu.html" class="book-card-link">
+            <h3>Seni Menata Waktu di Gerbang Rehat</h3>
+            <img src="cover_seni_menata_waktu.png" alt="Cover Seni Menata Waktu">
+          </a>
+          <p>
+            Catatan tentang waktu, istirahat, ritme hidup, dan bagaimana menata kembali kehidupan saat memasuki fase tenang.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan06_seni_menata_waktu.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet/8w3yqwk43wzn/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/bvka/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0156-462" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <!-- DAFTAR IZIN RESMI -->
-                <ul class="space-y-2 text-sm text-gray-300 my-3">
-                    <li>• <strong>Izin Pialang Berjangka Bappebti:</strong> No. 499/BAPPEBTI/SI/X/2004</li>
-                    <li>• <strong>Izin SPA Bappebti:</strong> No. 1157/BAPPEBTI/SP/3/2007</li>
-                    <li>• <strong>Anggota Bursa Berjangka Jakarta (BBJ):</strong> No. SPAB-071/BBJ/05/04</li>
-                    <li>• <strong>Anggota Kliring Berjangka Indonesia (KBI):</strong> No. 48/AK-KBI/I/2007</li>
-                    <li>
-                        <strong>✅ Cek Fatwa DSN-MUI No. 82, di Parameter Komoditi Syariah, Klik 👇:</strong>
-                        <a href="http://bappebti.go.id/artikel/detail/129" target="_blank" rel="noopener noreferrer" class="text-gold underline hover:text-yellow-300">
-                            bappebti.go.id/artikel/detail/129
-                        </a>
-                    </li>
-                </ul>
+      <!-- BUKU 7 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #7</span>
+          <a href="ringkasan07_sriwijaya_poros_maritim_dunia.html" class="book-card-link">
+            <h3>Sriwijaya Poros Maritim Dunia</h3>
+            <img src="cover-sriwijaya.png" alt="Cover Sriwijaya Poros Maritim Dunia">
+          </a>
+          <p>
+            Penelusuran sejarah mengenai Sriwijaya, ruang maritim Nusantara, dan jaringan dunia maritim masa lalu.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan07_sriwijaya_poros_maritim_dunia.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Ebook7_Sriwijaya.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="https://lynk.id/wbiznet/qw98lrlery27/checkout" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/bcqh/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-5005-856" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <!-- TOMBOL LINK VERIFIKASI BAPPEBTI -->
-                <div class="pt-3 text-center md:text-left">
-                    <a href="https://share.google/1ygUozEJbQVjpOwRZ" target="_blank" rel="noopener noreferrer" class="inline-block px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-md no-underline text-[13px] font-bold transition">
-                        🔍 Cek Verifikasi Izin BPF di Situs Resmi Bappebti
-                    </a>
-                </div>
-                <p class="text-xs text-gray-400 mt-3 italic">*Keaslian legalitas dapat diverifikasi mandiri kapan saja melalui situs resmi Bappebti.</p>
-            </div>
+      <!-- BUKU 8 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #8</span>
+          <a href="TheStoryOfParis.html" class="book-card-link">
+            <h3>PARIS: BIOGRAFI SANG RAKSASA MUDA</h3>
+            <img src="Cover_Paris.png" alt="Cover Buku Paris">
+          </a>
+          <p>
+            Kisah sebuah kota yang bangkit dari reruntuhan, menelusuri perjalanan peradaban Paris mulai dari Lutetia hingga modernisasi Haussmann.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="TheStoryOfParis.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/lkpt/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0056-278" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-            <!-- EMBED VIDEO PENJELASAN -->
-            <section class="space-y-4 pt-4 border-t border-gold/20">
-                <h2 class="text-xl font-serif font-semibold text-gold">🎥 Kajian Video Edukasi Singkat</h2>
-                <p class="text-sm text-gray-300">Simak ulasan visual ringkas mengenai mekanisme peluang emas komoditas dan transparansi rekening terpisah melalui tayangan video di bawah ini:</p>
+      <!-- BUKU 9 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #9</span>
+          <a href="ringkasan09_sains_menjadi_kaya.html" class="book-card-link">
+            <h3>SAINS MENJADI KAYA</h3>
+            <img src="cover09_SainsMenjadiKaya.png" alt="Cover Buku Sains Menjadi Kaya">
+          </a>
+          <p>
+           Buku ini adalah sebuah naskah yang merangkum Catatan Aksi Nyata. Ia disusun bukan untuk menggurui, melainkan sebagai kawan bagi Anda yang siap membuktikan hukum kelimpahan melalui tindakan yang efisien di tempat Anda berada saat ini.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan09_sains_menjadi_kaya.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/dypw/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-3349-359" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <!-- KONTEN EMBED TIKTOK -->
-                <div class="flex justify-center my-4">
-                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@wbiznetchannel/video/7709327446109113607" data-video-id="7709327446109113607" style="max-width: 605px; min-width: 325px;">
-                        <section>
-                            <a target="_blank" title="@wbiznetchannel" href="https://www.tiktok.com/@wbiznetchannel?refer=embed">@wbiznetchannel</a>
-                        </section>
-                    </blockquote>
-                    <script async src="https://www.tiktok.com/embed.js"></script>
-                </div>
-            </section>
+      <!-- BUKU 10 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #10</span>
+          <a href="Napoleon_and_Josephine.html" class="book-card-link">
+            <h3>NAPOLEON & JOSEPHINE: Bangkitnya Elang dari Corsica</h3>
+            <img src="coverbukuNapoleon.png" alt="Cover Buku Napoleon & Josephine">
+          </a>
+          <p>
+           Kisah epik perjalanan hidup Napoleon Bonaparte dari pulau Corsica menuju takhta kekaisaran Eropa, dipadukan dengan sketsa kehidupan dan pesona Permaisuri Josephine.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="Napoleon_and_Josephine.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="biografi10_napoleon_bonaparte.html" target="_blank" class="btn btn-detail">Lihat Detail</a>
+            <a href="https://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="https://online.pubhtml5.com/fontf/wkku/" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1466-388" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛</a>
+        </div>
+      </div>
 
-            <!-- SEKSI KONTAK & JANJI TEMU (KONSULTAN PRIBADI) -->
-            <section class="mt-8 p-6 rounded-lg border border-gold/40 text-center space-y-4 bg-[#0a192f]">
-                <h3 class="text-xl font-serif font-bold text-gold">Layanan Edukasi &amp; Konsultasi Portofolio Emas</h3>
-                <p class="text-sm text-gray-300 max-w-2xl mx-auto">
-                    Untuk pemetaan risiko, simulasi transaksi, atau janji temu konsultasi tatap muka (didampingi tim konsultan senior) di kantor operasional kami:
-                </p>
+      <!-- BUKU 11 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #11</span>
+          <a href="50tahun_di_wallstreet.html" class="book-card-link">
+            <h3>50 Tahun di Wall Street: Catatan, Spekulasi, dan Pelajaran Abadi</h3>
+            <img src="cover_50tahun.png" alt="Cover Buku 50 Tahun Di Wall Street">
+          </a>
+          <p>
+           Buku memoar klasik karya Henry Clews yang kini disusun ulang dan diadaptasi ke dalam Bahasa Indonesia oleh Kresnawan Sasmita Putra.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="50tahun_di_wallstreet.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Buku11_50tahun.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="http://lynk.id/wbiznet/l50pexr65mpz" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook11_50tahundiwallstreet.html" target="_blank" class="btn btn-flipbook">Intip Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-9565-743" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <div class="text-sm text-gray-200 space-y-1 py-2">
-                    <p>👤 <strong>Konsultan Hubungan Nasabah:</strong> Kresnawan Sasmita Putra</p>
-                    <p>🏢 <strong>Perusahaan Pialang:</strong> PT BestProfit Futures (BPF) Cabang Medan</p>
-                    <p>📍 <strong>Alamat Kantor:</strong> Jl. Perintis Kemerdekaan, Komplek Grand Jati Junction No. P9A-P10A, Medan</p>
-                    <p>☎️ <strong>Telp / Fax:</strong> 061-80501610 / 061-80501699</p>
-                    <p>📧 <strong>Email konsultan:</strong> kresnawansp@gmail.com</p>
-                </div>
+      <!-- BUKU 12 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #12</span>
+          <a href="jejak_pangeran_champa.html" class="book-card-link">
+            <h3>Jejak Pangeran Champa</h3>
+            <img src="cover_jejak_pangeran_champa.png" alt="Cover Jejak Pangeran Champa">
+          </a>
+          <p>
+           Romansa Laku Spiritual dan Simbolisme Visual dalam Serat Selarasa.
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="jejak_pangeran_champa.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Ebook12_JejakPengeranChampa.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="http://lynk.id/wbiznet" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook_Jejak_Pangeran_Champa.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-3070-849" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <!-- 3 LANGKAH MEMULAI (SATU KOTAK SAJA DI ATAS TOMBOL WHATSAPP) -->
-                <div class="text-left max-w-2xl mx-auto my-4 p-4 rounded-lg border border-gold/25 bg-[#0b1324]">
-                    <h4 class="text-sm font-serif font-bold text-gold mb-3 text-center">
-                        🗺️ Langkah Awal Memulai (Santai &amp; Bertahap)
-                    </h4>
-                    <ol class="space-y-2.5 text-xs md:text-sm text-gray-300 list-decimal pl-5">
-                        <li>
-                            <strong class="text-white">Diskusi &amp; Pemetaan Kebutuhan:</strong>
-                            Ngobrol santai via WhatsApp atau janji temu di kantor Medan untuk menyesuaikan rencana—baik untuk dana perorangan maupun kas usaha—serta profil risikonya.
-                        </li>
-                        <li>
-                            <strong class="text-white">Simulasi &amp; Pemahaman Mekanisme:</strong>
-                            Mempelajari cara kerja pergerakan harga emas, perhitungan lot/potongan, serta manajemen risiko sebelum benar-benar masuk ke pasar.
-                        </li>
-                        <li>
-                            <strong class="text-white">Pembukaan Rekening Terpisah (<i>Segregated Account</i>):</strong>
-                            Jika sudah paham dan mantap, proses registrasi dan penyetoran dana dilakukan langsung ke rekening terpisah resmi yang berizin serta berada di bawah pengawasan Bappebti dan mekanisme kliring—namun tetap diingat bahwa pengawasan ini mengatur tata kelola dan pemisahan rekening, bukan jaminan profit.
-                        </li>
-                    </ol>
-                </div>
+      <!-- BUKU 13 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #13</span>
+          <a href="Pemikiran_Al_Ghazali.html" class="book-card-link">
+            <h3>Menuju Cahaya Kepastian<br>Otobiografi Spiritual dan Pemikiran Imam Al-Ghazali</h3>
+            <img src="cover_menuju_cahaya_kepastian.png" alt="Cover Menuju Cahaya Kepastian"> 
+          </a>
+          <p>
+           Buku adaptasi ini merangkai kembali perjalanan otobiografis Al-Ghazali dalam menembus kabut *taqlid*, membedah keterbatasan teologi dan filsafat, hingga meraih puncak pencerahan spiritual (*Ilmu Yakin*) melalui pengalaman batiniah (*Dzauq*).
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="Pemikiran_Al_Ghazali.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="Al_Ghazali.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href="http://lynk.id/wbiznet/enqz5q9mxvr6" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook_Pemikiran_Al_Ghazali.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-0529-943" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
-                <div class="pt-2">
-                    <a href="https://wa.me/6281370959401?text=INFO%20EMAS%20BPF" target="_blank" rel="noopener noreferrer" class="inline-block px-7 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg no-underline text-sm shadow-md transition">
-                        💬 Hubungi Pak Kresnawan via WhatsApp
-                    </a>
-                </div>
+      <!-- BUKU 14 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #14—TERBARU</span>
+          <a href="Misteri_Lembah_Yang_Hilang.html" class="book-card-link">
+            <h3>Misteri Lembah Yang Hilang<br>Catatan Perjalanan John Lewis Burckhardt (1822)
 
-                <p class="text-xs text-gray-400 max-w-xl mx-auto pt-3 border-t border-gray-700/50">
-                    <em>Disclaimer: Perdagangan Berjangka Komoditi merupakan aktivitas investasi yang memiliki potensi keuntungan tinggi dan risiko tinggi (high risk, high return). Pelajari mekanisme pasar dan risikonya secara bijak sebelum bertransaksi.</em>
-                </p>
-            </section>
-        </article>
+ </h3>
+            <img src="coverbuku_misteri_lembah.jpg" alt="Cover Misteri Lembah Yang Hilang"> 
+          </a>
+          <p>
+           Ditemani seorang pemandu lokal yang siap mencabut belati kapan saja jika penyamarannya terbongkar, Burckhardt berjalan di antara tebing raksasa yang mencekam hingga menemukan kembali Petra—Kota Batu Merah Muda yang hilang selama ratusan tahun.
 
-        <!-- FOOTER HALAMAN -->
-        <footer class="border-t border-gold/25 text-gray-300 bg-[#0a192f] py-9 px-4 text-center mt-10 rounded-lg">
-            <div class="max-w-3xl mx-auto">
-                <p>
-                    <strong class="text-gold font-serif text-lg tracking-wide">Kresnawan Sasmita Putra Library</strong>
-                </p>
-                <p class="mt-2 text-xs text-gray-400">
-                    © 2026 <strong class="text-white">Pustaka Wbiznet — Self Publisher</strong>. Seluruh Hak Cipta Dilindungi.
-                </p>
-                <p class="mt-4">
-                    <a href="https://pustaka-wbiznet.vercel.app" class="text-gold hover:underline no-underline text-sm font-medium inline-block">
-                        ← Kembali ke Katalog Utama Pustaka Wbiznet
-                    </a>
-                </p>
-            </div>
-        </footer>
-    </main>
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="Misteri_Lembah_Yang_Hilang.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="pdfbook14_misteri.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href=" https://lynk.id/wbiznet/86vvknwxx995" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook14.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-2447-397" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
 
+      <!-- BUKU 15 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #15 </span>
+          <a href="jejak_sunyi_di_gunung_suci.html" class="book-card-link">
+            <h3>Jejak Sunyi di Gunung Suci<br>Catatan Perjalanan John Lewis Burckhardt (1816)
+
+ </h3>
+            <img src="coverbook_jejak_sunyi_gunung_suci.png" alt="Cover Jejak Sunyi di Gunung Suci "> 
+          </a>
+          <p>
+           Setelah melintasi celah gaib El-Siq dan menemukan kembali kota mawar batu Petra pada tahun 1812 (Seri 1—Misteri Lembah Yang Hilang), penjelajah Swiss ternama John Lewis Burckhardt yang menyamar sebagai sarjana Muslim bergelar Sheikh Ibrahim ibn Abdallah melanjutkan misi ilmiahnya pada tahun 1816 menembus pedalaman  Semenanjung Sinai.
+ <br><p></p>
+Di balik keganasan Gurun El-Ty dan tebing granit yang membara, Sheikh Ibrahim tidak hanya mencatat prasasti-prasasti purba di Wady Mokatteb, tetapi juga mempertaruhkan nyawa saat ditarik menggunakan keranjang katrol menuju benteng kuno Biara Saint Catherine abad ke-6. 
+ 
+
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="jejak_sunyi_di_gunung_suci.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="pdfbook15_jejaksunyidigunungsuci.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href=" http://lynk.id/wbiznet/meyyojoy7v8j" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook15.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1344-424" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+         <!-- BUKU 16 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #16</span>
+          <a href="readbook16.html" class="book-card-link">
+            <h3>Rahasia Labirin Batu Hitam<br>Catatan Perjalanan John Lewis Burckhardt (1816)
+
+ </h3>
+            <img src="coverbook16_rahasia_labirin_batu_hitam.png" alt="Cover Rahasia Labirin Batu Hitam "> 
+          </a>
+          <p>
+           buku ini menyajikan ketegangan penyamaran, rahasia arsitektur batu basalt hitam yang langka, serta keberanian seorang penjelajah dalam menyelamatkan ingatan sejarah dunia.
+
+
+
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan16_rahasia_labirin_batu_hitam.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="pdfbook16_rahasia_labirin_batu_hitam.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href=" http://lynk.id/wbiznet/1d331nrmgx8g" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook16.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-8266-740" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+      
+
+         <!-- BUKU 17 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #17 </span>
+          <a href="readbook17.html" class="book-card-link">
+            <h3>Aroma Sawit Dan Bara Cinta<br>Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti 
+
+
+
+ </h3>
+            <img src="coverbook17_aroma_sawit_dan_bara_cinta.png" alt="Cover Aroma Sawit dan Bara Cinta "> 
+          </a>
+          <p>
+           Di mana ada integritas, kecerdasan strategi, dan cinta yang murni, tembok dendam tertua sekalipun akan runtuh menjadi fondasi kejayaan yang tak tergoyahkan." 
+
+
+
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan17_aroma_sawit_dan_bara_cinta.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="pdfbook17_aroma_sawit_dan_bara_cinta.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href=" https://lynk.id/wbiznet/jozz2mozo8gx" target="_blank" class="btn btn-beli">Beli</a>
+          </div>
+          <a href="readbook17.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-3036-911" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+
+<!-- BUKU 18 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #18</span>
+          <a href="readbook18_pembebasan_yerusalem_1187.html" class="book-card-link">
+            <h3>Pembebasan Yerusalem 1187 dalam Komparasi Naskah Primer
+
+
+
+
+ </h3>
+            <img src="coverbook18_pembebasan_yerusalem_1187.png" alt="Cover Pembebasan Yerusalem 1187 "> 
+          </a>
+          <p>
+           Ebook "Pembebasan Yerusalem 1187 dalam Komparasi Naskah Primer" menyingkap detik-detik paling menegangkan dari dua sudut pandang saksi mata abad ke-12 yang saling bertolak belakang namun saling melengkapi
+
+
+
+
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan18_pembebasan_yerusalem_1187.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="pdfbook18_pembebasan_yerusalem_1187.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href=" https://lynk.id/wbiznet/p1pxmx5pwd9d" target="_blank" class="btn btn-beli">Beli di Lynk</a>
+          </div>
+          <a href=" https://play.google.com/store/books/details?id=jBUdEgAAQBAJ" target="_blank" class="btn btn-beli">Beli di Google book</a>
+          </div>
+          <a href="readbook18_pembebasan_yerusalem_1187.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-4314-228" target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+<!-- BUKU 19 -->
+      <div class="book-card">
+        <div>
+          <span class="badge">BUKU #19 —TERBARU</span>
+          <a href="readbook19_aromasawit_jilid2.html" class="book-card-link">
+            <h3>Aroma Sawit & Bara Cinta Jilid 2
+Di Antara Garis Demarkasi dan Janji Suci Dua Dinasti— Angka, Keringat, Dan Audit di Ujung Tahun
+ </h3>
+            <img src="Coverjilid2_aromasawit.png" alt="Cover Aroma Sawit & Bara Cinta — Jilid 2 ">  
+          </a>
+          <p>
+           Ebook "Aroma Sawit & Bara Cinta — Jilid 2" Jilid kedua dari kisah ini membuka tabir rahasia tentang apa yang sesungguhnya terjadi di balik layar sebuah imperium perkebunan—sebuah perjalanan di mana setiap deviasi harus dikunci dengan kerja sama, dan setiap kebijakan pemimpin diuji oleh realitas lapangan.
+
+
+
+
+          </p>
+        </div>
+        <div class="btn-action-area">
+          <a href="ringkasan19_aromasawit_jilid2.html" class="btn btn-ringkasan">Baca Ringkasan</a>
+          <div class="btn-row">
+            <a href="pdfbook19_aromasawit2.html" target="_blank" class="btn btn-detail">Pratinjau Ebook</a>
+            <a href=" http://lynk.id/wbiznet/3d1vmmpxzx1x/" target="_blank" class="btn btn-beli">Beli di Lynk</a>
+          </div>
+          <a href=" https://play.google.com/store/books/" target="_blank" class="btn btn-beli">Beli di Google book</a>
+          </div>
+          <a href="readbook19_aromasawit_jilid2.html" target="_blank" class="btn btn-flipbook">Baca Flipbook</a>
+          <a href="https://www.qrcbn.com/check/62-10158-1975-266 " target="_blank" class="btn-qrcbn">Katalog QRCBN Pustaka Wbiznet 🏛️</a>
+        </div>
+      </div>
+
+
+
+
+    </div> <!-- Tutup book-grid -->
+
+    <!-- TEMPAT UNTUK ARTIKEL & TULISAN -->
+    <div id="artikel" style="margin-top: 40px;">
+      <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+        📂 Halaman Artikel
+      </h2>
+      <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px; line-height: 1.5;">
+          Temukan berbagai koleksi artikel pilihan, catatan sejarah, opini, dan ulasan menarik lainnya secara lengkap pada halaman khusus arsip tulisan kami.
+        </p>
+        <a href="artikel.html" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+          📖 Buka Arsip Artikel & Tulisan Lengkap
+        </a>
+      </div>
+    </div>
+    
+    <!-- TEMPAT UNTUK BIOGRAFI -->
+    <div id="biografi" style="margin-top: 40px;">
+      <h2 style="color: #d4af37; font-size: 1.2rem; border-bottom: 2px solid #0284c7; padding-bottom: 6px; margin-bottom: 15px;">
+        📂 Halaman Biografi
+      </h2>
+      <div style="background-color: #0a192f; border: 1px solid rgba(212, 175, 55, 0.3); padding: 24px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+        <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 16px; line-height: 1.5;">
+          Mengenal lebih dekat profil, perjalanan karier, latar belakang, serta rekam jejak Tokoh lengkap pada halaman khusus biografi.
+        </p>
+        <a href="biografi.html" style="display: inline-block; background-color: #2563eb; color: #ffffff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+          📂 Buka Halaman Biografi Lengkap
+        </a>
+      </div>
+    </div>
+
+    <!-- AREA UNDUH APLIKASI (APK & PWA) -->
+    <div class="app-download-card">
+      <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 16px;">
+        Klik tombol di bawah ini untuk mengunduh dan memasang aplikasi secara langsung di ponsel Android Anda:
+      </p>
+
+      <a href="https://go.shr.lc/4gPkS9J" class="btn-install">
+        Download &amp; Install APK
+      </a>
+
+      <div class="ios-box">
+        <strong>📱 Pengguna iPhone (iOS):</strong><br>
+        Buka web ini di browser <strong>Safari</strong> &rarr; Tekan ikon <strong>Share</strong> (kotak dengan panah ke atas) &rarr; Pilih <strong>"Tambahkan ke Layar Utama"</strong>.
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px 15px; background-color: #1e293b; color: white; margin-top: 40px; font-size: 0.85rem;">
+  
+  <img src="icon_logo.png" alt="Icon Pustaka Wbiznet" style="max-width: 60px; height: auto; margin-bottom: 12px; display: block;">
+
+  <!-- Teks Nama Library (Rata Tengah) -->
+           <p>
+                <strong style="color: #d4af37; font-family: serif; font-size: 0.80rem; letter-spacing: 0.4px;">Kresnawan Sasmita Putra Library</strong>
+            </p>
+
+  
+    <!-- Tombol menu Kirim Email/Pesan -->
+  <a href="halaman_komentar.html" style="display: inline-block; background-color: #16a34a; color: #ffffff; padding: 6px 14px; font-size: 12px; font-weight: 500; border-radius: 6px; text-decoration: none; box-shadow: 0 1px 3px rgba(0,0,0,0.2); margin-bottom: 15px;">
+    ✉️ Kirim Email/Pesan/Komentar
+  </a>
+
+
+
+  <!-- Copyright -->
+  <p style="text-align: center; margin: 0; color: #94a3b8; font-size: 0.75rem;">
+    Copyright © Pustaka Wbiznet — 2026
+  </p>
+
+</footer>
+
+  <!-- Script Service Worker (PWA) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
 </body>
 </html>
